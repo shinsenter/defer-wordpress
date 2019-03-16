@@ -1,6 +1,6 @@
 # defer-wordpress
-🔌 A Wordpress plugin integrating my beloved "defer.js" library into your websites. Hope you guys like it.
 
+🔌 WordPress remains one of the most popular CMS platform until now, and I'm excited to make a Wordpress plugin integrating my beloved "defer.js" library into your websites. Hope you guys like it.
 
 
 ## Keep in touch
@@ -10,15 +10,17 @@
 
 
 - Become a stargazer:
-  https://github.com/shinsenter/defer.js/stargazers
+  https://github.com/shinsenter/defer-wordpress/stargazers
 - Report an issue:
-  https://github.com/shinsenter/defer.js/issues
+  https://github.com/shinsenter/defer-wordpress/issues
 - Keep up-to-date with new releases:
-  https://github.com/shinsenter/defer.js/releases
+  https://github.com/shinsenter/defer-wordpress/releases
   
 ## Follow my defer.js project:
 
 https://github.com/shinsenter/defer.js/releases
+
+https://github.com/shinsenter/defer.js/stargazers
 
 ---
 
