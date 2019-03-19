@@ -64,8 +64,8 @@ if (!function_exists('ob_defer_js')) {
                 $defer->enable_defer_iframes  = get_option(DEFER_JS_PREFIX . 'enable_defer_iframes', true);
                 $defer->defer_web_fonts       = get_option(DEFER_JS_PREFIX . 'defer_web_fonts', true);
 
-                $defer->empty_gif             = get_option(DEFER_JS_PREFIX . 'empty_gif', 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==');
-                $defer->empty_src             = get_option(DEFER_JS_PREFIX . 'empty_src', 'about:blank');
+                // $defer->empty_gif             = get_option(DEFER_JS_PREFIX . 'empty_gif', 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==');
+                // $defer->empty_src             = get_option(DEFER_JS_PREFIX . 'empty_src', 'about:blank');
                 $defer->use_color_placeholder = get_option(DEFER_JS_PREFIX . 'use_color_placeholder', true);
 
                 $optimized = $defer->fromHtml($buffer)->toHtml();
