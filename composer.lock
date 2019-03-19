@@ -1,0 +1,94 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "b43ca693cc6b75f3afe4ac7300cf2dac",
+    "packages": [
+        {
+            "name": "shinsenter/defer.php",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/shinsenter/defer.php.git",
+                "reference": "572fcdad634f93c8e1b089446aa05b7e6bd903ad"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/shinsenter/defer.php/zipball/572fcdad634f93c8e1b089446aa05b7e6bd903ad",
+                "reference": "572fcdad634f93c8e1b089446aa05b7e6bd903ad",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.6"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [],
+                "psr-4": {
+                    "shinsenter\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mai Nhut Tan",
+                    "email": "shin@shin.company"
+                }
+            ],
+            "description": "defer.php is a PHP helper class to integrate shinsenter/defer.js library into your websites.",
+            "keywords": [
+                "PageSpeed",
+                "avoid-render-blocking",
+                "browser-compatibility",
+                "browser-perf",
+                "composer-package",
+                "defer",
+                "defer.js",
+                "defer.php",
+                "dom-optimization",
+                "dom-optimize",
+                "efficient",
+                "frontend-library",
+                "intersection-observer",
+                "lazy",
+                "lazy-ads",
+                "lazy-css",
+                "lazy-iframe",
+                "lazy-image",
+                "lazy-img",
+                "lazy-javascript",
+                "lazy-js",
+                "lazy-loader",
+                "lazy-loading",
+                "lazy-style",
+                "lazy-video",
+                "lazyload",
+                "performant",
+                "php-library",
+                "tiny-library",
+                "website-performance"
+            ],
+            "time": "2019-03-19 11:39:34"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "shinsenter/defer.php": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": ">=5.5.9"
+    },
+    "platform-dev": [],
+    "platform-overrides": {
+        "php": "5.6"
+    }
+}
