@@ -1,4 +1,5 @@
 *
 !.gitignore
+!VERSION
 !deploy.sh
 !blacklist.txt

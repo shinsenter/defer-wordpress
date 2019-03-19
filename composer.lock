@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/shinsenter/defer.php.git",
-                "reference": "572fcdad634f93c8e1b089446aa05b7e6bd903ad"
+                "reference": "a43c674aabd5fbea0978dd4771dff02f9f50aefa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/shinsenter/defer.php/zipball/572fcdad634f93c8e1b089446aa05b7e6bd903ad",
-                "reference": "572fcdad634f93c8e1b089446aa05b7e6bd903ad",
+                "url": "https://api.github.com/repos/shinsenter/defer.php/zipball/a43c674aabd5fbea0978dd4771dff02f9f50aefa",
+                "reference": "a43c674aabd5fbea0978dd4771dff02f9f50aefa",
                 "shasum": ""
             },
             "require": {
@@ -73,7 +73,7 @@
                 "tiny-library",
                 "website-performance"
             ],
-            "time": "2019-03-19 11:39:34"
+            "time": "2019-03-19T17:49:51+00:00"
         }
     ],
     "packages-dev": [],

@@ -21,7 +21,7 @@ if (!defined('WPINC')) {
  * Plugin Name:       A performant lazy loader (defer.js)
  * Plugin URI:        https://github.com/shinsenter/defer-wordpress
  * Description:       🔌 A Wordpress plugin integrating my beloved "defer.js" library into your websites. Hope you guys like it.
- * Version:           1.0.0
+ * Version:           1.0.5
  * Author:            MAI NHUT TAN
  * Author URI:        https://code.shin.company/
  * License:           GPL-2.0+
