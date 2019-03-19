@@ -1,0 +1,20 @@
+{
+    "license": "MIT",
+    "type": "project",
+    "scripts":
+    {
+        "deploy": [
+            "bash ./_dist_/deploy.sh"
+        ]
+    },
+    "require": {
+        "php": ">=5.5.9",
+        "shinsenter/defer.php": "dev-master"
+    },
+    "config": {
+        "preferred-install": "dist",
+        "platform": {
+            "php": "5.6"
+        }
+    }
+}

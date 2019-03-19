@@ -1,0 +1,4 @@
+*
+!.gitignore
+!deploy.sh
+!blacklist.txt
