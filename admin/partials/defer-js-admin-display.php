@@ -1,12 +1,13 @@
 <?php
 
 /**
- * Provide a admin area view for the plugin
+ * 🔌 A Wordpress plugin integrating my beloved "defer.js" library
+ *    into your websites. Hope you guys like it.
+ * (c) 2019 AppSeeds Team <hello@appseeds.net>
  *
- * This file is used to markup the admin-facing aspects of the plugin.
- *
- * @see       https://code.shin.company/
- * @since      1.0.0
+ * @author    Mai Nhut Tan <shin@shin.company>
+ * @copyright 2019 AppSeeds
+ * @see       https://code.shin.company/defer-wordpress/
  */
 ?>
 
