@@ -1,13 +1,14 @@
 <?php
 
 /**
- * The public-facing functionality of the plugin.
+ * 🔌 A Wordpress plugin integrating my beloved "defer.js" library
+ *    into your websites. Hope you guys like it.
+ * (c) 2019 AppSeeds Team <hello@appseeds.net>
  *
- * @link       https://code.shin.company/
- * @since      1.0.0
- *
- * @package    Defer_Js
- * @subpackage Defer_Js/public
+ * @author    Mai Nhut Tan <shin@shin.company>
+ * @copyright 2019 AppSeeds
+ * @package   defer-wordpress
+ * @see       https://code.shin.company/defer-wordpress/
  */
 
 /**
@@ -16,19 +17,15 @@
  * Defines the plugin name, version, and two examples hooks for how to
  * enqueue the public-facing stylesheet and JavaScript.
  *
- * @package    Defer_Js
- * @subpackage Defer_Js/public
  * @author     MAI NHUT TAN <shin@shin.company>
  */
 class Defer_Js_Public
 {
-
     /**
      * The ID of this plugin.
      *
      * @since    1.0.0
-     * @access   private
-     * @var      string    $plugin_name    The ID of this plugin.
+     * @var string the ID of this plugin
      */
     private $plugin_name;
 
@@ -36,8 +33,7 @@ class Defer_Js_Public
      * The version of this plugin.
      *
      * @since    1.0.0
-     * @access   private
-     * @var      string    $version    The current version of this plugin.
+     * @var string the current version of this plugin
      */
     private $version;
 
@@ -45,12 +41,11 @@ class Defer_Js_Public
      * Initialize the class and set its properties.
      *
      * @since    1.0.0
-     * @param      string    $plugin_name       The name of the plugin.
-     * @param      string    $version    The version of this plugin.
+     * @param string $plugin_name the name of the plugin
+     * @param string $version     the version of this plugin
      */
     public function __construct($plugin_name, $version)
     {
-
         $this->plugin_name = $plugin_name;
         $this->version     = $version;
     }
@@ -62,8 +57,7 @@ class Defer_Js_Public
      */
     public function enqueue_styles()
     {
-
-        /**
+        /*
          * This function is provided for demonstration purposes only.
          *
          * An instance of this class should be passed to the run() function
@@ -85,8 +79,7 @@ class Defer_Js_Public
      */
     public function enqueue_scripts()
     {
-
-        /**
+        /*
          * This function is provided for demonstration purposes only.
          *
          * An instance of this class should be passed to the run() function

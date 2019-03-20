@@ -1,15 +1,13 @@
 <?php
 
 /**
- * Provide a public-facing view for the plugin
+ * 🔌 A Wordpress plugin integrating my beloved "defer.js" library
+ *    into your websites. Hope you guys like it.
+ * (c) 2019 AppSeeds Team <hello@appseeds.net>
  *
- * This file is used to markup the public-facing aspects of the plugin.
- *
- * @link       https://code.shin.company/
- * @since      1.0.0
- *
- * @package    Defer_Js
- * @subpackage Defer_Js/public/partials
+ * @author    Mai Nhut Tan <shin@shin.company>
+ * @copyright 2019 AppSeeds
+ * @see       https://code.shin.company/defer-wordpress/
  */
 ?>
 
