@@ -20,7 +20,7 @@ if (!defined('WPINC')) {
  * Currently plugin version.
  * Rename this for your plugin and update it as you release new versions.
  */
-define('DEFER_WORDPRESS_PLUGIN_VERSION', '1.0.7');
+define('DEFER_WORDPRESS_PLUGIN_VERSION', '1.0.8');
 define('DEFER_JS_PREFIX', 'shinsenter_deferjs_');
 
 /*
@@ -28,7 +28,7 @@ define('DEFER_JS_PREFIX', 'shinsenter_deferjs_');
  * Plugin Name:       A performant lazy loader (defer.js)
  * Plugin URI:        https://github.com/shinsenter/defer-wordpress
  * Description:       🔌 A Wordpress plugin integrating my beloved "defer.js" library into your websites. Hope you guys like it.
- * Version:           1.0.7
+ * Version:           1.0.8
  * Author:            MAI NHUT TAN
  * Author URI:        https://code.shin.company/
  * License:           GPL-2.0+
@@ -41,7 +41,7 @@ define('DEFER_JS_PREFIX', 'shinsenter_deferjs_');
  * defer.js library version
  */
 if (!defined('DEFER_JS_VERSION')) {
-    define('DEFER_JS_VERSION', 'latest');
+    define('DEFER_JS_VERSION', '1.1.3');
 }
 
 if (!defined('DEFER_JS_CACHE_SUFFIX')) {
