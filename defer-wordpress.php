@@ -41,7 +41,7 @@ define('DEFER_JS_PREFIX', 'shinsenter_deferjs_');
  * defer.js library version
  */
 if (!defined('DEFER_JS_VERSION')) {
-    define('DEFER_JS_VERSION', 'latest');
+    define('DEFER_JS_VERSION', '1.1.3');
 }
 
 if (!defined('DEFER_JS_CACHE_SUFFIX')) {
