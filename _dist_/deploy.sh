@@ -24,15 +24,17 @@ if [[ ! -e $plugin_dir ]]; then
     svn co $plugin_svn $plugin_dir
 fi
 
-svn rm $plugin_dir/trunk/* --force
+cd $plugin_dir
+
+svn rm trunk/* --force
 rsync -aHxW --delete --exclude-from=$base_dir/_dist_/blacklist.txt $base_dir/ $plugin_dir/trunk/
 
-cd $plugin_dir
 mv trunk/defer-wordpress.php $plugin_dir/trunk/$plugin_name.php
 svn stat
 
 svn add trunk/* --force
 svn ci -m "Release $version" --username=shinsenter --force-interactive
 
+svn rm tags/$version
 svn cp trunk tags/$version
 svn ci -m "Tagging version $version" --username=shinsenter --force-interactive

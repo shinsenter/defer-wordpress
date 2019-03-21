@@ -3,7 +3,7 @@ Contributors: shinsenter
 Donate link: https://www.paypal.me/shinsenter
 Tags: defer.js, defer, lazy, lazyload, lazy-loading, lazy-loader, lazy-js, lazy-css, lazy-image, lazy-iframe, lazy-video, lazy-ads, performant, pagespeed, website-performance, avoid-render-blocking, browser-compatibility, intersection-observer, browser-perf
 Requires at least: 4.0
-Tested up to: 4.8
+Tested up to: 5.1.1
 Stable tag: trunk
 Requires PHP: 5.6
 License: GPL-2.0+
@@ -13,7 +13,9 @@ License URI: https://github.com/shinsenter/defer-wordpress/blob/master/LICENSE
 
 == Description ==
 
-🔌 WordPress remains one of the most popular CMS platform until now, and I'm excited to make a Wordpress plugin integrating my beloved [defer.js](https://github.com/shinsenter/defer.js) library into your websites. Hope you guys like it.
+🔌 WordPress remains one of the most popular CMS platform until now, and I'm excited to make a Wordpress plugin integrating my beloved [defer.js](https://github.com/shinsenter/defer.js) library into your websites.
+
+Rate [5 stars (⭐️⭐️⭐️⭐️⭐️)](https://wordpress.org/support/plugin/shins-pageload-magic/reviews/?filter=5) you guys like it.
 
 ### defer.js
 
@@ -57,22 +59,22 @@ Available in latest browsers. This library also works perfectly with Internet Ex
 [![Become a sponsor](https://c5.patreon.com/external/logo/become_a_patron_button@2x.png)](https://www.patreon.com/appseeds)
 
 - Become a stargazer:
-https://github.com/shinsenter/defer-wordpress/stargazers
+[https://github.com/shinsenter/defer-wordpress/stargazers](https://github.com/shinsenter/defer-wordpress/stargazers)
 - Report an issue:
-https://github.com/shinsenter/defer-wordpress/issues
+[https://github.com/shinsenter/defer-wordpress/issues](https://github.com/shinsenter/defer-wordpress/issues)
 - Keep up-to-date with new releases:
-https://github.com/shinsenter/defer-wordpress/releases
+[https://github.com/shinsenter/defer-wordpress/releases](https://github.com/shinsenter/defer-wordpress/releases)
 
 ### Follow my defer.js project:
 
-https://github.com/shinsenter/defer.js/releases
+[https://github.com/shinsenter/defer.js/releases](https://github.com/shinsenter/defer.js/releases)
 
-https://github.com/shinsenter/defer.js/stargazers
+[https://github.com/shinsenter/defer.js/stargazers](https://github.com/shinsenter/defer.js/stargazers)
 
 ---
 
 Released under the GNU General Public License v2 license.
-https://github.com/shinsenter/defer-wordpress/blob/master/LICENSE
+[https://github.com/shinsenter/defer-wordpress/blob/master/LICENSE](https://github.com/shinsenter/defer-wordpress/blob/master/LICENSE)
 
 Copyright (c) 2019 Mai Nhut Tan &lt;[shin@shin.company](mailto:shin@shin.company)&gt;
 
@@ -101,6 +103,8 @@ Lazy loading content on web page can help reduce resource contention and improve
 2. Defer almost anything, easily speed up your website.
 
 == Changelog ==
+
+1.0.8 Fix issues with open web fonts
 
 1.0.7 Optimized scriptloader, polyfill, scrset
 
