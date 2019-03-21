@@ -61,13 +61,13 @@ class Defer_Js
      */
     public function __construct()
     {
-        if (defined('DEFER_JS_VERSION')) {
-            $this->version = DEFER_JS_VERSION;
+        if (defined('DEFER_WORDPRESS_PLUGIN_VERSION')) {
+            $this->version = DEFER_WORDPRESS_PLUGIN_VERSION;
         } else {
             $this->version = '1.0.0';
         }
 
-        $this->plugin_name = 'defer-js';
+        $this->plugin_name = 'defer-wordpress';
 
         $this->load_dependencies();
         $this->set_locale();
@@ -191,7 +191,7 @@ class Defer_Js
         // $this->loader->add_action('admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts');
 
         // if (!(defined('WP_CLI') && WP_CLI)) {
-        //     $this->loader->add_action('init', $plugin_admin, 'enable_defer_js', 2);
+        //     $this->loader->add_action('init', $plugin_admin, 'enable_defer_wordpress', pi());
         // }
     }
 
@@ -209,7 +209,7 @@ class Defer_Js
         // $this->loader->add_action('wp_enqueue_scripts', $plugin_public, 'enqueue_scripts');
 
         if (!(defined('WP_CLI') && WP_CLI) && !is_admin()) {
-            $this->loader->add_action('init', $plugin_public, 'enable_defer_js', 2);
+            $this->loader->add_action('init', $plugin_public, 'enable_defer_wordpress', pi());
         }
     }
 }
