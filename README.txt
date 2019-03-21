@@ -102,6 +102,10 @@ Lazy loading content on web page can help reduce resource contention and improve
 
 == Changelog ==
 
+1.0.7 Optimized scriptloader, polyfill, scrset
+
+1.0.6 Small bug fixes (color placeholders, css)
+
 1.0.5 Migrate with defer.js library
 
 1.0.0 ~ 1.0.4 The first implement

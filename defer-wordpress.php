@@ -17,11 +17,18 @@ if (!defined('WPINC')) {
 }
 
 /*
+ * Currently plugin version.
+ * Rename this for your plugin and update it as you release new versions.
+ */
+define('DEFER_WORDPRESS_PLUGIN_VERSION', '1.0.7');
+define('DEFER_JS_PREFIX', 'shinsenter_deferjs_');
+
+/*
  * @wordpress-plugin
  * Plugin Name:       A performant lazy loader (defer.js)
  * Plugin URI:        https://github.com/shinsenter/defer-wordpress
  * Description:       🔌 A Wordpress plugin integrating my beloved "defer.js" library into your websites. Hope you guys like it.
- * Version:           1.0.6
+ * Version:           1.0.7
  * Author:            MAI NHUT TAN
  * Author URI:        https://code.shin.company/
  * License:           GPL-2.0+
@@ -31,15 +38,21 @@ if (!defined('WPINC')) {
  */
 
 /*
- * Currently plugin version.
- * Start at version 1.0.0 and use SemVer - https://semver.org
- * Rename this for your plugin and update it as you release new versions.
+ * defer.js library version
  */
-define('DEFER_JS_VERSION', '1.0.6');
-define('DEFER_JS_PREFIX', 'shinsenter_deferjs_');
+if (!defined('DEFER_JS_VERSION')) {
+    define('DEFER_JS_VERSION', 'latest');
+}
 
-if (!function_exists('ob_defer_js')) {
-    function ob_defer_js($buffer)
+if (!defined('DEFER_JS_CACHE_SUFFIX')) {
+    define('DEFER_JS_CACHE_SUFFIX', '_' . DEFER_WORDPRESS_PLUGIN_VERSION);
+}
+
+/*
+ * The main code
+ */
+if (!function_exists('ob_defer_wordpress')) {
+    function ob_defer_wordpress($buffer)
     {
         $optimized = null;
 
@@ -62,10 +75,8 @@ if (!function_exists('ob_defer_js')) {
                 $defer->enable_defer_scripts  = get_option(DEFER_JS_PREFIX . 'enable_defer_scripts', false);
                 $defer->enable_defer_images   = get_option(DEFER_JS_PREFIX . 'enable_defer_images', true);
                 $defer->enable_defer_iframes  = get_option(DEFER_JS_PREFIX . 'enable_defer_iframes', true);
-                $defer->defer_web_fonts       = get_option(DEFER_JS_PREFIX . 'defer_web_fonts', true);
 
-                $defer->empty_gif             = get_option(DEFER_JS_PREFIX . 'empty_gif', 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==');
-                $defer->empty_src             = get_option(DEFER_JS_PREFIX . 'empty_src', 'about:blank');
+                $defer->defer_web_fonts       = get_option(DEFER_JS_PREFIX . 'defer_web_fonts', true);
                 $defer->use_color_placeholder = get_option(DEFER_JS_PREFIX . 'use_color_placeholder', true);
 
                 $optimized = $defer->fromHtml($buffer)->toHtml();
@@ -82,8 +93,9 @@ if (!function_exists('ob_defer_js')) {
  * The code that runs during plugin activation.
  * This action is documented in includes/class-defer-js-activator.php
  */
-function activate_defer_js()
+function activate_defer_wordpress()
 {
+    require_once __DIR__ . '/vendor/autoload.php';
     require_once plugin_dir_path(__FILE__) . 'includes/class-defer-js-activator.php';
     Defer_Js_Activator::activate();
 }
@@ -92,14 +104,15 @@ function activate_defer_js()
  * The code that runs during plugin deactivation.
  * This action is documented in includes/class-defer-js-deactivator.php
  */
-function deactivate_defer_js()
+function deactivate_defer_wordpress()
 {
+    require_once __DIR__ . '/vendor/autoload.php';
     require_once plugin_dir_path(__FILE__) . 'includes/class-defer-js-deactivator.php';
     Defer_Js_Deactivator::deactivate();
 }
 
-register_activation_hook(__FILE__, 'activate_defer_js');
-register_deactivation_hook(__FILE__, 'deactivate_defer_js');
+register_activation_hook(__FILE__, 'activate_defer_wordpress');
+register_deactivation_hook(__FILE__, 'deactivate_defer_wordpress');
 
 /**
  * The core plugin class that is used to define internationalization,
@@ -116,7 +129,7 @@ require plugin_dir_path(__FILE__) . 'includes/class-defer-js.php';
  *
  * @since    1.0.0
  */
-function run_defer_js()
+function run_defer_wordpress()
 {
     require_once __DIR__ . '/vendor/autoload.php';
 
@@ -124,4 +137,4 @@ function run_defer_js()
     $plugin->run();
 }
 
-run_defer_js();
+run_defer_wordpress();

@@ -29,7 +29,6 @@ rsync -aHxW --delete --exclude-from=$base_dir/_dist_/blacklist.txt $base_dir/ $p
 
 cd $plugin_dir
 mv trunk/defer-wordpress.php $plugin_dir/trunk/$plugin_name.php
-sed -nE 's|A performant|Magic|g' $plugin_dir/trunk/$plugin_name.php
 svn stat
 
 svn add trunk/* --force

@@ -111,11 +111,11 @@ class Defer_Js_Loader
     private function add($hooks, $hook, $component, $callback, $priority, $accepted_args)
     {
         $hooks[] = [
-            'hook'          => $hook,
+            'hook'          => (string) $hook,
             'component'     => $component,
             'callback'      => $callback,
-            'priority'      => $priority,
-            'accepted_args' => $accepted_args,
+            'priority'      => (int) $priority,
+            'accepted_args' => (int) $accepted_args,
         ];
 
         return $hooks;

@@ -94,8 +94,8 @@ class Defer_Js_Admin
         // wp_enqueue_script($this->plugin_name, plugin_dir_url(__FILE__) . 'js/defer-js-admin.js', ['jquery'], $this->version, false);
     }
 
-    public function enable_defer_js()
+    public function enable_defer_wordpress()
     {
-        ob_start('ob_defer_js');
+        ob_start('ob_defer_wordpress');
     }
 }
