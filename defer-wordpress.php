@@ -44,6 +44,19 @@ if (!defined('DEFER_JS_VERSION')) {
     define('DEFER_JS_VERSION', '1.1.3');
 }
 
+if (!defined('DEFER_JS_PLUGIN_NAME')) {
+    define('DEFER_JS_PLUGIN_NAME', 'defer-wordpress');
+}
+
+if (!defined('DEFER_JS_PLUGIN_HOOK')) {
+    define('DEFER_JS_PLUGIN_HOOK', 'plugin_action_links_' . plugin_basename(__FILE__));
+    define('DEFER_JS_HOMEPAGE', 'https://github.com/shinsenter/defer.js/');
+    define('DEFER_JS_PAYPAL', 'https://www.paypal.me/shinsenter/');
+    define('DEFER_JS_PATREON', 'https://www.patreon.com/appseeds');
+    define('DEFER_JS_RATING', 'https://wordpress.org/support/plugin/shins-pageload-magic/reviews/?filter=5#new-post');
+    define('DEFER_JS_SETTINGS', admin_url('admin.php?page=' . DEFER_JS_PLUGIN_NAME));
+}
+
 if (!defined('DEFER_JS_CACHE_SUFFIX')) {
     define('DEFER_JS_CACHE_SUFFIX', '_' . DEFER_WORDPRESS_PLUGIN_VERSION);
 }

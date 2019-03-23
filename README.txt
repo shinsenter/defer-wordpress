@@ -15,7 +15,7 @@ License URI: https://github.com/shinsenter/defer-wordpress/blob/master/LICENSE
 
 🔌 WordPress remains one of the most popular CMS platform until now, and I'm excited to make a Wordpress plugin integrating my beloved [defer.js](https://github.com/shinsenter/defer.js) library into your websites.
 
-Rate [5 stars (⭐️⭐️⭐️⭐️⭐️)](https://wordpress.org/support/plugin/shins-pageload-magic/reviews/?filter=5) you guys like it.
+Rate [5 stars (⭐️⭐️⭐️⭐️⭐️)](https://wordpress.org/support/plugin/shins-pageload-magic/reviews/?filter=5) if you guys like it.
 
 ### defer.js
 

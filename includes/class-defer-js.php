@@ -67,7 +67,7 @@ class Defer_Js
             $this->version = '1.0.0';
         }
 
-        $this->plugin_name = 'defer-wordpress';
+        $this->plugin_name = DEFER_JS_PLUGIN_NAME;
 
         $this->load_dependencies();
         $this->set_locale();
@@ -187,12 +187,13 @@ class Defer_Js
     {
         $plugin_admin = new Defer_Js_Admin($this->get_plugin_name(), $this->get_version());
 
-        // $this->loader->add_action('admin_enqueue_scripts', $plugin_admin, 'enqueue_styles');
-        // $this->loader->add_action('admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts');
-
-        // if (!(defined('WP_CLI') && WP_CLI)) {
-        //     $this->loader->add_action('init', $plugin_admin, 'enable_defer_wordpress', pi());
-        // }
+        if (!(defined('WP_CLI') && WP_CLI) && is_admin()) {
+            $this->loader->add_action('admin_enqueue_scripts', $plugin_admin, 'enqueue_styles');
+            $this->loader->add_action('admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts');
+            $this->loader->add_action('admin_menu', $plugin_admin, 'register_menu');
+            $this->loader->add_action('admin_init', $plugin_admin, 'register_options');
+            $this->loader->add_filter(DEFER_JS_PLUGIN_HOOK, $plugin_admin, 'register_menu_plugin_options');
+        }
     }
 
     /**
@@ -204,9 +205,6 @@ class Defer_Js
     private function define_public_hooks()
     {
         $plugin_public = new Defer_Js_Public($this->get_plugin_name(), $this->get_version());
-
-        // $this->loader->add_action('wp_enqueue_scripts', $plugin_public, 'enqueue_styles');
-        // $this->loader->add_action('wp_enqueue_scripts', $plugin_public, 'enqueue_scripts');
 
         if (!(defined('WP_CLI') && WP_CLI) && !is_admin()) {
             $this->loader->add_action('init', $plugin_public, 'enable_defer_wordpress', pi());

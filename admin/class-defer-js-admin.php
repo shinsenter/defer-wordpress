@@ -50,6 +50,48 @@ class Defer_Js_Admin
         $this->version     = $version;
     }
 
+    public function register_options()
+    {
+        if (class_exists('shinsenter\Defer')) {
+            $defer = new \shinsenter\Defer();
+
+            foreach ($defer->options as $key => $value) {
+                register_setting(DEFER_JS_PLUGIN_NAME, DEFER_JS_PREFIX . $key);
+            }
+        }
+    }
+
+    public function register_menu()
+    {
+        // Remove old menu
+        remove_menu_page(DEFER_JS_PLUGIN_NAME);
+
+        // Create new top-level menu
+        add_menu_page(
+            __('Edit defer.js settings'),
+            __('Edit defer.js'),
+            'administrator',
+            DEFER_JS_PLUGIN_NAME,
+            [$this, 'options_page'],
+            plugins_url('/icon.jpg', __FILE__),
+            $this->get_menu_position()
+        );
+    }
+
+    public function register_menu_plugin_options($links)
+    {
+        $links[] = '<a title="Edit defer.js settings" href="' . DEFER_JS_SETTINGS . '">' . __('Settings') . '</a>';
+        $links[] = '<a title="Donate for defer.js" target="paypal" href="' . DEFER_JS_PAYPAL . '">' . __('Donate') . '</a>';
+        $links[] = '<a title="Like defer.js" target="rating" href="' . DEFER_JS_RATING . '">' . __('Like') . '</a>';
+
+        return $links;
+    }
+
+    public function options_page()
+    {
+        include plugin_dir_path(__FILE__) . 'partials/defer-js-admin-display.php';
+    }
+
     /**
      * Register the stylesheets for the admin area.
      *
@@ -69,7 +111,7 @@ class Defer_Js_Admin
          * class.
          */
 
-        // wp_enqueue_style($this->plugin_name, plugin_dir_url(__FILE__) . 'css/defer-js-admin.css', [], $this->version, 'all');
+        wp_enqueue_style($this->plugin_name, plugin_dir_url(__FILE__) . 'css/defer-js-admin.css', [], $this->version, 'all');
     }
 
     /**
@@ -91,11 +133,18 @@ class Defer_Js_Admin
          * class.
          */
 
-        // wp_enqueue_script($this->plugin_name, plugin_dir_url(__FILE__) . 'js/defer-js-admin.js', ['jquery'], $this->version, false);
+        wp_enqueue_script('defer.js', 'https://cdn.jsdelivr.net/npm/@shinsenter/defer.js/dist/defer.min.js', [], $this->version, false);
+        wp_enqueue_script($this->plugin_name, plugin_dir_url(__FILE__) . 'js/defer-js-admin.js', [], $this->version, false);
     }
 
-    public function enable_defer_wordpress()
+    protected function get_menu_position($target = 'switch_themes')
     {
-        ob_start('ob_defer_wordpress');
+        foreach ($GLOBALS['menu'] as $position => $item) {
+            if ($item[1] == $target) {
+                return $position;
+            }
+        }
+
+        return 1;
     }
 }

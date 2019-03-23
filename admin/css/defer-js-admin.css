@@ -1,4 +1,48 @@
-/**
- * All of the CSS for your admin-specific functionality should be
- * included in this file.
- */
+.toplevel_page_defer-wordpress .menu-top img {
+    width: 16px;
+    height: 16px;
+}
+
+.toplevel_page_defer-wordpress .wrap {
+    padding: 0.5rem;
+}
+
+.toplevel_page_defer-wordpress .wrap * {
+    box-sizing: border-box;
+    max-width: 100%;
+    word-wrap: break-word;
+}
+
+.toplevel_page_defer-wordpress .wrap img {
+    display: inline-block;
+}
+
+.toplevel_page_defer-wordpress .wrap img.deferjs-icon {
+    width: 28px;
+    height: 28px;
+    vertical-align: top;
+}
+
+.toplevel_page_defer-wordpress .wrap p {
+    line-height: 1.5;
+}
+
+.toplevel_page_defer-wordpress .wrap .box {
+    margin-top: 1em;
+    padding: 1em;
+    background: #fafafa;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (min-width: 760px) {
+    .toplevel_page_defer-wordpress .wrap .main {
+        width: 70%;
+        float: left;
+        padding-right: 2rem;
+    }
+
+    .toplevel_page_defer-wordpress .wrap .side {
+        margin-top: 0;
+        margin-left: 70%;
+    }
+}
