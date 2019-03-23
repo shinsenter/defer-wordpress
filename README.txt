@@ -38,7 +38,7 @@ Other lazy loading libraries hook up to the scroll event on elements that need t
 
 Here we are, [defer.js](https://github.com/shinsenter/defer.js) is written in plain JavaScript, making lazy-loading more efficient and performant. This library is using the recently added [Intersection Observer](https://developers.google.com/web/updates/2016/04/intersectionobserver) with tremendous native performance benefits.
 
-![Defer loading of JavaScript](https://raw.githubusercontent.com/shinsenter/defer.js/master/docs/assets/defer-script.png)
+![Defer loading of JavaScript](https://raw.githubusercontent.com/shinsenter/defer.js/master/docs/assets/defer-script.jpg)
 
 In various cases, using `async` or `defer` does not deliver faster page speed than defer.js does.
 
@@ -103,6 +103,8 @@ Lazy loading content on web page can help reduce resource contention and improve
 2. Defer almost anything, easily speed up your website.
 
 == Changelog ==
+
+1.0.9 Imrpove preloading code
 
 1.0.8 Fix issues with open web fonts
 
