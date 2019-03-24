@@ -15,7 +15,7 @@ License URI: https://github.com/shinsenter/defer-wordpress/blob/master/LICENSE
 
 🔌 WordPress remains one of the most popular CMS platform until now, and I'm excited to make a Wordpress plugin integrating my beloved [defer.js](https://github.com/shinsenter/defer.js) library into your websites.
 
-Rate [5 stars (⭐️⭐️⭐️⭐️⭐️)](https://wordpress.org/support/plugin/shins-pageload-magic/reviews/?filter=5) you guys like it.
+Rate [5 stars (⭐️⭐️⭐️⭐️⭐️)](https://wordpress.org/support/plugin/shins-pageload-magic/reviews/?filter=5) if you guys like it.
 
 ### defer.js
 
@@ -102,17 +102,20 @@ Lazy loading content on web page can help reduce resource contention and improve
 1. Scoring 100/100 in Google PageSpeed Test!
 2. Defer almost anything, easily speed up your website.
 
+
 == Changelog ==
 
-1.0.9 Imrpove preloading code
+1.1.0 Added settings page
 
-1.0.8 Fix issues with open web fonts
+1.0.9 Imrpoved preloading code
+
+1.0.8 Fixed issues with open web fonts
 
 1.0.7 Optimized scriptloader, polyfill, scrset
 
 1.0.6 Small bug fixes (color placeholders, css)
 
-1.0.5 Migrate with defer.js library
+1.0.5 Migrated with defer.js library
 
 1.0.0 ~ 1.0.4 The first implement
 

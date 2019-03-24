@@ -20,7 +20,7 @@ if (!defined('WPINC')) {
  * Currently plugin version.
  * Rename this for your plugin and update it as you release new versions.
  */
-define('DEFER_WORDPRESS_PLUGIN_VERSION', '1.0.9');
+define('DEFER_WORDPRESS_PLUGIN_VERSION', '1.1.0');
 define('DEFER_JS_PREFIX', 'shinsenter_deferjs_');
 
 /*
@@ -28,7 +28,7 @@ define('DEFER_JS_PREFIX', 'shinsenter_deferjs_');
  * Plugin Name:       A performant lazy loader (defer.js)
  * Plugin URI:        https://github.com/shinsenter/defer-wordpress
  * Description:       🔌 A Wordpress plugin integrating my beloved "defer.js" library into your websites. Hope you guys like it.
- * Version:           1.0.9
+ * Version:           1.1.0
  * Author:            MAI NHUT TAN
  * Author URI:        https://code.shin.company/
  * License:           GPL-2.0+
@@ -42,6 +42,40 @@ define('DEFER_JS_PREFIX', 'shinsenter_deferjs_');
  */
 if (!defined('DEFER_JS_VERSION')) {
     define('DEFER_JS_VERSION', '1.1.3');
+}
+
+if (!defined('DEFER_JS_PLUGIN_NAME')) {
+    define('DEFER_JS_PLUGIN_NAME', 'defer-wordpress');
+}
+
+if (!defined('DEFER_JS_PLUGIN_HOOK')) {
+    define('DEFER_JS_PLUGIN_HOOK', 'plugin_action_links_' . plugin_basename(__FILE__));
+    define('DEFER_JS_HOMEPAGE', 'https://github.com/shinsenter/defer.js');
+    define('DEFER_JS_SPONSORS', 'https://raw.githubusercontent.com/shinsenter/defer.php/footprint/sponsors.html');
+    define('DEFER_JS_PAYPAL', 'https://www.paypal.me/shinsenter');
+    define('DEFER_JS_PATREON', 'https://www.patreon.com/appseeds');
+    define('DEFER_JS_RATING', 'https://wordpress.org/support/plugin/shins-pageload-magic/reviews/?filter=5#new-post');
+    define('DEFER_JS_SETTINGS', admin_url('admin.php?page=' . DEFER_JS_PLUGIN_NAME));
+    define('DEFER_JS_CACHE_DIR', __DIR__ . '/vendor/shinsenter/defer.php/cache/sponsors.php');
+    define('DEFER_JS_CACHE_EXP', 86400);
+
+    if (!file_exists(DEFER_JS_CACHE_DIR) || time() - filectime(DEFER_JS_CACHE_DIR) >= DEFER_JS_CACHE_EXP) {
+        $source   = @file_get_contents(DEFER_JS_SPONSORS);
+        $template = "<?php
+if (!defined('DEFER_JS_SPONSORS_HTML')) {
+    define('DEFER_JS_SPONSORS_HTML', base64_decode('%s'));
+}
+";
+        @file_put_contents(
+            DEFER_JS_CACHE_DIR,
+            sprintf(
+                $template,
+                base64_encode($source)
+            )
+        );
+    }
+
+    @include_once DEFER_JS_CACHE_DIR;
 }
 
 if (!defined('DEFER_JS_CACHE_SUFFIX')) {
@@ -60,24 +94,12 @@ if (!function_exists('ob_defer_wordpress')) {
             try {
                 $defer = new \shinsenter\Defer();
 
-                $defer->debug_mode            = get_option(DEFER_JS_PREFIX . 'debug_mode', false);
-                $defer->hide_warnings         = get_option(DEFER_JS_PREFIX . 'hide_warnings', true);
+                foreach ($defer->options as $key => $value) {
+                    $defer->{$key} = get_option(DEFER_JS_PREFIX . $key, $value);
+                }
 
-                $defer->append_defer_js       = get_option(DEFER_JS_PREFIX . 'append_defer_js', false);
-                $defer->default_defer_time    = get_option(DEFER_JS_PREFIX . 'default_defer_time', 100);
-
-                $defer->enable_preloading     = get_option(DEFER_JS_PREFIX . 'enable_preloading', true);
-                $defer->enable_dns_prefetch   = get_option(DEFER_JS_PREFIX . 'enable_dns_prefetch', true);
-                $defer->fix_render_blocking   = get_option(DEFER_JS_PREFIX . 'fix_render_blocking', true);
-                $defer->minify_output_html    = get_option(DEFER_JS_PREFIX . 'minify_output_html', true);
-
-                $defer->enable_defer_css      = get_option(DEFER_JS_PREFIX . 'enable_defer_css', true);
-                $defer->enable_defer_scripts  = get_option(DEFER_JS_PREFIX . 'enable_defer_scripts', false);
-                $defer->enable_defer_images   = get_option(DEFER_JS_PREFIX . 'enable_defer_images', true);
-                $defer->enable_defer_iframes  = get_option(DEFER_JS_PREFIX . 'enable_defer_iframes', true);
-
-                $defer->defer_web_fonts       = get_option(DEFER_JS_PREFIX . 'defer_web_fonts', true);
-                $defer->use_color_placeholder = get_option(DEFER_JS_PREFIX . 'use_color_placeholder', true);
+                $defer->debug_mode    = false;
+                $defer->hide_warnings = true;
 
                 $optimized = $defer->fromHtml($buffer)->toHtml();
             } catch (\Exception $e) {

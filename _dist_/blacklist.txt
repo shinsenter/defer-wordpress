@@ -2,3 +2,5 @@
 _dist_
 README.md
 composer.*
+sonar-*
+test
