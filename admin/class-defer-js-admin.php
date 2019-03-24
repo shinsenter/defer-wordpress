@@ -164,6 +164,8 @@ class Defer_Js_Admin
 
     protected function reset_settings()
     {
+        @unlink(DEFER_JS_CACHE_DIR);
+
         $result = false;
 
         if (class_exists('shinsenter\Defer')) {
