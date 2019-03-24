@@ -59,6 +59,10 @@ class Defer_Js_Admin
                 register_setting(DEFER_JS_PLUGIN_NAME, DEFER_JS_PREFIX . $key);
             }
         }
+
+        if (!get_option(DEFER_JS_PREFIX . 'default_defer_time', false)) {
+            $this->reset_settings();
+        }
     }
 
     public function register_menu()
@@ -89,6 +93,16 @@ class Defer_Js_Admin
 
     public function options_page()
     {
+        if (!empty($_REQUEST['reset-settings'])) {
+            $reset_settings = $this->reset_settings();
+        }
+
+        if (!empty($_REQUEST['save-settings'])) {
+            $save_settings = $this->save_settings();
+        }
+
+        $options = $this->get_settings();
+
         include plugin_dir_path(__FILE__) . 'partials/defer-js-admin-display.php';
     }
 
@@ -146,5 +160,110 @@ class Defer_Js_Admin
         }
 
         return 1;
+    }
+
+    protected function reset_settings()
+    {
+        $result = false;
+
+        if (class_exists('shinsenter\Defer')) {
+            $defer = new \shinsenter\Defer();
+
+            $defer->debug_mode            = false;
+            $defer->hide_warnings         = true;
+            $defer->append_defer_js       = false;
+            $defer->default_defer_time    = 10;
+            $defer->use_color_placeholder = true;
+
+            foreach ($defer->options as $key => $value) {
+                update_option(DEFER_JS_PREFIX . $key, $value);
+            }
+
+            // Create library cache
+            $dummy = '<!DOCTYPE html><html><head></head><body></body></html>';
+            $defer->fromHtml($dummy)->toHtml();
+
+            $result = $defer->options;
+        }
+
+        return $result;
+    }
+
+    protected function save_settings()
+    {
+        $result = false;
+
+        $_REQUEST = array_map('stripslashes_deep', $_REQUEST);
+
+        if (isset($_REQUEST[DEFER_JS_PREFIX . 'web_fonts_patterns'])) {
+            $values                                           = explode("\n", $_REQUEST[DEFER_JS_PREFIX . 'web_fonts_patterns']);
+            $_REQUEST[DEFER_JS_PREFIX . 'web_fonts_patterns'] = array_filter($values);
+        }
+
+        if (isset($_REQUEST[DEFER_JS_PREFIX . 'do_not_optimize'])) {
+            $values                                        = explode("\n", $_REQUEST[DEFER_JS_PREFIX . 'do_not_optimize']);
+            $_REQUEST[DEFER_JS_PREFIX . 'do_not_optimize'] = array_filter($values);
+        }
+
+        if (!empty($_REQUEST[DEFER_JS_PREFIX . 'loader_scripts'])) {
+            $values                                        = [trim($_REQUEST[DEFER_JS_PREFIX . 'loader_scripts'])];
+            $_REQUEST[DEFER_JS_PREFIX . 'loader_scripts']  = array_filter($values);
+        }
+
+        if (!empty($_REQUEST[DEFER_JS_PREFIX . 'empty_gif'])) {
+            $_REQUEST[DEFER_JS_PREFIX . 'empty_gif'] = trim($_REQUEST[DEFER_JS_PREFIX . 'empty_gif']);
+        }
+
+        if (!empty($_REQUEST[DEFER_JS_PREFIX . 'empty_src'])) {
+            $_REQUEST[DEFER_JS_PREFIX . 'empty_src'] = trim($_REQUEST[DEFER_JS_PREFIX . 'empty_src']);
+        }
+
+        if (class_exists('shinsenter\Defer')) {
+            $defer   = new \shinsenter\Defer();
+            $success = false;
+
+            try {
+                // Test the configuration
+                $dummy = '<!DOCTYPE html><html><head></head><body></body></html>';
+                $defer->fromHtml($dummy)->toHtml();
+                $success = true;
+            } catch (\Exception $e) {
+            }
+
+            if ($success) {
+                foreach ($defer->options as $key => $value) {
+                    if (isset($_REQUEST[DEFER_JS_PREFIX . $key]) && !in_array($key, ['debug_mode', 'hide_warnings'])) {
+                        $defer->{$key} = $_REQUEST[DEFER_JS_PREFIX . $key];
+                        update_option(DEFER_JS_PREFIX . $key, $defer->{$key});
+                    } else {
+                        update_option(DEFER_JS_PREFIX . $key, $value);
+                    }
+                }
+
+                $result = $defer->options;
+            }
+        }
+
+        return $result;
+    }
+
+    protected function get_settings()
+    {
+        $result = false;
+
+        if (class_exists('shinsenter\Defer')) {
+            $defer = new \shinsenter\Defer();
+
+            foreach ($defer->options as $key => $value) {
+                $defer->{$key} = get_option(DEFER_JS_PREFIX . $key, $value);
+            }
+
+            $defer->debug_mode    = false;
+            $defer->hide_warnings = true;
+
+            $result = $defer->options;
+        }
+
+        return $result;
     }
 }

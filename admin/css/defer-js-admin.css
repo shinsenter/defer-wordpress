@@ -5,12 +5,23 @@
 
 .toplevel_page_defer-wordpress .wrap {
     padding: 0.5rem;
+    word-wrap: break-word;
 }
 
 .toplevel_page_defer-wordpress .wrap * {
     box-sizing: border-box;
     max-width: 100%;
-    word-wrap: break-word;
+}
+
+.toplevel_page_defer-wordpress .wrap h1 {
+    margin-bottom: 1rem;
+}
+
+.toplevel_page_defer-wordpress .wrap h2 {
+
+    padding: 8px 12px;
+    margin: 0;
+    line-height: 1.4;
 }
 
 .toplevel_page_defer-wordpress .wrap img {
@@ -27,11 +38,37 @@
     line-height: 1.5;
 }
 
-.toplevel_page_defer-wordpress .wrap .box {
-    margin-top: 1em;
-    padding: 1em;
-    background: #fafafa;
-    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+.toplevel_page_defer-wordpress .wrap tr {
+    border-bottom: 1px #f0f0f0 solid;
+}
+
+.toplevel_page_defer-wordpress .wrap fieldset textarea,
+.toplevel_page_defer-wordpress .wrap fieldset input[type="text"],
+.toplevel_page_defer-wordpress .wrap fieldset input[type="number"] {
+    width: 100%
+}
+
+.toplevel_page_defer-wordpress .wrap fieldset textarea {
+    font-size: smaller;
+}
+
+.toplevel_page_defer-wordpress .wrap fieldset p.help {
+    font-size: smaller;
+    color: #555;
+}
+
+.toplevel_page_defer-wordpress .wrap .submit {
+    padding: 0;
+}
+
+.toplevel_page_defer-wordpress .wrap .donate {
+    text-align: center;
+}
+
+.toplevel_page_defer-wordpress .wrap .donate>* {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 0.5em;
 }
 
 @media screen and (min-width: 760px) {
