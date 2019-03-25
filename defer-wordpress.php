@@ -20,15 +20,15 @@ if (!defined('WPINC')) {
  * Currently plugin version.
  * Rename this for your plugin and update it as you release new versions.
  */
-define('DEFER_WORDPRESS_PLUGIN_VERSION', '1.1.0-a');
+define('DEFER_WORDPRESS_PLUGIN_VERSION', '1.1.1');
 define('DEFER_JS_PREFIX', 'shinsenter_deferjs_');
 
 /*
  * @wordpress-plugin
  * Plugin Name:       A performant lazy loader (defer.js)
- * Plugin URI:        https://github.com/shinsenter/defer-wordpress
+ * Plugin URI:        https://wordpress.org/plugins/shins-pageload-magic/
  * Description:       🔌 A Wordpress plugin integrating my beloved "defer.js" library into your websites. Hope you guys like it.
- * Version:           1.1.0-a
+ * Version:           1.1.1
  * Author:            MAI NHUT TAN
  * Author URI:        https://code.shin.company/
  * License:           GPL-2.0+

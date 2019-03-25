@@ -16,22 +16,12 @@
 
 [![Become a sponsor](https://c5.patreon.com/external/logo/become_a_patron_button@2x.png)](https://www.patreon.com/appseeds)
 
-- Become a stargazer:
-  https://github.com/shinsenter/defer-wordpress/stargazers
-- Report an issue:
-  https://github.com/shinsenter/defer-wordpress/issues
 - Keep up-to-date with new releases:
-  https://github.com/shinsenter/defer-wordpress/releases
-
-
-
-## Follow my defer.js project:
-
-https://github.com/shinsenter/defer.js/releases
-
-https://github.com/shinsenter/defer.js/stargazers
-
-
+[https://wordpress.org/plugins/shins-pageload-magic/](https://wordpress.org/plugins/shins-pageload-magic/)
+- Become a stargazer:
+[https://github.com/shinsenter/defer.js/stargazers](https://github.com/shinsenter/defer.js/stargazers)
+- Report an issue:
+[https://github.com/shinsenter/defer.js/issues](https://github.com/shinsenter/defer.js/issues)
 
 ---
 
