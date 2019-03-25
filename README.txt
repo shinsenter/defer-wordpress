@@ -1,7 +1,7 @@
 === A performant lazy loader (defer.js) ===
 Contributors: shinsenter
 Donate link: https://www.paypal.me/shinsenter
-Tags: defer.js, defer, lazy, lazyload, lazy-loading, lazy-loader, lazy-js, lazy-css, lazy-image, lazy-iframe, lazy-video, lazy-ads, performant, pagespeed, website-performance, avoid-render-blocking, browser-compatibility, intersection-observer, browser-perf
+Tags: lazy,lazyload,lazy-js,lazy-css,lazy-image,lazy-iframe,lazy-video,pagespeed,website-performance,lazy-loading,lazy-loader,defer,lazy-ads,performant,avoid-render-blocking,browser-compatibility,intersection-observer,browser-perf,defer.js
 Requires at least: 4.0
 Tested up to: 5.1.1
 Stable tag: trunk
@@ -9,7 +9,7 @@ Requires PHP: 5.6
 License: GPL-2.0+
 License URI: https://github.com/shinsenter/defer-wordpress/blob/master/LICENSE
 
-🔌 A Wordpress plugin integrating my beloved "defer.js" library into your websites. Hope you guys like it.
+⚡️ A native, blazing fast lazy loader. ✅ Legacy browsers support (IE9+). 💯 SEO friendly. 🧩 Lazy load almost anything.
 
 == Description ==
 
@@ -22,7 +22,7 @@ Rate [5 stars (⭐️⭐️⭐️⭐️⭐️)](https://wordpress.org/support/pl
 [defer.js](https://github.com/shinsenter/defer.js) is a super tiny, native performant library for lazy-loading JS, CSS, images, iframes...
 
 - ⚡️ Native API, blazing fast
-- 👍🏻 Legacy browsers support (IE9+)
+- 👍 Legacy browsers support (IE9+)
 - 🥇 SEO friendly
 - ✅ Very easy to use
 - 💯 No dependencies, no jQuery
