@@ -32,14 +32,16 @@
         <?php
     } ?>
 
-        <?php if (!isset($reset_settings) && !isset($save_settings)) { ?>
+        <?php if (!isset($reset_settings) && !isset($save_settings)) {
+        ?>
         <div id="message" class="notice notice-info fade">
             <p>
-                <strong>💡 Tip:</strong> For better result, please <u>disable</u> HTML, CSS, JS optimizations by other plugins.
-                Using with a <a href="plugin-install.php?s=cache&tab=search&type=tag">caching plugin</a> is strongly recommended.
+                <strong>💡 Tip:</strong> For better result, please <u>disable</u> lazyload and HTML-CSS-JS optimizations by other plugins.
+                Using with a <a href="plugin-install.php?s=caching&tab=search&type=tag">caching plugin</a> is strongly recommended.
             </p>
         </div>
-        <?php } ?>
+        <?php
+    } ?>
 
         <form method="post" action="<?php echo DEFER_JS_SETTINGS; ?>">
             <?php settings_fields(DEFER_JS_PLUGIN_NAME); ?>
@@ -451,6 +453,8 @@
             </div>
         </div>
 
-        <?php if(defined('DEFER_JS_SPONSORS_HTML')) echo DEFER_JS_SPONSORS_HTML; ?>
+        <?php if (defined('DEFER_JS_SPONSORS_HTML')) {
+        echo DEFER_JS_SPONSORS_HTML;
+    } ?>
     </div>
 </div>
