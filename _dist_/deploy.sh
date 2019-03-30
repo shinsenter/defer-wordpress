@@ -29,9 +29,9 @@ fi
 
 cd $plugin_dir
 
-if [[ ! -e $plugin_dir/tags/$version ]]; then
+if [[ -e $plugin_dir/tags/$version ]]; then
     svn rm tags/$version
-    rm -Rf $plugin_dir/tags/$version
+    rm -Rf tags/$version
 fi
 
 svn rm trunk/* --force
@@ -42,4 +42,5 @@ svn add trunk/* --force
 svn stat
 
 svn ci -m "Release $version" --username=shinsenter --force-interactive
-svn cp trunk tags/$version -m "Tagging version $version" --username=shinsenter --force-interactive
+svn cp trunk tags/$version
+svn ci -m "Tagging version $version" --username=shinsenter --force-interactive
