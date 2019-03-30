@@ -1,7 +1,7 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
     "content-hash": "b43ca693cc6b75f3afe4ac7300cf2dac",
@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/shinsenter/defer.php.git",
-                "reference": "d4c5a1e05ee91f1fb2999b70eb283c0df626678a"
+                "reference": "4135aa2d03cabd65719477b0546463b018750b40"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/shinsenter/defer.php/zipball/d4c5a1e05ee91f1fb2999b70eb283c0df626678a",
-                "reference": "d4c5a1e05ee91f1fb2999b70eb283c0df626678a",
+                "url": "https://api.github.com/repos/shinsenter/defer.php/zipball/4135aa2d03cabd65719477b0546463b018750b40",
+                "reference": "4135aa2d03cabd65719477b0546463b018750b40",
                 "shasum": ""
             },
             "require": {
@@ -74,7 +74,7 @@
                 "tiny-library",
                 "website-performance"
             ],
-            "time": "2019-03-30T13:20:24+00:00"
+            "time": "2019-03-30T14:06:40+00:00"
         },
         {
             "name": "symfony/http-foundation",
