@@ -18,6 +18,8 @@ plugin_dir=$build_dir/$plugin_name
 
 version=`head -n 1 $base_dir/_dist_/VERSION`
 
+echo "Deploy version ${version}"
+
 if [[ ! -e $plugin_dir ]]; then
     rm -Rf $build_dir
     mkdir -p $plugin_dir
@@ -29,18 +31,19 @@ fi
 
 cd $plugin_dir
 
-if [[ -e $plugin_dir/tags/$version ]]; then
-    svn rm tags/$version
-    rm -Rf tags/$version
-fi
-
 svn rm trunk/* --force
 rsync -aHxW --delete --exclude-from=$base_dir/_dist_/blacklist.txt $base_dir/ $plugin_dir/trunk/
 mv trunk/defer-wordpress.php $plugin_dir/trunk/$plugin_name.php
 
 svn add trunk/* --force
 svn stat
-
 svn ci -m "Release $version" --username=shinsenter --force-interactive
+
+svn up tags/$version --force
+if [[ -e $plugin_dir ]]; then
+    svn rm tags/$version --force
+    rm -Rf tags/$version
+fi
+
 svn cp trunk tags/$version
 svn ci -m "Tagging version $version" --username=shinsenter --force-interactive

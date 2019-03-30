@@ -59,7 +59,7 @@ if (!defined('DEFER_JS_PLUGIN_HOOK')) {
     define('DEFER_JS_RATING', 'https://wordpress.org/support/plugin/shins-pageload-magic/reviews/?filter=5#new-post');
     define('DEFER_JS_SETTINGS', admin_url('admin.php?page=' . DEFER_JS_PLUGIN_NAME));
     define('DEFER_JS_CACHE_DIR', __DIR__ . '/vendor/shinsenter/defer.php/cache');
-    define('DEFER_JS_CACHE_EXP', 86400);
+    define('DEFER_JS_CACHE_EXP', 600);
 }
 
 if (!defined('DEFER_JS_CACHE_SUFFIX')) {
