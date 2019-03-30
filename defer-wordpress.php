@@ -46,6 +46,7 @@ if (!defined('DEFER_JS_VERSION')) {
 }
 
 if (!defined('DEFER_JS_PLUGIN_NAME')) {
+    require_once __DIR__ . '/vendor/autoload.php';
     define('DEFER_JS_PLUGIN_NAME', 'defer-wordpress');
 }
 
@@ -57,26 +58,8 @@ if (!defined('DEFER_JS_PLUGIN_HOOK')) {
     define('DEFER_JS_PATREON', 'https://www.patreon.com/appseeds');
     define('DEFER_JS_RATING', 'https://wordpress.org/support/plugin/shins-pageload-magic/reviews/?filter=5#new-post');
     define('DEFER_JS_SETTINGS', admin_url('admin.php?page=' . DEFER_JS_PLUGIN_NAME));
-    define('DEFER_JS_CACHE_DIR', __DIR__ . '/vendor/shinsenter/defer.php/cache/sponsors.php');
+    define('DEFER_JS_CACHE_DIR', __DIR__ . '/vendor/shinsenter/defer.php/cache');
     define('DEFER_JS_CACHE_EXP', 86400);
-
-    if (!file_exists(DEFER_JS_CACHE_DIR) || time() - filectime(DEFER_JS_CACHE_DIR) >= DEFER_JS_CACHE_EXP) {
-        $source   = @file_get_contents(DEFER_JS_SPONSORS);
-        $template = "<?php
-if (!defined('DEFER_JS_SPONSORS_HTML')) {
-    define('DEFER_JS_SPONSORS_HTML', base64_decode('%s'));
-}
-";
-        @file_put_contents(
-            DEFER_JS_CACHE_DIR,
-            sprintf(
-                $template,
-                base64_encode($source)
-            )
-        );
-    }
-
-    @include_once DEFER_JS_CACHE_DIR;
 }
 
 if (!defined('DEFER_JS_CACHE_SUFFIX')) {
@@ -122,7 +105,6 @@ if (!function_exists('ob_defer_wordpress')) {
  */
 function activate_defer_wordpress()
 {
-    require_once __DIR__ . '/vendor/autoload.php';
     require_once plugin_dir_path(__FILE__) . 'includes/class-defer-js-activator.php';
     Defer_Js_Activator::activate();
 }
@@ -133,7 +115,6 @@ function activate_defer_wordpress()
  */
 function deactivate_defer_wordpress()
 {
-    require_once __DIR__ . '/vendor/autoload.php';
     require_once plugin_dir_path(__FILE__) . 'includes/class-defer-js-deactivator.php';
     Defer_Js_Deactivator::deactivate();
 }
@@ -158,8 +139,6 @@ require plugin_dir_path(__FILE__) . 'includes/class-defer-js.php';
  */
 function run_defer_wordpress()
 {
-    require_once __DIR__ . '/vendor/autoload.php';
-
     $plugin = new Defer_Js();
     $plugin->run();
 }
