@@ -192,11 +192,28 @@ class Defer_Js_Admin
         if (class_exists('shinsenter\Defer')) {
             $defer = new \shinsenter\Defer();
 
-            $defer->debug_mode            = false;
-            $defer->hide_warnings         = true;
-            $defer->append_defer_js       = false;
-            $defer->default_defer_time    = 10;
-            $defer->use_color_placeholder = true;
+            // Set test options
+            $defer->debug_mode         = false;
+            $defer->hide_warnings      = true;
+            $defer->append_defer_js    = false;
+            $defer->default_defer_time = 10;
+
+            $defer->enable_preloading   = true;
+            $defer->enable_dns_prefetch = true;
+            $defer->fix_render_blocking = true;
+            $defer->minify_output_html  = true;
+
+            $defer->enable_defer_css        = true;
+            $defer->enable_defer_scripts    = false;
+            $defer->enable_defer_images     = true;
+            $defer->enable_defer_iframes    = true;
+            $defer->enable_defer_background = true;
+
+            $defer->defer_web_fonts        = true;
+            $defer->use_css_fadein_effects = false;
+            $defer->use_color_placeholder  = false;
+
+            $defer->clearCache();
 
             foreach ($defer->options as $key => $value) {
                 update_option(DEFER_JS_PREFIX . $key, $value);
