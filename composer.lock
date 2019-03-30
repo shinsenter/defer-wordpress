@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/shinsenter/defer.php.git",
-                "reference": "4135aa2d03cabd65719477b0546463b018750b40"
+                "reference": "e36fc5609f10008aa58fcbfa8fcc6e82ab542248"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/shinsenter/defer.php/zipball/4135aa2d03cabd65719477b0546463b018750b40",
-                "reference": "4135aa2d03cabd65719477b0546463b018750b40",
+                "url": "https://api.github.com/repos/shinsenter/defer.php/zipball/e36fc5609f10008aa58fcbfa8fcc6e82ab542248",
+                "reference": "e36fc5609f10008aa58fcbfa8fcc6e82ab542248",
                 "shasum": ""
             },
             "require": {
@@ -74,7 +74,7 @@
                 "tiny-library",
                 "website-performance"
             ],
-            "time": "2019-03-30T14:06:40+00:00"
+            "time": "2019-03-30T16:28:53+00:00"
         },
         {
             "name": "symfony/http-foundation",

@@ -273,6 +273,22 @@
                         <tbody>
                             <tr class="top">
                                 <th>
+                                    <label for="deferjs_use_css_fadein_effects">Fade-in effect</label>
+                                </th>
+                                <td>
+                                    <fieldset>
+                                        <input type="hidden" value="0" name="<?php echo DEFER_JS_PREFIX . 'use_css_fadein_effects'; ?>">
+                                        <input type="checkbox" value="1"
+                                        <?php echo $options['use_css_fadein_effects'] == true ? 'checked' : ''; ?>
+                                        name="<?php echo DEFER_JS_PREFIX . 'use_css_fadein_effects'; ?>"
+                                        id="deferjs_use_css_fadein_effects">
+                                        <span class="description">Default: none.</span>
+                                        <p class="help">Add an fade-in effect for lazy images and iframes when they are fully loaded.</p>
+                                    </fieldset>
+                                </td>
+                            </tr>
+                            <tr class="top">
+                                <th>
                                     <label for="deferjs_use_color_placeholder">Color placeholder</label>
                                 </th>
                                 <td>
@@ -282,7 +298,7 @@
                                         <?php echo $options['use_color_placeholder'] == true ? 'checked' : ''; ?>
                                         name="<?php echo DEFER_JS_PREFIX . 'use_color_placeholder'; ?>"
                                         id="deferjs_use_color_placeholder">
-                                        <span class="description">Default: checked.</span>
+                                        <span class="description">Default: none.</span>
                                         <p class="help">Use a color placeholder for lazy images and iframes.</p>
                                     </fieldset>
                                 </td>
