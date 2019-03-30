@@ -66,30 +66,6 @@ if (!defined('DEFER_JS_CACHE_SUFFIX')) {
     define('DEFER_JS_CACHE_SUFFIX', '_' . DEFER_WORDPRESS_PLUGIN_VERSION);
 }
 
-if (!defined('DEFER_JS_SPONSORS_HTML')) {
-    if (class_exists('shinsenter\DeferCache')) {
-        $cache = new \shinsenter\DeferCache(DEFER_JS_CACHE_DIR, 1);
-
-        if (empty($html = $cache->get('sponsors' . DEFER_JS_CACHE_SUFFIX))) {
-            $html = @file_get_contents(DEFER_JS_SPONSORS . '?t=' . time());
-            $cache->put('sponsors' . DEFER_JS_CACHE_SUFFIX, $html, DEFER_JS_CACHE_EXP);
-        }
-
-        define('DEFER_JS_SPONSORS_HTML', $html);
-    } else {
-        if (!file_exists(DEFER_JS_CACHE_DIR) || time() - filectime(DEFER_JS_CACHE_DIR) >= DEFER_JS_CACHE_EXP) {
-            $source   = @file_get_contents(DEFER_JS_SPONSORS . '?t=' . time());
-            $template = "<?php define('DEFER_JS_SPONSORS_HTML', base64_decode('%s'));";
-            @file_put_contents(
-                DEFER_JS_CACHE_DIR . '/sponsors.php',
-                sprintf($template, base64_encode($source))
-            );
-        }
-
-        @include_once DEFER_JS_CACHE_DIR . '/sponsors.php';
-    }
-}
-
 /*
  * The main code
  */

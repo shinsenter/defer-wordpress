@@ -17,30 +17,30 @@
 
         <?php if (isset($reset_settings)) {
     ?>
-        <div id="message" class="updated fade">
-            <p><strong>Settings have been set to default. Please empty all page caches.</strong></p>
-        </div>
-        <?php
+            <div id="message" class="updated fade">
+                <p><strong>Settings have been set to default. Please empty all page caches.</strong></p>
+            </div>
+            <?php
 } ?>
 
         <?php if (isset($save_settings)) {
         $msg = $save_settings === false ? 'Cannot save your settings.' : 'All changes have been saved. Please empty all page caches.';
         $err = $save_settings === false ? 'error' : 'updated'; ?>
-        <div id="message" class="<?php echo $err; ?> fade">
-            <p><strong><?php echo esc_html($msg); ?></strong></p>
-        </div>
-        <?php
+            <div id="message" class="<?php echo $err; ?> fade">
+                <p><strong><?php echo esc_html($msg); ?></strong></p>
+            </div>
+            <?php
     } ?>
 
         <?php if (!isset($reset_settings) && !isset($save_settings)) {
         ?>
-        <div id="message" class="notice notice-info fade">
-            <p>
-                <strong>💡 Tip:</strong> For better result, please <u>disable</u> lazyload and HTML-CSS-JS optimizations by other plugins.
-                Using with a <a href="plugin-install.php?s=caching&tab=search&type=tag">caching plugin</a> is strongly recommended.
-            </p>
-        </div>
-        <?php
+            <div id="message" class="notice notice-info fade">
+                <p>
+                    <strong>💡 Tip:</strong> For better result, please <u>disable</u> lazyload and HTML-CSS-JS optimizations by other plugins.
+                    Using with a <a href="plugin-install.php?s=caching&tab=search&type=tag">caching plugin</a> is strongly recommended.
+                </p>
+            </div>
+            <?php
     } ?>
 
         <form method="post" action="<?php echo DEFER_JS_SETTINGS; ?>">
