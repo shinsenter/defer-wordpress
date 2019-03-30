@@ -3,5 +3,7 @@ _dist_
 README.md
 composer.*
 sonar-*
-test
-defer.php/assets
+test/
+defer.php/assets/
+Tests/
+*Test*.php
