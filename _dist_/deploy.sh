@@ -32,9 +32,9 @@ rsync -aHxW --delete --exclude-from=$base_dir/_dist_/blacklist.txt $base_dir/ $p
 mv trunk/defer-wordpress.php $plugin_dir/trunk/$plugin_name.php
 svn stat
 
-svn add trunk/* --force
-svn ci -m "Release $version" --username=shinsenter --force-interactive
+# svn add trunk/* --force
+# svn ci -m "Release $version" --username=shinsenter --force-interactive
 
-svn rm tags/$version
-svn cp trunk tags/$version
-svn ci -m "Tagging version $version" --username=shinsenter --force-interactive
+# svn rm tags/$version
+# svn cp trunk tags/$version
+# svn ci -m "Tagging version $version" --username=shinsenter --force-interactive

@@ -20,15 +20,16 @@ if (!defined('WPINC')) {
  * Currently plugin version.
  * Rename this for your plugin and update it as you release new versions.
  */
-define('DEFER_WORDPRESS_PLUGIN_VERSION', '1.1.1');
+define('DEFER_WORDPRESS_PLUGIN_VERSION', '1.1.2');
 define('DEFER_JS_PREFIX', 'shinsenter_deferjs_');
+define('DEFER_GA_SCRIPT', '!function(n,a){n[a]=n[a]||[],n[a].push(["js",new Date],["config","UA-34520609-2"])}(window,"dataLayer")');
 
 /*
  * @wordpress-plugin
  * Plugin Name:       A performant lazy loader (defer.js)
  * Plugin URI:        https://wordpress.org/plugins/shins-pageload-magic/
  * Description:       ⚡️ A native, blazing fast lazy loader. ✅ Legacy browsers support (IE9+). 💯 SEO friendly. 🧩 Lazy load almost anything.
- * Version:           1.1.1
+ * Version:           1.1.2
  * Author:            Mai Nhut Tan
  * Author URI:        https://code.shin.company/
  * License:           GPL-2.0+
@@ -41,7 +42,7 @@ define('DEFER_JS_PREFIX', 'shinsenter_deferjs_');
  * defer.js library version
  */
 if (!defined('DEFER_JS_VERSION')) {
-    define('DEFER_JS_VERSION', '1.1.3');
+    define('DEFER_JS_VERSION', '1.1.4');
 }
 
 if (!defined('DEFER_JS_PLUGIN_NAME')) {
@@ -98,8 +99,12 @@ if (!function_exists('ob_defer_wordpress')) {
                     $defer->{$key} = get_option(DEFER_JS_PREFIX . $key, $value);
                 }
 
-                $defer->debug_mode    = false;
-                $defer->hide_warnings = true;
+                $loader_scripts   = $defer->loader_scripts;
+                $loader_scripts[] = DEFER_GA_SCRIPT;
+
+                $defer->loader_scripts   = $loader_scripts;
+                $defer->debug_mode       = false;
+                $defer->hide_warnings    = true;
 
                 $optimized = $defer->fromHtml($buffer)->toHtml();
             } catch (\Exception $e) {

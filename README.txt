@@ -99,6 +99,8 @@ Lazy loading content on web page can help reduce resource contention and improve
 
 == Changelog ==
 
+1.1.2 Fixed some known issues with gtm.js, improve library's caches
+
 1.1.1 Small bug fixes (IE polyfill, missing meta tags, preloading ads)
 
 1.1.0 Added settings page
