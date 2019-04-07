@@ -57,9 +57,6 @@ class Defer_Js_Activator
             // Create library cache
             $dummy = '<!DOCTYPE html><html><head></head><body></body></html>';
             $defer->fromHtml($dummy)->toHtml();
-
-            // Update the version
-            update_option(DEFER_JS_PREFIX . 'version', DEFER_WORDPRESS_PLUGIN_VERSION);
         }
     }
 }

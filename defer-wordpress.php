@@ -111,6 +111,9 @@ $installed_version = get_option(DEFER_JS_PREFIX . 'version', '');
 
 if ($installed_version !== DEFER_WORDPRESS_PLUGIN_VERSION) {
     add_action('admin_notices', 'shinsenter_deferjs_update_note');
+
+    // Update the version
+    update_option(DEFER_JS_PREFIX . 'version', DEFER_WORDPRESS_PLUGIN_VERSION);
 }
 
 /**
