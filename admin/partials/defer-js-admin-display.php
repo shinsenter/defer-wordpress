@@ -63,7 +63,9 @@
                                         <?php echo $options['append_defer_js'] == true ? 'checked' : ''; ?>
                                         name="<?php echo DEFER_JS_PREFIX . 'append_defer_js'; ?>"
                                         id="deferjs_append_defer_js">
-                                        <span class="description">Default: none. Current defer.js version: <?php echo DEFER_JS_VERSION; ?>.</span>
+                                        <span class="description">
+                                            Default: <?php echo $default['append_defer_js'] ? 'checked' : 'none'; ?>.
+                                            Current defer.js version: <?php echo DEFER_JS_VERSION; ?>.</span>
                                         <p class="help">Copy defer.js library and inline it in HTML document.</p>
                                     </fieldset>
                                 </td>
@@ -78,6 +80,7 @@
                                         name="<?php echo DEFER_JS_PREFIX . 'default_defer_time'; ?>"
                                         id="deferjs_default_defer_time"
                                         value="<?php echo esc_html($options['default_defer_time']); ?>">
+                                        <span class="description">Default: <?php echo $default['default_defer_time'] ?: '0'; ?>ms.</span>
                                         <p class="help">Deferred resources will be triggerred loading after a specified number of milliseconds. Tip: 1000ms = 1 second.</p>
                                     </fieldset>
                                 </td>
@@ -108,7 +111,7 @@
                                         <?php echo $options['enable_preloading'] == true ? 'checked' : ''; ?>
                                         name="<?php echo DEFER_JS_PREFIX . 'enable_preloading'; ?>"
                                         id="deferjs_enable_preloading">
-                                        <span class="description">Default: checked.</span>
+                                        <span class="description">Default: <?php echo $default['enable_preloading'] ? 'checked' : 'none'; ?>.</span>
                                         <p class="help">Preloading content with rel="preload". <a rel="nofollow" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Preloading_content" target="_blank">This article</a> provides a basic guide to how preload works.</p>
                                     </fieldset>
                                 </td>
@@ -124,7 +127,7 @@
                                         <?php echo $options['enable_dns_prefetch'] == true ? 'checked' : ''; ?>
                                         name="<?php echo DEFER_JS_PREFIX . 'enable_dns_prefetch'; ?>"
                                         id="deferjs_enable_dns_prefetch">
-                                        <span class="description">Default: checked.</span>
+                                        <span class="description">Default: <?php echo $default['enable_dns_prefetch'] ? 'checked' : 'none'; ?>.</span>
                                         <p class="help">DNS resolution time can lead to a significant amount of user perceived latency. Enabling DNS prefetch saves about 200 milliseconds in browser navigation. <a rel="nofollow" href="https://dev.chromium.org/developers/design-documents/dns-prefetching" target="_blank">This article</a> provides a basic guide to how DNS prefetch works.</p>
                                     </fieldset>
                                 </td>
@@ -140,7 +143,7 @@
                                         <?php echo $options['fix_render_blocking'] == true ? 'checked' : ''; ?>
                                         name="<?php echo DEFER_JS_PREFIX . 'fix_render_blocking'; ?>"
                                         id="deferjs_fix_render_blocking">
-                                        <span class="description">Default: checked.</span>
+                                        <span class="description">Default: <?php echo $default['fix_render_blocking'] ? 'checked' : 'none'; ?>.</span>
                                         <p class="help">This moves all CSS blocks to the top to ensure the content loads with styles already applied, and puts your scripts at the very bottom of the page, so that as much as possible of the page gets loaded and rendered to the user, as fast as possible.</p>
                                     </fieldset>
                                 </td>
@@ -156,7 +159,7 @@
                                         <?php echo $options['minify_output_html'] == true ? 'checked' : ''; ?>
                                         name="<?php echo DEFER_JS_PREFIX . 'minify_output_html'; ?>"
                                         id="deferjs_minify_output_html">
-                                        <span class="description">Default: checked.</span>
+                                        <span class="description">Default: <?php echo $default['minify_output_html'] ? 'checked' : 'none'; ?>.</span>
                                         <p class="help">Blazing fast HTML minification algorithm. You may not need any other plugin for minifying HTML.</p>
                                     </fieldset>
                                 </td>
@@ -187,7 +190,7 @@
                                         <?php echo $options['enable_defer_css'] == true ? 'checked' : ''; ?>
                                         name="<?php echo DEFER_JS_PREFIX . 'enable_defer_css'; ?>"
                                         id="deferjs_enable_defer_css">
-                                        <span class="description">Default: checked.</span>
+                                        <span class="description">Default: <?php echo $default['enable_defer_css'] ? 'checked' : 'none'; ?>.</span>
                                         <!-- <p class="help">This is helper text</p> -->
                                     </fieldset>
                                 </td>
@@ -203,7 +206,7 @@
                                         <?php echo $options['enable_defer_scripts'] == true ? 'checked' : ''; ?>
                                         name="<?php echo DEFER_JS_PREFIX . 'enable_defer_scripts'; ?>"
                                         id="deferjs_enable_defer_scripts">
-                                        <span class="description">Default: none.</span>
+                                        <span class="description">Default: <?php echo $default['enable_defer_scripts'] ? 'checked' : 'none'; ?>.</span>
                                         <p class="help">The loading and execution of scripts that are not necessary for the initial page render will be deferred until after the initial render or other critical parts of the page have finished loading. Use with caution.</p>
                                     </fieldset>
                                 </td>
@@ -219,7 +222,7 @@
                                         <?php echo $options['enable_defer_images'] == true ? 'checked' : ''; ?>
                                         name="<?php echo DEFER_JS_PREFIX . 'enable_defer_images'; ?>"
                                         id="deferjs_enable_defer_images">
-                                        <span class="description">Default: checked.</span>
+                                        <span class="description">Default: <?php echo $default['enable_defer_images'] ? 'checked' : 'none'; ?>.</span>
                                         <!-- <p class="help">This is helper text</p> -->
                                     </fieldset>
                                 </td>
@@ -235,7 +238,7 @@
                                         <?php echo $options['enable_defer_iframes'] == true ? 'checked' : ''; ?>
                                         name="<?php echo DEFER_JS_PREFIX . 'enable_defer_iframes'; ?>"
                                         id="deferjs_enable_defer_iframes">
-                                        <span class="description">Default: checked.</span>
+                                        <span class="description">Default: <?php echo $default['enable_defer_iframes'] ? 'checked' : 'none'; ?>.</span>
                                         <!-- <p class="help">This is helper text</p> -->
                                     </fieldset>
                                 </td>
@@ -251,7 +254,7 @@
                                         <?php echo $options['enable_defer_background'] == true ? 'checked' : ''; ?>
                                         name="<?php echo DEFER_JS_PREFIX . 'enable_defer_background'; ?>"
                                         id="deferjs_enable_defer_background">
-                                        <span class="description">Default: checked.</span>
+                                        <span class="description">Default: <?php echo $default['enable_defer_background'] ? 'checked' : 'none'; ?>.</span>
                                         <p class="help">Defer all inline background images inside style attribute.</p>
                                     </fieldset>
                                 </td>
@@ -282,7 +285,7 @@
                                         <?php echo $options['use_css_fadein_effects'] == true ? 'checked' : ''; ?>
                                         name="<?php echo DEFER_JS_PREFIX . 'use_css_fadein_effects'; ?>"
                                         id="deferjs_use_css_fadein_effects">
-                                        <span class="description">Default: none.</span>
+                                        <span class="description">Default: <?php echo $default['use_css_fadein_effects'] ? 'checked' : 'none'; ?>.</span>
                                         <p class="help">Add an fade-in effect for lazy images and iframes when they are fully loaded.</p>
                                     </fieldset>
                                 </td>
@@ -298,7 +301,7 @@
                                         <?php echo $options['use_color_placeholder'] == true ? 'checked' : ''; ?>
                                         name="<?php echo DEFER_JS_PREFIX . 'use_color_placeholder'; ?>"
                                         id="deferjs_use_color_placeholder">
-                                        <span class="description">Default: none.</span>
+                                        <span class="description">Default: <?php echo $default['use_color_placeholder'] ? 'checked' : 'none'; ?>.</span>
                                         <p class="help">Use a color placeholder for lazy images and iframes.</p>
                                     </fieldset>
                                 </td>
@@ -357,7 +360,7 @@
                                         <?php echo $options['defer_web_fonts'] == true ? 'checked' : ''; ?>
                                         name="<?php echo DEFER_JS_PREFIX . 'defer_web_fonts'; ?>"
                                         id="deferjs_defer_web_fonts">
-                                        <span class="description">Default: checked.</span>
+                                        <span class="description">Default: <?php echo $default['defer_web_fonts'] ? 'checked' : 'none'; ?>.</span>
                                         <p class="help">All web font patterns in the list below will be deferred until the page have finished loading.</p>
                                     </fieldset>
                                 </td>

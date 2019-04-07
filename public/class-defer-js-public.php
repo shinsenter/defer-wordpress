@@ -96,6 +96,6 @@ class Defer_Js_Public
 
     public function enable_defer_wordpress()
     {
-        ob_start('ob_defer_wordpress');
+        ob_start('shinsenter_deferjs_ob');
     }
 }

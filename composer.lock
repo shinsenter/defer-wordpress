@@ -1,28 +1,28 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b43ca693cc6b75f3afe4ac7300cf2dac",
+    "content-hash": "77b4f7853eb883a5021e2e178d29776d",
     "packages": [
         {
             "name": "shinsenter/defer.php",
-            "version": "dev-master",
+            "version": "1.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/shinsenter/defer.php.git",
-                "reference": "e36fc5609f10008aa58fcbfa8fcc6e82ab542248"
+                "reference": "c3b381a0fc1958c167d8d0cb57b043bf791d14fd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/shinsenter/defer.php/zipball/e36fc5609f10008aa58fcbfa8fcc6e82ab542248",
-                "reference": "e36fc5609f10008aa58fcbfa8fcc6e82ab542248",
+                "url": "https://api.github.com/repos/shinsenter/defer.php/zipball/c3b381a0fc1958c167d8d0cb57b043bf791d14fd",
+                "reference": "c3b381a0fc1958c167d8d0cb57b043bf791d14fd",
                 "shasum": ""
             },
             "require": {
-                "php": "^5.6",
-                "symfony/http-foundation": "~3.3.1"
+                "php": ">=5.6",
+                "symfony/http-foundation": ">2.6"
             },
             "type": "library",
             "autoload": {
@@ -38,43 +38,40 @@
             "authors": [
                 {
                     "name": "Mai Nhut Tan",
-                    "email": "shin@shin.company"
+                    "email": "shin@shin.company",
+                    "homepage": "https://code.shin.company",
+                    "role": "Developer"
                 }
             ],
-            "description": "defer.php is a PHP helper class to integrate shinsenter/defer.js library into your websites.",
+            "description": "🚀 A PHP library that focuses on minimizing payload size of HTML document and optimizing processing on the browser when rendering the web page.",
             "keywords": [
-                "PageSpeed",
-                "avoid-render-blocking",
-                "browser-compatibility",
-                "browser-perf",
-                "composer-package",
+                "PHP Library",
+                "avoid render blocking",
                 "defer",
+                "defer php",
                 "defer.js",
-                "defer.php",
-                "dom-optimization",
-                "dom-optimize",
-                "efficient",
-                "frontend-library",
-                "intersection-observer",
-                "lazy",
-                "lazy-ads",
-                "lazy-css",
-                "lazy-iframe",
-                "lazy-image",
-                "lazy-img",
-                "lazy-javascript",
-                "lazy-js",
-                "lazy-loader",
-                "lazy-loading",
-                "lazy-style",
-                "lazy-video",
+                "dom optimization",
+                "gtmetrix",
+                "lazy load",
+                "lazy loader",
+                "lazy loading",
                 "lazyload",
-                "performant",
-                "php-library",
-                "tiny-library",
-                "website-performance"
+                "lazyload css",
+                "lazyload facebook",
+                "lazyload font",
+                "lazyload image",
+                "lazyload js",
+                "lazyload laravel",
+                "lazyload php",
+                "lazyload video",
+                "lazyload wordpress",
+                "lazyload youtube",
+                "page speed optimization",
+                "pagespeed insight",
+                "performance",
+                "website speed optimization"
             ],
-            "time": "2019-03-30T16:28:53+00:00"
+            "time": "2019-04-07T14:33:08+00:00"
         },
         {
             "name": "symfony/http-foundation",
@@ -192,13 +189,11 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "shinsenter/defer.php": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=5.5.9"
+        "php": ">=5.6"
     },
     "platform-dev": [],
     "platform-overrides": {

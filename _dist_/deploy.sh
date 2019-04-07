@@ -16,7 +16,7 @@ plugin_name=shins-pageload-magic
 plugin_svn=$plugin_url/$plugin_name
 plugin_dir=$build_dir/$plugin_name
 
-version=`head -n 1 $base_dir/_dist_/VERSION`
+version=`head -n 1 $base_dir/VERSION`
 
 echo "Deploy version ${version}"
 

@@ -72,8 +72,8 @@ class Defer_Js_Admin
 
         // Create new top-level menu
         add_menu_page(
-            __('Edit defer.js settings'),
-            __('Edit defer.js'),
+            __('Configure defer.js settings'),
+            __('My defer.js'),
             'administrator',
             DEFER_JS_PLUGIN_NAME,
             [$this, 'options_page'],
@@ -84,7 +84,7 @@ class Defer_Js_Admin
 
     public function register_menu_plugin_options($links)
     {
-        $links[] = '<a title="Edit defer.js settings" href="' . DEFER_JS_SETTINGS . '">' . __('Settings') . '</a>';
+        $links[] = '<a title="Configure defer.js settings" href="' . DEFER_JS_SETTINGS . '">' . __('Settings') . '</a>';
         $links[] = '<a title="Donate for defer.js" target="paypal" href="' . DEFER_JS_PAYPAL . '">' . __('Donate') . '</a>';
         $links[] = '<a title="Like defer.js" target="rating" href="' . DEFER_JS_RATING . '">' . __('Like') . '</a>';
 
@@ -122,6 +122,7 @@ class Defer_Js_Admin
             $save_settings = $this->save_settings();
         }
 
+        $default = $this->default_settings();
         $options = $this->get_settings();
 
         include plugin_dir_path(__FILE__) . 'partials/defer-js-admin-display.php';
@@ -183,10 +184,8 @@ class Defer_Js_Admin
         return 1;
     }
 
-    protected function reset_settings()
+    protected function default_settings()
     {
-        @unlink(DEFER_JS_CACHE_DIR);
-
         $result = false;
 
         if (class_exists('shinsenter\Defer')) {
@@ -204,14 +203,28 @@ class Defer_Js_Admin
             $defer->minify_output_html  = true;
 
             $defer->enable_defer_css        = true;
-            $defer->enable_defer_scripts    = false;
+            $defer->enable_defer_scripts    = true;
             $defer->enable_defer_images     = true;
             $defer->enable_defer_iframes    = true;
             $defer->enable_defer_background = true;
 
             $defer->defer_web_fonts        = true;
-            $defer->use_css_fadein_effects = false;
+            $defer->use_css_fadein_effects = true;
             $defer->use_color_placeholder  = false;
+
+            $result = $defer->options;
+        }
+
+        return $result;
+    }
+
+    protected function reset_settings()
+    {
+        @unlink(DEFER_JS_CACHE_DIR);
+
+        if (class_exists('shinsenter\Defer')) {
+            $default = $this->default_settings();
+            $defer   = new \shinsenter\Defer(null, $default);
 
             $defer->clearCache();
 
@@ -223,10 +236,10 @@ class Defer_Js_Admin
             $dummy = '<!DOCTYPE html><html><head></head><body></body></html>';
             $defer->fromHtml($dummy)->toHtml();
 
-            $result = $defer->options;
+            return $default;
         }
 
-        return $result;
+        return false;
     }
 
     protected function save_settings()

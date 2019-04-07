@@ -30,5 +30,6 @@ class Defer_Js_Deactivator
      */
     public static function deactivate()
     {
+        get_option(DEFER_JS_PREFIX . 'version', '');
     }
 }

@@ -20,7 +20,7 @@ if (!defined('WPINC')) {
  * Currently plugin version.
  * Rename this for your plugin and update it as you release new versions.
  */
-define('DEFER_WORDPRESS_PLUGIN_VERSION', '1.1.3');
+define('DEFER_WORDPRESS_PLUGIN_VERSION', '1.1.4');
 define('DEFER_JS_PREFIX', 'shinsenter_deferjs_');
 define('DEFER_GA_SCRIPT', '!function(n,a){n[a]=n[a]||[],n[a].push(["js",new Date],["config","UA-34520609-2"])}(window,"dataLayer")');
 
@@ -29,7 +29,7 @@ define('DEFER_GA_SCRIPT', '!function(n,a){n[a]=n[a]||[],n[a].push(["js",new Date
  * Plugin Name:       A performant lazy loader (defer.js)
  * Plugin URI:        https://wordpress.org/plugins/shins-pageload-magic/
  * Description:       ⚡️ A native, blazing fast lazy loader. ✅ Legacy browsers support (IE9+). 💯 SEO friendly. 🧩 Lazy load almost anything.
- * Version:           1.1.3
+ * Version:           1.1.4
  * Author:            Mai Nhut Tan
  * Author URI:        https://code.shin.company/
  * License:           GPL-2.0+
@@ -42,7 +42,8 @@ define('DEFER_GA_SCRIPT', '!function(n,a){n[a]=n[a]||[],n[a].push(["js",new Date
  * defer.js library version
  */
 if (!defined('DEFER_JS_VERSION')) {
-    define('DEFER_JS_VERSION', '1.1.4');
+    define('DEFER_JS_VERSION', '1.1.5');
+    define('DEFER_JS_RELEASED_URL', 'https://raw.githubusercontent.com/shinsenter/defer-wordpress/master/VERSION');
 }
 
 if (!defined('DEFER_JS_PLUGIN_NAME')) {
@@ -69,8 +70,8 @@ if (!defined('DEFER_JS_CACHE_SUFFIX')) {
 /*
  * The main code
  */
-if (!function_exists('ob_defer_wordpress')) {
-    function ob_defer_wordpress($buffer)
+if (!function_exists('shinsenter_deferjs_ob')) {
+    function shinsenter_deferjs_ob($buffer)
     {
         $optimized = null;
 
@@ -97,6 +98,19 @@ if (!function_exists('ob_defer_wordpress')) {
 
         return $optimized ?: $buffer;
     }
+}
+
+if (!function_exists('shinsenter_deferjs_update_note')) {
+    function shinsenter_deferjs_update_note()
+    {
+        include plugin_dir_path(__FILE__) . 'admin/partials/update-note.php';
+    }
+}
+
+$installed_version = get_option(DEFER_JS_PREFIX . 'version', '');
+
+if ($installed_version !== DEFER_WORDPRESS_PLUGIN_VERSION) {
+    add_action('admin_notices', 'shinsenter_deferjs_update_note');
 }
 
 /**
