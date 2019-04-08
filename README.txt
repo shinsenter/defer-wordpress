@@ -99,6 +99,10 @@ Lazy loading content on web page can help reduce resource contention and improve
 
 == Changelog ==
 
+1.1.5 Hotfix: Escape HTML node value
+
+1.1.4 Many improvements
+
 1.1.3 Unify lazy attributes of another plugins
 
 1.1.2 Fixed some known issues with gtm.js, improve library's caches
