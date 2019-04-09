@@ -96,8 +96,9 @@ class Defer_Js_Admin
         if (!defined('DEFER_JS_SPONSORS_HTML')) {
             if (class_exists('shinsenter\DeferCache')) {
                 $cache = new \shinsenter\DeferCache(DEFER_JS_CACHE_DIR, 1);
+                $html  = $cache->get('sponsors' . DEFER_JS_CACHE_SUFFIX);
 
-                if (empty($html = $cache->get('sponsors' . DEFER_JS_CACHE_SUFFIX))) {
+                if (empty($html)) {
                     $html = @file_get_contents(DEFER_JS_SPONSORS . '?t=' . time());
                     $cache->put('sponsors' . DEFER_JS_CACHE_SUFFIX, $html, DEFER_JS_CACHE_EXP);
                 }
@@ -281,6 +282,8 @@ class Defer_Js_Admin
                 $defer->fromHtml($dummy)->toHtml();
                 $success = true;
             } catch (\Exception $e) {
+                // This is error
+                unset($e);
             }
 
             if ($success) {
