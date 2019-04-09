@@ -28,7 +28,7 @@
     display: inline-block;
 }
 
-.toplevel_page_defer-wordpress .wrap img.deferjs-icon {
+.toplevel_page_defer-wordpress .wrap .deferjs-icon {
     width: 28px;
     height: 28px;
     vertical-align: top;
@@ -52,7 +52,7 @@
     font-size: smaller;
 }
 
-.toplevel_page_defer-wordpress .wrap fieldset p.help {
+.toplevel_page_defer-wordpress .wrap fieldset .help {
     font-size: smaller;
     color: #555;
 }
