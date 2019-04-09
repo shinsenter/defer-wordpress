@@ -99,6 +99,8 @@ Lazy loading content on web page can help reduce resource contention and improve
 
 == Changelog ==
 
+1.1.6 Updated library version, improved javascript execution order
+
 1.1.5 Hotfix: Escape HTML node value
 
 1.1.4 Many improvements
