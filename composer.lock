@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/shinsenter/defer.php.git",
-                "reference": "42ab8de39bbbcd25897d86303cbea32730061668"
+                "reference": "3098e049121ff6f339732b6048ad883595de1d17"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/shinsenter/defer.php/zipball/42ab8de39bbbcd25897d86303cbea32730061668",
-                "reference": "42ab8de39bbbcd25897d86303cbea32730061668",
+                "url": "https://api.github.com/repos/shinsenter/defer.php/zipball/3098e049121ff6f339732b6048ad883595de1d17",
+                "reference": "3098e049121ff6f339732b6048ad883595de1d17",
                 "shasum": ""
             },
             "require": {
@@ -71,7 +71,7 @@
                 "performance",
                 "website speed optimization"
             ],
-            "time": "2019-04-09T16:10:17+00:00"
+            "time": "2019-04-09T16:56:11+00:00"
         },
         {
             "name": "symfony/http-foundation",
