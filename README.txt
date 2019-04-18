@@ -3,7 +3,7 @@ Contributors: shinsenter
 Donate link: https://www.paypal.me/shinsenter
 Tags: lazy,lazyload,lazy-js,lazy-css,lazy-image,lazy-iframe,lazy-video,pagespeed,website-performance,lazy-loading,lazy-loader,defer,lazy-ads,performant,avoid-render-blocking,browser-compatibility,intersection-observer,browser-perf,defer.js
 Requires at least: 4.0
-Tested up to: 5.1.1
+Tested up to: 5.2
 Stable tag: trunk
 Requires PHP: 5.6
 License: GPL-2.0+
@@ -13,11 +13,15 @@ License URI: https://github.com/shinsenter/defer-wordpress/blob/master/LICENSE
 
 == Description ==
 
-🔌 WordPress remains one of the most popular CMS platform until now, and I'm excited to make a Wordpress plugin integrating my beloved [defer.js](https://github.com/shinsenter/defer.js) library into your websites.
+WordPress remains one of the most popular CMS platform until now, and I'm excited to make a Wordpress plugin that focuses on minimizing payload size of HTML document and optimizing processing on the browser when rendering the web page.
+
+⚡️ A native, blazing fast lazy loader. ✅ Legacy browsers support (IE9+). 💯 SEO friendly. 🧩 Lazy load almost anything.
 
 Rate [5 stars (⭐️⭐️⭐️⭐️⭐️)](https://wordpress.org/support/plugin/shins-pageload-magic/reviews/?filter=5) if you guys like it.
 
-### defer.js
+💡 Tip for defer.js: To archive better result, please disable lazyload and HTML-CSS-JS optimizations by other plugins.
+
+### Powered by defer.js
 
 [defer.js](https://github.com/shinsenter/defer.js) is a super tiny, native performant library for lazy-loading JS, CSS, images, iframes...
 
@@ -99,6 +103,8 @@ Lazy loading content on web page can help reduce resource contention and improve
 
 == Changelog ==
 
+1.1.7 Fixed issues of FireFox, code improvements
+
 1.1.6 Updated library version, improved javascript execution order
 
 1.1.5 Hotfix: Escape HTML node value
@@ -128,3 +134,5 @@ Lazy loading content on web page can help reduce resource contention and improve
 == Upgrade Notice ==
 
 Nothing to do, just install and enjoy!
+
+If you are using older version of this plugin, please update now!

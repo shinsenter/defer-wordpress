@@ -48,54 +48,6 @@
             <?php do_settings_sections(DEFER_JS_PLUGIN_NAME); ?>
 
             <div class="postbox">
-                <h2>Add defer.js library</h2>
-                <div class="inside">
-                    <table class="form-table">
-                        <tbody>
-                            <tr class="top">
-                                <th>
-                                    <label for="deferjs_append_defer_js">Inline defer.js</label>
-                                </th>
-                                <td>
-                                    <fieldset>
-                                        <input type="hidden" value="0" name="<?php echo DEFER_JS_PREFIX . 'append_defer_js'; ?>">
-                                        <input type="checkbox" value="1"
-                                        <?php echo $options['append_defer_js'] == true ? 'checked' : ''; ?>
-                                        name="<?php echo DEFER_JS_PREFIX . 'append_defer_js'; ?>"
-                                        id="deferjs_append_defer_js">
-                                        <span class="description">
-                                            Default: <?php echo $default['append_defer_js'] ? 'checked' : 'none'; ?>.
-                                            Current defer.js version: <?php echo DEFER_JS_VERSION; ?>.</span>
-                                        <p class="help">Copy defer.js library and inline it in HTML document.</p>
-                                    </fieldset>
-                                </td>
-                            </tr>
-                            <tr class="top">
-                                <th>
-                                    <label for="deferjs_default_defer_time">Defer timeout</label>
-                                </th>
-                                <td>
-                                    <fieldset>
-                                        <input type="number"
-                                        name="<?php echo DEFER_JS_PREFIX . 'default_defer_time'; ?>"
-                                        id="deferjs_default_defer_time"
-                                        value="<?php echo esc_html($options['default_defer_time']); ?>">
-                                        <span class="description">Default: <?php echo $default['default_defer_time'] ?: '0'; ?>ms.</span>
-                                        <p class="help">Deferred resources will be triggerred loading after a specified number of milliseconds. Tip: 1000ms = 1 second.</p>
-                                    </fieldset>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-
-                    <p class="submit">
-                        <?php submit_button(__('Update all'), 'primary', 'save-settings', false); ?>
-                        <?php submit_button(__('Reset all to default'), 'secondary', 'reset-settings', false, ['reset-all' => true]); ?>
-                    </p>
-                </div>
-            </div>
-
-            <div class="postbox">
                 <h2>Page optimiztions</h2>
                 <div class="inside">
                     <table class="form-table">
@@ -419,6 +371,56 @@
                                     </fieldset>
                                 </td>
                             </tr>
+                        </tbody>
+                    </table>
+
+                    <p class="submit">
+                        <?php submit_button(__('Update all'), 'primary', 'save-settings', false); ?>
+                        <?php submit_button(__('Reset all to default'), 'secondary', 'reset-settings', false, ['reset-all' => true]); ?>
+                    </p>
+                </div>
+            </div>
+
+            <div class="postbox">
+                <h2>Add defer.js library</h2>
+                <div class="inside">
+                    <table class="form-table">
+                        <tbody>
+                            <tr class="top">
+                                <th>
+                                    <label for="deferjs_append_defer_js">Inline defer.js</label>
+                                </th>
+                                <td>
+                                    <fieldset>
+                                        <input type="hidden" value="0" name="<?php echo DEFER_JS_PREFIX . 'append_defer_js'; ?>">
+                                        <input type="checkbox" value="1"
+                                        <?php echo $options['append_defer_js'] == true ? 'checked' : ''; ?>
+                                        name="<?php echo DEFER_JS_PREFIX . 'append_defer_js'; ?>"
+                                        id="deferjs_append_defer_js">
+                                        <span class="description">
+                                            Default: <?php echo $default['append_defer_js'] ? 'checked' : 'none'; ?>.
+                                            Current defer.js version: <?php echo DEFER_JS_VERSION; ?>.</span>
+                                        <p class="help">Copy defer.js library and inline it in HTML document.</p>
+                                    </fieldset>
+                                </td>
+                            </tr>
+                            <!--
+                            <tr class="top">
+                                <th>
+                                    <label for="deferjs_default_defer_time">Defer timeout</label>
+                                </th>
+                                <td>
+                                    <fieldset>
+                                        <input type="number"
+                                        name="<?php echo DEFER_JS_PREFIX . 'default_defer_time'; ?>"
+                                        id="deferjs_default_defer_time"
+                                        value="<?php echo esc_html($options['default_defer_time']); ?>">
+                                        <span class="description">Default: <?php echo $default['default_defer_time'] ?: '0'; ?>ms.</span>
+                                        <p class="help">Deferred resources will be triggerred loading after a specified number of milliseconds. Tip: 1000ms = 1 second.</p>
+                                    </fieldset>
+                                </td>
+                            </tr>
+                            -->
                         </tbody>
                     </table>
 
