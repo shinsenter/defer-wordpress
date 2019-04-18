@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/shinsenter/defer.php.git",
-                "reference": "b5171aafdd8d41e23b74e0fa2c4861a19ef00dd6"
+                "reference": "d024be374813be353e11875317dde5241134ff9f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/shinsenter/defer.php/zipball/b5171aafdd8d41e23b74e0fa2c4861a19ef00dd6",
-                "reference": "b5171aafdd8d41e23b74e0fa2c4861a19ef00dd6",
+                "url": "https://api.github.com/repos/shinsenter/defer.php/zipball/d024be374813be353e11875317dde5241134ff9f",
+                "reference": "d024be374813be353e11875317dde5241134ff9f",
                 "shasum": ""
             },
             "require": {
