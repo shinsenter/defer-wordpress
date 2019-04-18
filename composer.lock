@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "shinsenter/defer.php",
-            "version": "1.0.9",
+            "version": "1.0.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/shinsenter/defer.php.git",
-                "reference": "3098e049121ff6f339732b6048ad883595de1d17"
+                "reference": "b5171aafdd8d41e23b74e0fa2c4861a19ef00dd6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/shinsenter/defer.php/zipball/3098e049121ff6f339732b6048ad883595de1d17",
-                "reference": "3098e049121ff6f339732b6048ad883595de1d17",
+                "url": "https://api.github.com/repos/shinsenter/defer.php/zipball/b5171aafdd8d41e23b74e0fa2c4861a19ef00dd6",
+                "reference": "b5171aafdd8d41e23b74e0fa2c4861a19ef00dd6",
                 "shasum": ""
             },
             "require": {
@@ -71,7 +71,7 @@
                 "performance",
                 "website speed optimization"
             ],
-            "time": "2019-04-09T16:56:11+00:00"
+            "time": "2019-04-18T13:11:33+00:00"
         },
         {
             "name": "symfony/http-foundation",

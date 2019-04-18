@@ -42,7 +42,7 @@ define('DEFER_GA_SCRIPT', '!function(n,a){n[a]=n[a]||[],n[a].push(["js",new Date
  * defer.js library version
  */
 if (!defined('DEFER_JS_VERSION')) {
-    define('DEFER_JS_VERSION', '1.1.7');
+    define('DEFER_JS_VERSION', '1.1.7-c');
     define('DEFER_JS_RELEASED_URL', 'https://raw.githubusercontent.com/shinsenter/defer-wordpress/master/VERSION');
 }
 
