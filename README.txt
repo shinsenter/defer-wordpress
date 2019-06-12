@@ -103,6 +103,8 @@ Lazy loading content on web page can help reduce resource contention and improve
 
 == Changelog ==
 
+1.1.8 Updated defer.php library (v1.0.15)
+
 1.1.7 Fixed issues of FireFox, code improvements
 
 1.1.6 Updated library version, improved javascript execution order
