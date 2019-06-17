@@ -3,7 +3,7 @@ Contributors: shinsenter
 Donate link: https://www.paypal.me/shinsenter
 Tags: lazy,lazyload,lazy-js,lazy-css,lazy-image,lazy-iframe,lazy-video,pagespeed,website-performance,lazy-loading,lazy-loader,defer,lazy-ads,performant,avoid-render-blocking,browser-compatibility,intersection-observer,browser-perf,defer.js
 Requires at least: 4.0
-Tested up to: 5.2
+Tested up to: 5.2.1
 Stable tag: trunk
 Requires PHP: 5.6
 License: GPL-2.0+
@@ -102,6 +102,8 @@ Lazy loading content on web page can help reduce resource contention and improve
 
 
 == Changelog ==
+
+1.1.9 Fixed wrong encoding when using mb_detect_encoding() function
 
 1.1.8 Updated defer.php library (v1.0.15)
 
