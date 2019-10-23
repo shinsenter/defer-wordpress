@@ -45,8 +45,8 @@ class Defer_Js_Loader
      */
     public function __construct()
     {
-        $this->actions = [];
-        $this->filters = [];
+        $this->actions = array();
+        $this->filters = array();
     }
 
     /**
@@ -87,11 +87,11 @@ class Defer_Js_Loader
     public function run()
     {
         foreach ($this->filters as $hook) {
-            add_filter($hook['hook'], [$hook['component'], $hook['callback']], $hook['priority'], $hook['accepted_args']);
+            add_filter($hook['hook'], array($hook['component'], $hook['callback']), $hook['priority'], $hook['accepted_args']);
         }
 
         foreach ($this->actions as $hook) {
-            add_action($hook['hook'], [$hook['component'], $hook['callback']], $hook['priority'], $hook['accepted_args']);
+            add_action($hook['hook'], array($hook['component'], $hook['callback']), $hook['priority'], $hook['accepted_args']);
         }
     }
 
@@ -110,13 +110,13 @@ class Defer_Js_Loader
      */
     private function add($hooks, $hook, $component, $callback, $priority, $accepted_args)
     {
-        $hooks[] = [
+        $hooks[] = array(
             'hook'          => (string) $hook,
             'component'     => $component,
             'callback'      => $callback,
             'priority'      => (int) $priority,
             'accepted_args' => (int) $accepted_args,
-        ];
+        );
 
         return $hooks;
     }

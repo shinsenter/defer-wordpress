@@ -10,6 +10,7 @@
  * @package   defer-wordpress
  * @see       https://code.shin.company/defer-wordpress/
  */
+
 use PhpCsFixer\Config;
 use PhpCsFixer\Finder;
 
@@ -24,7 +25,7 @@ $header = <<<'EOF'
 @see       https://code.shin.company/defer-wordpress/
 EOF;
 
-$rules = [
+$rules = array(
     '@PHP56Migration'                               => true,
     '@PHP70Migration'                               => true,
     '@PHP71Migration'                               => true,
@@ -32,20 +33,20 @@ $rules = [
     '@PSR2'                                         => true,
     'align_multiline_comment'                       => true,
     'array_indentation'                             => true,
-    'array_syntax'                                  => ['syntax' => 'short'],
+    'array_syntax'                                  => array('syntax' => 'long'),
     'combine_consecutive_issets'                    => true,
     'combine_consecutive_unsets'                    => true,
     'compact_nullable_typehint'                     => true,
-    'concat_space'                                  => ['spacing' => 'one'],
+    'concat_space'                                  => array('spacing' => 'one'),
     'escape_implicit_backslashes'                   => true,
     'explicit_indirect_variable'                    => true,
     'explicit_string_variable'                      => true,
     'fully_qualified_strict_types'                  => true,
-    'header_comment'                                => ['header' => $header, 'comment_type' => 'PHPDoc', 'location' => 'after_open', 'separate' => 'both'],
+    'header_comment'                                => array('header' => $header, 'comment_type' => 'PHPDoc', 'location' => 'after_open', 'separate' => 'both'),
     'heredoc_to_nowdoc'                             => true,
-    'increment_style'                               => ['style' => 'post'],
-    'list_syntax'                                   => ['syntax' => 'long'],
-    'method_argument_space'                         => ['on_multiline' => 'ensure_fully_multiline'],
+    'increment_style'                               => array('style' => 'post'),
+    'list_syntax'                                   => array('syntax' => 'long'),
+    'method_argument_space'                         => array('on_multiline' => 'ensure_fully_multiline'),
     'method_chaining_indentation'                   => true,
     'multiline_comment_opening_closing'             => true,
     'native_function_invocation'                    => false,
@@ -77,29 +78,29 @@ $rules = [
     'single_quote'                                  => true,
     'yoda_style'                                    => false,
 
-    'blank_line_before_statement'                   => [
-        'statements' => [
+    'blank_line_before_statement'                   => array(
+        'statements' => array(
             'continue', 'declare', 'return', 'throw', 'try',
             'declare', 'for', 'foreach', 'goto', 'if',
-        ],
-    ],
-    'no_extra_blank_lines'                          => [
-        'tokens' => [
+        ),
+    ),
+    'no_extra_blank_lines'                          => array(
+        'tokens' => array(
             'continue', 'extra', 'return', 'throw', 'use',
             'parenthesis_brace_block', 'square_brace_block', 'curly_brace_block',
-        ],
-    ],
-    'braces'                                        => [
+        ),
+    ),
+    'braces'                                        => array(
         'allow_single_line_closure' => true,
-    ],
-    'binary_operator_spaces'                        => [
+    ),
+    'binary_operator_spaces'                        => array(
         'default'   => 'single_space',
-        'operators' => [
+        'operators' => array(
             '=>' => 'align_single_space',
             '='  => 'align_single_space',
-        ],
-    ],
-];
+        ),
+    ),
+);
 
 $finder = Finder::create()
     ->in(__DIR__)

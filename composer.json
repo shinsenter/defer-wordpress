@@ -3,6 +3,7 @@
     "type": "project",
     "scripts":
     {
+        "fixer": "php-cs-fixer fix --show-progress=estimating --verbose",
         "deploy": [
             "bash ./_dist_/deploy.sh"
         ]

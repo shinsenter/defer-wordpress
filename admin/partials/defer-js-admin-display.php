@@ -121,7 +121,7 @@
 
                     <p class="submit">
                         <?php submit_button(__('Update all'), 'primary', 'save-settings', false); ?>
-                        <?php submit_button(__('Reset all to default'), 'secondary', 'reset-settings', false, ['reset-all' => true]); ?>
+                        <?php submit_button(__('Reset all to default'), 'secondary', 'reset-settings', false, array('reset-all' => true)); ?>
                     </p>
                 </div>
             </div>
@@ -216,7 +216,7 @@
 
                     <p class="submit">
                         <?php submit_button(__('Update all'), 'primary', 'save-settings', false); ?>
-                        <?php submit_button(__('Reset all to default'), 'secondary', 'reset-settings', false, ['reset-all' => true]); ?>
+                        <?php submit_button(__('Reset all to default'), 'secondary', 'reset-settings', false, array('reset-all' => true)); ?>
                     </p>
                 </div>
             </div>
@@ -291,7 +291,7 @@
 
                     <p class="submit">
                         <?php submit_button(__('Update all'), 'primary', 'save-settings', false); ?>
-                        <?php submit_button(__('Reset all to default'), 'secondary', 'reset-settings', false, ['reset-all' => true]); ?>
+                        <?php submit_button(__('Reset all to default'), 'secondary', 'reset-settings', false, array('reset-all' => true)); ?>
                     </p>
                 </div>
             </div>
@@ -335,7 +335,7 @@
 
                     <p class="submit">
                         <?php submit_button(__('Update all'), 'primary', 'save-settings', false); ?>
-                        <?php submit_button(__('Reset all to default'), 'secondary', 'reset-settings', false, ['reset-all' => true]); ?>
+                        <?php submit_button(__('Reset all to default'), 'secondary', 'reset-settings', false, array('reset-all' => true)); ?>
                     </p>
                 </div>
             </div>
@@ -376,7 +376,7 @@
 
                     <p class="submit">
                         <?php submit_button(__('Update all'), 'primary', 'save-settings', false); ?>
-                        <?php submit_button(__('Reset all to default'), 'secondary', 'reset-settings', false, ['reset-all' => true]); ?>
+                        <?php submit_button(__('Reset all to default'), 'secondary', 'reset-settings', false, array('reset-all' => true)); ?>
                     </p>
                 </div>
             </div>
@@ -426,7 +426,7 @@
 
                     <p class="submit">
                         <?php submit_button(__('Update all'), 'primary', 'save-settings', false); ?>
-                        <?php submit_button(__('Reset all to default'), 'secondary', 'reset-settings', false, ['reset-all' => true]); ?>
+                        <?php submit_button(__('Reset all to default'), 'secondary', 'reset-settings', false, array('reset-all' => true)); ?>
                     </p>
                 </div>
             </div>
@@ -437,7 +437,7 @@
         <div class="postbox">
             <h2><a href='<?php echo DEFER_JS_HOMEPAGE; ?>' target='_blank' class='url'>@shinsenter/defer.js</a></h2>
             <div class="inside">
-                <p>🥇 A super tiny, native performant library for lazy-loading JS, CSS, images, iframes... Defer almost anything, easily speed up your website.</p>
+                <p>🥇 A super tiny, native performance library for lazy-loading JS, CSS, images, iframes... Defer almost anything, easily speed up your website.</p>
                 <p><a href="<?php echo DEFER_JS_RATING; ?>" target="rating">Rate 5 stars (⭐️⭐️⭐️⭐️⭐️)</a> if you guys like it.</p>
                 <p>
                     <img src='https://img.shields.io/github/license/shinsenter/defer.js.svg' alt='GitHub' referrerPolicy='no-referrer' />
