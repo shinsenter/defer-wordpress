@@ -1,9 +1,9 @@
-=== A performant lazy loader (defer.js) ===
+=== A efficient lazy loader (defer.js) ===
 Contributors: shinsenter
 Donate link: https://www.paypal.me/shinsenter
-Tags: lazy,lazyload,lazy-js,lazy-css,lazy-image,lazy-iframe,lazy-video,pagespeed,website-performance,lazy-loading,lazy-loader,defer,lazy-ads,performant,avoid-render-blocking,browser-compatibility,intersection-observer,browser-perf,defer.js
+Tags: lazy,lazyload,lazy-js,lazy-css,lazy-image,lazy-iframe,lazy-video,pagespeed,website-performance,lazy-loading,lazy-loader,defer,lazy-ads,efficient,avoid-render-blocking,browser-compatibility,intersection-observer,browser-perf,defer.js
 Requires at least: 4.0
-Tested up to: 5.2.1
+Tested up to: 5.3.0
 Stable tag: trunk
 Requires PHP: 5.6
 License: GPL-2.0+
@@ -23,7 +23,7 @@ Rate [5 stars (⭐️⭐️⭐️⭐️⭐️)](https://wordpress.org/support/pl
 
 ### Powered by defer.js
 
-[defer.js](https://github.com/shinsenter/defer.js) is a super tiny, native performant library for lazy-loading JS, CSS, images, iframes...
+[defer.js](https://github.com/shinsenter/defer.js) is a super tiny, native performance library for lazy-loading JS, CSS, images, iframes...
 
 - ⚡️ Native API, blazing fast
 - 👍 Legacy browsers support (IE9+)
@@ -40,7 +40,7 @@ Rate [5 stars (⭐️⭐️⭐️⭐️⭐️)](https://wordpress.org/support/pl
 
 Other lazy loading libraries hook up to the scroll event on elements that need to be lazy loaded. This approach forces the browser to re-layout the page and it is painfully slow.
 
-Here we are, [defer.js](https://github.com/shinsenter/defer.js) is written in plain JavaScript, making lazy-loading more efficient and performant. This library is using the recently added [Intersection Observer](https://developers.google.com/web/updates/2016/04/intersectionobserver) with tremendous native performance benefits.
+Here we are, [defer.js](https://github.com/shinsenter/defer.js) is written in plain JavaScript, making lazy-loading more efficient and fast. This library is using the recently added [Intersection Observer](https://developers.google.com/web/updates/2016/04/intersectionobserver) with tremendous native performance benefits.
 
 ![Defer loading of JavaScript](https://raw.githubusercontent.com/shinsenter/defer.js/master/docs/assets/defer-script.jpg)
 
@@ -86,7 +86,7 @@ Copyright (c) 2019 Mai Nhut Tan &lt;[shin@shin.company](mailto:shin@shin.company
 
 = What is defer.js? =
 
-🥇 A super tiny, native performant library for lazy-loading JS, CSS, images, iframes... Defer almost anything, easily speed up your website.
+🥇 A super tiny, native performance library for lazy-loading JS, CSS, images, iframes... Defer almost anything, easily speed up your website.
 
 = Why should I lazy-load my content? =
 
@@ -102,6 +102,8 @@ Lazy loading content on web page can help reduce resource contention and improve
 
 
 == Changelog ==
+
+1.1.10 Bug fixes and improvements
 
 1.1.9 Fixed wrong encoding when using mb_detect_encoding() function
 

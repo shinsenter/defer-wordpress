@@ -76,7 +76,7 @@ class Defer_Js_Admin
             __('My defer.js'),
             'administrator',
             DEFER_JS_PLUGIN_NAME,
-            [$this, 'options_page'],
+            array($this, 'options_page'),
             plugins_url('/icon.jpg', __FILE__),
             $this->get_menu_position()
         );
@@ -148,7 +148,7 @@ class Defer_Js_Admin
          * class.
          */
 
-        wp_enqueue_style($this->plugin_name, plugin_dir_url(__FILE__) . 'css/defer-js-admin.css', [], $this->version, 'all');
+        wp_enqueue_style($this->plugin_name, plugin_dir_url(__FILE__) . 'css/defer-js-admin.css', array(), $this->version, 'all');
     }
 
     /**
@@ -170,8 +170,8 @@ class Defer_Js_Admin
          * class.
          */
 
-        wp_enqueue_script('defer.js', 'https://cdn.jsdelivr.net/npm/@shinsenter/defer.js/dist/defer.min.js', [], $this->version, false);
-        wp_enqueue_script($this->plugin_name, plugin_dir_url(__FILE__) . 'js/defer-js-admin.js', [], $this->version, false);
+        wp_enqueue_script('defer.js', 'https://cdn.jsdelivr.net/npm/@shinsenter/defer.js/dist/defer.min.js', array(), $this->version, false);
+        wp_enqueue_script($this->plugin_name, plugin_dir_url(__FILE__) . 'js/defer-js-admin.js', array(), $this->version, false);
     }
 
     protected function get_menu_position($target = 'switch_themes')
@@ -260,7 +260,7 @@ class Defer_Js_Admin
         }
 
         if (!empty($_REQUEST[DEFER_JS_PREFIX . 'loader_scripts'])) {
-            $values                                        = [trim($_REQUEST[DEFER_JS_PREFIX . 'loader_scripts'])];
+            $values                                        = array(trim($_REQUEST[DEFER_JS_PREFIX . 'loader_scripts']));
             $_REQUEST[DEFER_JS_PREFIX . 'loader_scripts']  = array_filter($values);
         }
 
@@ -288,7 +288,7 @@ class Defer_Js_Admin
 
             if ($success) {
                 foreach ($defer->options as $key => $value) {
-                    if (isset($_REQUEST[DEFER_JS_PREFIX . $key]) && !in_array($key, ['debug_mode', 'hide_warnings'])) {
+                    if (isset($_REQUEST[DEFER_JS_PREFIX . $key]) && !in_array($key, array('debug_mode', 'hide_warnings'))) {
                         $defer->{$key} = $_REQUEST[DEFER_JS_PREFIX . $key];
                         update_option(DEFER_JS_PREFIX . $key, $defer->{$key});
                     } else {

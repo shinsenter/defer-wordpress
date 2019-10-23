@@ -34,24 +34,26 @@ class Defer_Js_Activator
             // Reset all options when activate the plugin
             $defer = new \shinsenter\Defer();
 
-            $defer->append_defer_js       = false;
-            $defer->default_defer_time    = 50;
+            $default_options = array(
+                'append_defer_js'       => false,
+                'default_defer_time'    => 16,
 
-            $defer->enable_preloading     = true;
-            $defer->enable_dns_prefetch   = true;
-            $defer->fix_render_blocking   = true;
-            $defer->minify_output_html    = true;
+                'enable_preloading'     => true,
+                'enable_dns_prefetch'   => true,
+                'fix_render_blocking'   => true,
+                'minify_output_html'    => true,
 
-            $defer->enable_defer_css      = true;
-            $defer->enable_defer_scripts  = false;
-            $defer->enable_defer_images   = true;
-            $defer->enable_defer_iframes  = true;
+                'enable_defer_css'      => true,
+                'enable_defer_scripts'  => false,
+                'enable_defer_images'   => true,
+                'enable_defer_iframes'  => true,
+                'defer_web_fonts'       => true,
+                'use_color_placeholder' => true,
+            );
 
-            $defer->defer_web_fonts       = true;
-            $defer->use_color_placeholder = true;
-
-            foreach ($defer->options as $key => $value) {
-                update_option(DEFER_JS_PREFIX . $key, $value);
+            foreach ($default_options as $key => $value) {
+                $defer->{$key} = get_option(DEFER_JS_PREFIX . $key, $value);
+                update_option(DEFER_JS_PREFIX . $key, $defer->{$key});
             }
 
             // Create library cache
