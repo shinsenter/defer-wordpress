@@ -103,7 +103,7 @@ Lazy loading content on web page can help reduce resource contention and improve
 
 == Changelog ==
 
-1.1.10+1 Bug fixes and improvements
+1.1.10+2 Bug fixes and improvements
 
 1.1.9 Fixed wrong encoding when using mb_detect_encoding() function
 
