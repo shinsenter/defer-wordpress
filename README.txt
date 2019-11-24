@@ -1,4 +1,4 @@
-=== A efficient lazy loader (defer.js) ===
+=== An efficient lazy loader (defer.js) ===
 Contributors: shinsenter
 Donate link: https://www.paypal.me/shinsenter
 Tags: lazy,lazyload,lazy-js,lazy-css,lazy-image,lazy-iframe,lazy-video,pagespeed,website-performance,lazy-loading,lazy-loader,defer,lazy-ads,efficient,avoid-render-blocking,browser-compatibility,intersection-observer,browser-perf,defer.js
@@ -103,7 +103,7 @@ Lazy loading content on web page can help reduce resource contention and improve
 
 == Changelog ==
 
-1.1.10 Bug fixes and improvements
+1.1.10+3 Bug fixes and improvements
 
 1.1.9 Fixed wrong encoding when using mb_detect_encoding() function
 
