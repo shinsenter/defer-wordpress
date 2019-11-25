@@ -93,28 +93,6 @@ class Defer_Js_Admin
 
     public function options_page()
     {
-        if (!defined('DEFER_JS_SPONSORS_HTML')) {
-            if (class_exists('shinsenter\DeferCache')) {
-                $cache = new \shinsenter\DeferCache(DEFER_JS_CACHE_DIR, 1);
-                $html  = $cache->get('sponsors' . DEFER_JS_CACHE_SUFFIX);
-
-                if (empty($html)) {
-                    $html = @file_get_contents(DEFER_JS_SPONSORS . '?t=' . time());
-                    $cache->put('sponsors' . DEFER_JS_CACHE_SUFFIX, $html, DEFER_JS_CACHE_EXP);
-                }
-
-                define('DEFER_JS_SPONSORS_HTML', $html);
-            } else {
-                if (!file_exists(DEFER_JS_CACHE_DIR) || time() - filectime(DEFER_JS_CACHE_DIR) >= DEFER_JS_CACHE_EXP) {
-                    $source   = @file_get_contents(DEFER_JS_SPONSORS . '?t=' . time());
-                    $template = "<?php define('DEFER_JS_SPONSORS_HTML', base64_decode('%s'));";
-                    @file_put_contents(DEFER_JS_CACHE_DIR . '/sponsors.php', sprintf($template, base64_encode($source)));
-                }
-
-                @include_once DEFER_JS_CACHE_DIR . '/sponsors.php';
-            }
-        }
-
         if (!empty($_REQUEST['reset-settings'])) {
             $reset_settings = $this->reset_settings();
         }
@@ -170,7 +148,6 @@ class Defer_Js_Admin
          * class.
          */
 
-        wp_enqueue_script('defer.js', 'https://cdn.jsdelivr.net/npm/@shinsenter/defer.js/dist/defer.min.js', array(), $this->version, false);
         wp_enqueue_script($this->plugin_name, plugin_dir_url(__FILE__) . 'js/defer-js-admin.js', array(), $this->version, false);
     }
 

@@ -381,6 +381,7 @@
                 </div>
             </div>
 
+            <?php /*
             <div class="postbox">
                 <h2>Add defer.js library</h2>
                 <div class="inside">
@@ -404,7 +405,7 @@
                                     </fieldset>
                                 </td>
                             </tr>
-                            <!--
+
                             <tr class="top">
                                 <th>
                                     <label for="deferjs_default_defer_time">Defer timeout</label>
@@ -420,7 +421,6 @@
                                     </fieldset>
                                 </td>
                             </tr>
-                            -->
                         </tbody>
                     </table>
 
@@ -430,6 +430,7 @@
                     </p>
                 </div>
             </div>
+            */ ?>
         </form>
     </div>
 
@@ -473,9 +474,5 @@
                 <p>From Vietnam 🇻🇳 with love.</p>
             </div>
         </div>
-
-        <?php if (defined('DEFER_JS_SPONSORS_HTML')) {
-        echo DEFER_JS_SPONSORS_HTML;
-    } ?>
     </div>
 </div>
