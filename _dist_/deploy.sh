@@ -32,8 +32,8 @@ fi
 cd $plugin_dir
 
 svn rm trunk/* --force
-rsync -aHxW --delete --exclude-from=$base_dir/_dist_/blacklist.txt $base_dir/ $plugin_dir/trunk/
-mv trunk/defer-wordpress.php $plugin_dir/trunk/$plugin_name.php
+rsync -aHxW --delete --exclude-from=$base_dir/_dist_/blacklist.txt $base_dir/ trunk/
+mv trunk/defer-wordpress.php trunk/$plugin_name.php
 
 svn add trunk/* --force
 svn stat
