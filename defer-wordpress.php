@@ -92,10 +92,10 @@ if (!function_exists('shinsenter_deferjs_ob')) {
                 $deferjs    = file_get_contents(__DIR__ . '/public/js/defer.js');
 
                 // Append polyfill.js and defer_plus.min.js
-                static::$helpers = $polyfill . $deferjs;
+                \shinsenter\Defer::$helpers = $polyfill . $deferjs;
 
                 // Remove copyright (omit external requests)
-                static::$fingerprint = '
+                \shinsenter\Defer::$fingerprint = '
     ┌┬┐┌─┐┌─┐┌─┐┬─┐  ┬┌─┐
      ││├┤ ├┤ ├┤ ├┬┘  │└─┐
     ─┴┘└─┘└  └─┘┴└─o└┘└─┘
