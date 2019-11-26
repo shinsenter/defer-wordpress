@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "77b4f7853eb883a5021e2e178d29776d",
+    "content-hash": "e258c52588909028a03cdfef4ab2e1db",
     "packages": [
         {
             "name": "shinsenter/defer.php",
@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/shinsenter/defer.php.git",
-                "reference": "7d3a3a68016fb58348b1c597a25cb599e2d92ba5"
+                "reference": "ba5d15f6b8cd48a6fc7f23088df8fa4f7188449a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/shinsenter/defer.php/zipball/7d3a3a68016fb58348b1c597a25cb599e2d92ba5",
-                "reference": "7d3a3a68016fb58348b1c597a25cb599e2d92ba5",
+                "url": "https://api.github.com/repos/shinsenter/defer.php/zipball/ba5d15f6b8cd48a6fc7f23088df8fa4f7188449a",
+                "reference": "ba5d15f6b8cd48a6fc7f23088df8fa4f7188449a",
                 "shasum": ""
             },
             "require": {
