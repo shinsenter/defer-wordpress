@@ -88,11 +88,15 @@ if (!function_exists('shinsenter_deferjs_ob')) {
 
                 // all files have been downloaded and served locally
                 // https://github.com/shinsenter/defer.js/tree/master/dist
-                $polyfill   = file_get_contents(__DIR__ . '/public/js/polyfill.js');
-                $deferjs    = file_get_contents(__DIR__ . '/public/js/defer.js');
+                $polyfill = '"IntersectionObserver"in window||deferscript("'
+                    . plugin_dir_url(__FILE__)
+                    . 'public/js/polyfill.js","polyfill-js",1);';
+                $deferjs  = file_get_contents(__DIR__ . '/public/js/defer.js');
+                $helpers  = file_get_contents(\shinsenter\Defer::HELPERS_URL);
 
                 // Append polyfill.js and defer_plus.min.js
-                \shinsenter\Defer::$helpers = $polyfill . $deferjs;
+                \shinsenter\Defer::$helpers = $polyfill . $deferjs . $helpers;
+
 
                 // Remove copyright (omit external requests)
                 \shinsenter\Defer::$fingerprint = '
