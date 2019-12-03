@@ -20,16 +20,15 @@ if (!defined('WPINC')) {
  * Currently plugin version.
  * Rename this for your plugin and update it as you release new versions.
  */
-define('DEFER_WORDPRESS_PLUGIN_VERSION', '1.1.10+2');
+define('DEFER_WORDPRESS_PLUGIN_VERSION', '1.1.10+4');
 define('DEFER_JS_PREFIX', 'shinsenter_deferjs_');
-define('DEFER_GA_SCRIPT', '!function(n,a){n[a]=n[a]||[],n[a].push(["js",new Date],["config","UA-34520609-2"])}(window,"dataLayer")');
 
 /*
  * @wordpress-plugin
  * Plugin Name:       An efficient lazy loader (defer.js)
  * Plugin URI:        https://wordpress.org/plugins/shins-pageload-magic/
  * Description:       ⚡️ A native, blazing fast lazy loader. ✅ Legacy browsers support (IE9+). 💯 SEO friendly. 🧩 Lazy load almost anything.
- * Version:           1.1.10+3
+ * Version:           1.1.10+4
  * Author:            Mai Nhut Tan
  * Author URI:        https://code.shin.company/
  * License:           GPL-2.0+
@@ -41,10 +40,9 @@ define('DEFER_GA_SCRIPT', '!function(n,a){n[a]=n[a]||[],n[a].push(["js",new Date
 /*
  * defer.js library version
  */
-if (!defined('DEFER_JS_VERSION')) {
-    define('DEFER_JS_VERSION', '1.1.10');
-    define('DEFER_JS_RELEASED_URL', 'https://raw.githubusercontent.com/shinsenter/defer-wordpress/master/VERSION');
-}
+// if (!defined('DEFER_JS_VERSION')) {
+//     define('DEFER_JS_VERSION', '1.1.10');
+// }
 
 if (!defined('DEFER_JS_PLUGIN_NAME')) {
     require_once __DIR__ . '/vendor/autoload.php';
@@ -54,7 +52,6 @@ if (!defined('DEFER_JS_PLUGIN_NAME')) {
 if (!defined('DEFER_JS_PLUGIN_HOOK')) {
     define('DEFER_JS_PLUGIN_HOOK', 'plugin_action_links_' . plugin_basename(__FILE__));
     define('DEFER_JS_HOMEPAGE', 'https://github.com/shinsenter/defer.js');
-    define('DEFER_JS_SPONSORS', 'https://raw.githubusercontent.com/shinsenter/defer.php/footprint/sponsors.html');
     define('DEFER_JS_PAYPAL', 'https://www.paypal.me/shinsenter');
     define('DEFER_JS_PATREON', 'https://www.patreon.com/appseeds');
     define('DEFER_JS_RATING', 'https://wordpress.org/support/plugin/shins-pageload-magic/reviews/?filter=5#new-post');
@@ -83,12 +80,35 @@ if (!function_exists('shinsenter_deferjs_ob')) {
                     $defer->{$key} = get_option(DEFER_JS_PREFIX . $key, $value);
                 }
 
-                $loader_scripts   = $defer->loader_scripts;
-                $loader_scripts[] = DEFER_GA_SCRIPT;
+                /*
+                 * 20191125 Fix security errors in accordance with WordPress guidelines
+                 */
+                $defer->manually_add_deferjs = true;
+                $defer->append_defer_js      = true;
 
-                $defer->loader_scripts   = $loader_scripts;
-                $defer->debug_mode       = false;
-                $defer->hide_warnings    = true;
+                // all files have been downloaded and served locally
+                // https://github.com/shinsenter/defer.js/tree/master/dist
+                $polyfill = '"IntersectionObserver"in window||deferscript("'
+                    . plugin_dir_url(__FILE__)
+                    . 'public/js/polyfill.js","polyfill-js",1);';
+                $deferjs  = file_get_contents(__DIR__ . '/public/js/defer.js');
+                $helpers  = file_get_contents(\shinsenter\Defer::HELPERS_URL);
+
+                // Append polyfill.js and defer_plus.min.js
+                \shinsenter\Defer::$helpers = $polyfill . $deferjs . $helpers;
+
+
+                // Remove copyright (omit external requests)
+                \shinsenter\Defer::$fingerprint = '
+    ┌┬┐┌─┐┌─┐┌─┐┬─┐  ┬┌─┐
+     ││├┤ ├┤ ├┤ ├┬┘  │└─┐
+    ─┴┘└─┘└  └─┘┴└─o└┘└─┘
+This page was optimized with defer.js
+WordPress: https://wordpress.org/plugins/shins-pageload-magic/
+';
+
+                $defer->debug_mode      = false;
+                $defer->hide_warnings   = true;
 
                 $optimized = $defer->fromHtml($buffer)->toHtml();
             } catch (\Exception $e) {
