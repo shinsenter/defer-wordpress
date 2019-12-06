@@ -1,8 +1,7 @@
 {
     "license": "MIT",
     "type": "project",
-    "scripts":
-    {
+    "scripts": {
         "fixer": "php-cs-fixer fix --show-progress=estimating --verbose",
         "deploy": [
             "bash ./_dist_/deploy.sh"
@@ -10,8 +9,8 @@
     },
     "require": {
         "php": ">=5.6",
-        "symfony/http-foundation": "3.4.36",
-        "shinsenter/defer.php": "^1.0.0"
+        "symfony/http-foundation": "3.3.18",
+        "shinsenter/defer.php": "^1.0"
     },
     "config": {
         "preferred-install": "dist",

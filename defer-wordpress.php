@@ -20,7 +20,7 @@ if (!defined('WPINC')) {
  * Currently plugin version.
  * Rename this for your plugin and update it as you release new versions.
  */
-define('DEFER_WORDPRESS_PLUGIN_VERSION', '1.1.10+4');
+define('DEFER_WORDPRESS_PLUGIN_VERSION', '1.1.11');
 define('DEFER_JS_PREFIX', 'shinsenter_deferjs_');
 
 /*
@@ -28,7 +28,7 @@ define('DEFER_JS_PREFIX', 'shinsenter_deferjs_');
  * Plugin Name:       An efficient lazy loader (defer.js)
  * Plugin URI:        https://wordpress.org/plugins/shins-pageload-magic/
  * Description:       ⚡️ A native, blazing fast lazy loader. ✅ Legacy browsers support (IE9+). 💯 SEO friendly. 🧩 Lazy load almost anything.
- * Version:           1.1.10+4
+ * Version:           1.1.11
  * Author:            Mai Nhut Tan
  * Author URI:        https://code.shin.company/
  * License:           GPL-2.0+
@@ -41,7 +41,7 @@ define('DEFER_JS_PREFIX', 'shinsenter_deferjs_');
  * defer.js library version
  */
 // if (!defined('DEFER_JS_VERSION')) {
-//     define('DEFER_JS_VERSION', '1.1.10');
+//     define('DEFER_JS_VERSION', '1.1.11');
 // }
 
 if (!defined('DEFER_JS_PLUGIN_NAME')) {
@@ -88,15 +88,14 @@ if (!function_exists('shinsenter_deferjs_ob')) {
 
                 // all files have been downloaded and served locally
                 // https://github.com/shinsenter/defer.js/tree/master/dist
+                $deferjs  = file_get_contents(__DIR__ . '/public/js/defer.js');
                 $polyfill = '"IntersectionObserver"in window||deferscript("'
                     . plugin_dir_url(__FILE__)
                     . 'public/js/polyfill.js","polyfill-js",1);';
-                $deferjs  = file_get_contents(__DIR__ . '/public/js/defer.js');
                 $helpers  = file_get_contents(\shinsenter\Defer::HELPERS_URL);
 
                 // Append polyfill.js and defer_plus.min.js
-                \shinsenter\Defer::$helpers = $polyfill . $deferjs . $helpers;
-
+                \shinsenter\Defer::$helpers = $deferjs . $polyfill . $helpers;
 
                 // Remove copyright (omit external requests)
                 \shinsenter\Defer::$fingerprint = '
@@ -104,11 +103,11 @@ if (!function_exists('shinsenter_deferjs_ob')) {
      ││├┤ ├┤ ├┤ ├┬┘  │└─┐
     ─┴┘└─┘└  └─┘┴└─o└┘└─┘
 This page was optimized with defer.js
-WordPress: https://wordpress.org/plugins/shins-pageload-magic/
+https://wordpress.org/plugins/shins-pageload-magic/
 ';
 
-                $defer->debug_mode      = false;
-                $defer->hide_warnings   = true;
+                $defer->debug_mode    = false;
+                $defer->hide_warnings = true;
 
                 $optimized = $defer->fromHtml($buffer)->toHtml();
             } catch (\Exception $e) {
