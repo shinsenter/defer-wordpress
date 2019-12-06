@@ -67,6 +67,9 @@ class Defer_Js_Admin
 
     public function register_menu()
     {
+        // Temporary disable icon on menu
+        return null;
+
         // Remove old menu
         remove_menu_page(DEFER_JS_PLUGIN_NAME);
 

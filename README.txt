@@ -103,7 +103,9 @@ Lazy loading content on web page can help reduce resource contention and improve
 
 == Changelog ==
 
-1.1.10+4 Removed external resources
+1.1.11 Fixed security issue (Fixed CVE-2019-18888)
+
+1.1.10+5 Removed external resources
 
 1.1.10 Bug fixes and improvements
 
