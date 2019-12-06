@@ -67,22 +67,19 @@ class Defer_Js_Admin
 
     public function register_menu()
     {
-        // Temporary disable icon on menu
-        return null;
+        // Remove old menu
+        remove_menu_page(DEFER_JS_PLUGIN_NAME);
 
-        // // Remove old menu
-        // remove_menu_page(DEFER_JS_PLUGIN_NAME);
-
-        // // Create new top-level menu
-        // add_menu_page(
-        //     __('Configure defer.js settings'),
-        //     __('My defer.js'),
-        //     'administrator',
-        //     DEFER_JS_PLUGIN_NAME,
-        //     array($this, 'options_page'),
-        //     plugins_url('/icon.jpg', __FILE__),
-        //     $this->get_menu_position()
-        // );
+        // Create new top-level menu
+        add_menu_page(
+            __('Configure defer.js settings'),
+            __('My defer.js'),
+            'administrator',
+            DEFER_JS_PLUGIN_NAME,
+            array($this, 'options_page'),
+            plugins_url('/icon.jpg', __FILE__),
+            $this->get_menu_position()
+        );
     }
 
     public function register_menu_plugin_options($links)
