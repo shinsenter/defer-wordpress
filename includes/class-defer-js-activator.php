@@ -30,18 +30,18 @@ class Defer_Js_Activator
      */
     public static function activate()
     {
-        if (class_exists('shinsenter\Defer')) {
+        if (class_exists('AppSeeds\Defer')) {
             // Reset all options when activate the plugin
-            $defer = new \shinsenter\Defer();
+            $defer = new \AppSeeds\Defer();
 
             $default_options = array(
-                'append_defer_js'       => false,
-                'default_defer_time'    => 16,
+                'append_defer_js'    => false,
+                'default_defer_time' => 16,
 
-                'enable_preloading'     => true,
-                'enable_dns_prefetch'   => true,
-                'fix_render_blocking'   => true,
-                'minify_output_html'    => true,
+                'enable_preloading'   => true,
+                'enable_dns_prefetch' => true,
+                'fix_render_blocking' => true,
+                'minify_output_html'  => true,
 
                 'enable_defer_css'      => true,
                 'enable_defer_scripts'  => false,

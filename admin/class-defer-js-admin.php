@@ -52,8 +52,8 @@ class Defer_Js_Admin
 
     public function register_options()
     {
-        if (class_exists('shinsenter\Defer')) {
-            $defer = new \shinsenter\Defer();
+        if (class_exists('AppSeeds\Defer')) {
+            $defer = new \AppSeeds\Defer();
 
             foreach ($defer->options as $key => $value) {
                 register_setting(DEFER_JS_PLUGIN_NAME, DEFER_JS_PREFIX . $key);
@@ -67,22 +67,19 @@ class Defer_Js_Admin
 
     public function register_menu()
     {
-        // Temporary disable icon on menu
-        return null;
+        // Remove old menu
+        remove_menu_page(DEFER_JS_PLUGIN_NAME);
 
-        // // Remove old menu
-        // remove_menu_page(DEFER_JS_PLUGIN_NAME);
-
-        // // Create new top-level menu
-        // add_menu_page(
-        //     __('Configure defer.js settings'),
-        //     __('My defer.js'),
-        //     'administrator',
-        //     DEFER_JS_PLUGIN_NAME,
-        //     array($this, 'options_page'),
-        //     plugins_url('/icon.jpg', __FILE__),
-        //     $this->get_menu_position()
-        // );
+        // Create new top-level menu
+        add_menu_page(
+            __('Configure defer.js settings'),
+            __('My defer.js'),
+            'administrator',
+            DEFER_JS_PLUGIN_NAME,
+            array($this, 'options_page'),
+            plugins_url('/icon.jpg', __FILE__),
+            $this->get_menu_position()
+        );
     }
 
     public function register_menu_plugin_options($links)
@@ -169,8 +166,8 @@ class Defer_Js_Admin
     {
         $result = false;
 
-        if (class_exists('shinsenter\Defer')) {
-            $defer = new \shinsenter\Defer();
+        if (class_exists('AppSeeds\Defer')) {
+            $defer = new \AppSeeds\Defer();
 
             // Set test options
             $defer->debug_mode         = false;
@@ -203,9 +200,9 @@ class Defer_Js_Admin
     {
         @unlink(DEFER_JS_CACHE_DIR);
 
-        if (class_exists('shinsenter\Defer')) {
+        if (class_exists('AppSeeds\Defer')) {
             $default = $this->default_settings();
-            $defer   = new \shinsenter\Defer(null, $default);
+            $defer   = new \AppSeeds\Defer(null, $default);
 
             $defer->clearCache();
 
@@ -240,8 +237,8 @@ class Defer_Js_Admin
         }
 
         if (!empty($_REQUEST[DEFER_JS_PREFIX . 'loader_scripts'])) {
-            $values                                        = array(trim($_REQUEST[DEFER_JS_PREFIX . 'loader_scripts']));
-            $_REQUEST[DEFER_JS_PREFIX . 'loader_scripts']  = array_filter($values);
+            $values                                       = array(trim($_REQUEST[DEFER_JS_PREFIX . 'loader_scripts']));
+            $_REQUEST[DEFER_JS_PREFIX . 'loader_scripts'] = array_filter($values);
         }
 
         if (!empty($_REQUEST[DEFER_JS_PREFIX . 'empty_gif'])) {
@@ -252,8 +249,8 @@ class Defer_Js_Admin
             $_REQUEST[DEFER_JS_PREFIX . 'empty_src'] = trim($_REQUEST[DEFER_JS_PREFIX . 'empty_src']);
         }
 
-        if (class_exists('shinsenter\Defer')) {
-            $defer   = new \shinsenter\Defer();
+        if (class_exists('AppSeeds\Defer')) {
+            $defer   = new \AppSeeds\Defer();
             $success = false;
 
             try {
@@ -287,8 +284,8 @@ class Defer_Js_Admin
     {
         $result = false;
 
-        if (class_exists('shinsenter\Defer')) {
-            $defer = new \shinsenter\Defer();
+        if (class_exists('AppSeeds\Defer')) {
+            $defer = new \AppSeeds\Defer();
 
             foreach ($defer->options as $key => $value) {
                 $defer->{$key} = get_option(DEFER_JS_PREFIX . $key, $value);
