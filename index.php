@@ -10,5 +10,4 @@
  * @package   defer-wordpress
  * @see       https://code.shin.company/defer-wordpress/
  */
-
 // Silence is golden

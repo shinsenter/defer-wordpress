@@ -13,14 +13,14 @@
 
 // If this file is called directly, abort.
 if (!defined('WPINC')) {
-    die;
+    exit;
 }
 
 /*
  * Currently plugin version.
  * Rename this for your plugin and update it as you release new versions.
  */
-define('DEFER_WORDPRESS_PLUGIN_VERSION', '1.1.11+1');
+define('DEFER_WORDPRESS_PLUGIN_VERSION', '1.1.12');
 define('DEFER_JS_PREFIX', 'shinsenter_deferjs_');
 
 /*
@@ -28,7 +28,7 @@ define('DEFER_JS_PREFIX', 'shinsenter_deferjs_');
  * Plugin Name:       An efficient lazy loader (defer.js)
  * Plugin URI:        https://wordpress.org/plugins/shins-pageload-magic/
  * Description:       ⚡️ A native, blazing fast lazy loader. ✅ Legacy browsers support (IE9+). 💯 SEO friendly. 🧩 Lazy load almost anything.
- * Version:           1.1.11+1
+ * Version:           1.1.12
  * Author:            Mai Nhut Tan
  * Author URI:        https://code.shin.company/
  * License:           GPL-2.0+
@@ -40,9 +40,10 @@ define('DEFER_JS_PREFIX', 'shinsenter_deferjs_');
 /*
  * defer.js library version
  */
-// if (!defined('DEFER_JS_VERSION')) {
-//     define('DEFER_JS_VERSION', '1.1.11');
-// }
+
+if (!defined('DEFER_JS_VERSION')) {
+    define('DEFER_JS_VERSION', '1.1.12');
+}
 
 if (!defined('DEFER_JS_PLUGIN_NAME')) {
     require_once __DIR__ . '/vendor/autoload.php';
@@ -72,9 +73,9 @@ if (!function_exists('shinsenter_deferjs_ob')) {
     {
         $optimized = null;
 
-        if (class_exists('shinsenter\Defer')) {
+        if (class_exists('AppSeeds\Defer')) {
             try {
-                $defer = new \shinsenter\Defer();
+                $defer = new \AppSeeds\Defer();
 
                 foreach ($defer->options as $key => $value) {
                     $defer->{$key} = get_option(DEFER_JS_PREFIX . $key, $value);
@@ -92,13 +93,13 @@ if (!function_exists('shinsenter_deferjs_ob')) {
                 $polyfill = '"IntersectionObserver"in window||deferscript("'
                     . plugin_dir_url(__FILE__)
                     . 'public/js/polyfill.js","polyfill-js",1);';
-                $helpers  = file_get_contents(\shinsenter\Defer::HELPERS_URL);
+                $helpers = file_get_contents(\AppSeeds\Defer::HELPERS_URL);
 
                 // Append polyfill.js and defer_plus.min.js
-                \shinsenter\Defer::$helpers = $deferjs . $polyfill . $helpers;
+                \AppSeeds\Defer::$helpers = $deferjs . $polyfill . $helpers;
 
                 // Remove copyright (omit external requests)
-                \shinsenter\Defer::$fingerprint = '
+                \AppSeeds\Defer::$fingerprint = '
     ┌┬┐┌─┐┌─┐┌─┐┬─┐  ┬┌─┐
      ││├┤ ├┤ ├┤ ├┬┘  │└─┐
     ─┴┘└─┘└  └─┘┴└─o└┘└─┘
