@@ -103,6 +103,8 @@ Lazy loading content on web page can help reduce resource contention and improve
 
 == Changelog ==
 
+1.1.14 Improved performance
+
 1.1.13 Fixed some Firefox bugs
 
 1.1.12 Fixed some IE bugs, tested with the latest WordPress version
