@@ -172,16 +172,16 @@ class Defer_Js_Admin
             // Set test options
             $defer->debug_mode         = false;
             $defer->hide_warnings      = true;
-            $defer->append_defer_js    = false;
+            $defer->append_defer_js    = true;
             $defer->default_defer_time = 10;
 
             $defer->enable_preloading   = true;
             $defer->enable_dns_prefetch = true;
             $defer->fix_render_blocking = true;
-            $defer->minify_output_html  = true;
+            $defer->minify_output_html  = false;
 
             $defer->enable_defer_css        = true;
-            $defer->enable_defer_scripts    = true;
+            $defer->enable_defer_scripts    = false;
             $defer->enable_defer_images     = true;
             $defer->enable_defer_iframes    = true;
             $defer->enable_defer_background = true;
@@ -227,17 +227,20 @@ class Defer_Js_Admin
         $_REQUEST = array_map('stripslashes_deep', $_REQUEST);
 
         if (isset($_REQUEST[DEFER_JS_PREFIX . 'web_fonts_patterns'])) {
-            $values                                           = explode("\n", $_REQUEST[DEFER_JS_PREFIX . 'web_fonts_patterns']);
+            $values = explode("\n", $_REQUEST[DEFER_JS_PREFIX . 'web_fonts_patterns']);
+
             $_REQUEST[DEFER_JS_PREFIX . 'web_fonts_patterns'] = array_filter($values);
         }
 
         if (isset($_REQUEST[DEFER_JS_PREFIX . 'do_not_optimize'])) {
-            $values                                        = explode("\n", $_REQUEST[DEFER_JS_PREFIX . 'do_not_optimize']);
+            $values = explode("\n", $_REQUEST[DEFER_JS_PREFIX . 'do_not_optimize']);
+
             $_REQUEST[DEFER_JS_PREFIX . 'do_not_optimize'] = array_filter($values);
         }
 
         if (!empty($_REQUEST[DEFER_JS_PREFIX . 'loader_scripts'])) {
-            $values                                       = array(trim($_REQUEST[DEFER_JS_PREFIX . 'loader_scripts']));
+            $values = array(trim($_REQUEST[DEFER_JS_PREFIX . 'loader_scripts']));
+
             $_REQUEST[DEFER_JS_PREFIX . 'loader_scripts'] = array_filter($values);
         }
 
