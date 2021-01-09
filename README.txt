@@ -103,6 +103,8 @@ Lazy loading content on web page can help reduce resource contention and improve
 
 == Changelog ==
 
+1.1.15 Fixed bugs in defer.js 1.1.13, 1.1.14
+
 1.1.14 Improved performance
 
 1.1.13 Fixed some Firefox bugs
