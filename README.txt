@@ -19,6 +19,11 @@ This plugin helps you to optimize everything like image tags, video, audio, ifra
 
 This plugin incorporates tips used a lot by experienced web experts, as well as making the most of the latest web technologies in lazy-loading resources on the page.
 
+Rate [5 stars (⭐️⭐️⭐️⭐️⭐️)](https://wordpress.org/support/plugin/shins-pageload-magic/reviews/?filter=5) if you guys like it.
+
+
+### Key features
+
 - ⚡️ Native API, blazing fast
 - 👍 Legacy browsers support (IE9+)
 - 🥇 SEO friendly
@@ -28,13 +33,24 @@ This plugin incorporates tips used a lot by experienced web experts, as well as 
 - 🧩 Uses [IntersectionObserver API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) for optimized CPU usage
 - 🏞 Supports for responsive images, both `srcset` and `sizes` attributes
 
-Rate [5 stars (⭐️⭐️⭐️⭐️⭐️)](https://wordpress.org/support/plugin/shins-pageload-magic/reviews/?filter=5) if you guys like it.
-
 💡 Tip: To archive better result, you should consider disabling all optimization features (Eg. lazy-loading, HTML minification, JS minification, etc.) by other plugins.
 
 We recommend you use it with another page-caching plugin for best performance.
 
 ![Scoring 100/100 in Google PageSpeed Test](https://raw.githubusercontent.com/shinsenter/defer.js/master/docs/assets/scores.jpg)
+
+
+### Browser support
+
+Available in latest browsers. This library also works perfectly with Internet Explorer 9 and later.
+
+- 🖥 IE9+
+- 🖥 Firefox 4+
+- 🖥 Safari 3+
+- 🖥 Chrome *
+- 🖥 Opera *
+- 📱 Android 4+
+- 📱 iOS 3.2+
 
 ### Powered by defer.php
 
@@ -62,19 +78,6 @@ We recommend you use it with another page-caching plugin for best performance.
 - [x] Attribute to ignore lazyloading the element
 - [x] Optimize AMP document
 - [x] Minify HTML output
-
-
-### Browser support
-
-Available in latest browsers. This library also works perfectly with Internet Explorer 9 and later.
-
-- 🖥 IE9+
-- 🖥 Firefox 4+
-- 🖥 Safari 3+
-- 🖥 Chrome *
-- 🖥 Opera *
-- 📱 Android 4+
-- 📱 iOS 3.2+
 
 
 ### Keep in touch
