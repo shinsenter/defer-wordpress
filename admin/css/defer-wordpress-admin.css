@@ -1,8 +1,8 @@
-#adminmenu .toplevel_page_defer-wordpress {
+#toplevel_page_defer-wordpress {
     display: none;
 }
 
-.toplevel_page_defer-wordpress .menu-top img {
+#toplevel_page_defer-wordpress img {
     width: 16px;
     height: 16px;
 }
@@ -22,7 +22,6 @@
 }
 
 .toplevel_page_defer-wordpress .wrap h2 {
-
     padding: 8px 12px;
     margin: 0;
     line-height: 1.4;
@@ -81,7 +80,6 @@
         float: left;
         padding-right: 2rem;
     }
-
     .toplevel_page_defer-wordpress .wrap .side {
         margin-top: 0;
         margin-left: 70%;

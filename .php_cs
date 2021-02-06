@@ -1,25 +1,35 @@
 <?php
 
 /**
- * 🔌 A Wordpress plugin integrating my beloved "defer.js" library
- *    into your websites. Hope you guys like it.
- * (c) 2019 AppSeeds Team <hello@appseeds.net>
+ * 🚀 A WordPress plugin that focuses on minimizing payload size of HTML document
+ *    and optimizing processing on the browser when rendering the WordPress page.
+ * (c) 2021 AppSeeds <hello@appseeds.net>
  *
- * @author    Mai Nhut Tan <shin@shin.company>
- * @copyright 2019 AppSeeds
+ * PHP Version >=5.6
+ *
+ * @category  Web_Performance_Optimization
  * @package   defer-wordpress
- * @see       https://code.shin.company/defer-wordpress/
+ * @author    Mai Nhut Tan <shin@shin.company>
+ * @copyright 2021 AppSeeds
+ * @license   https://code.shin.company/defer-wordpress/blob/master/LICENSE GNU
+ * @link      https://code.shin.company/defer-wordpress
+ * @see       https://code.shin.company/defer-wordpress/blob/master/README.md
  */
 
 $header = <<<'EOF'
-🔌 A Wordpress plugin integrating my beloved "defer.js" library
-   into your websites. Hope you guys like it.
-(c) 2019 AppSeeds Team <hello@appseeds.net>
+🚀 A WordPress plugin that focuses on minimizing payload size of HTML document
+   and optimizing processing on the browser when rendering the WordPress page.
+(c) 2021 AppSeeds <hello@appseeds.net>
 
-@author    Mai Nhut Tan <shin@shin.company>
-@copyright 2019 AppSeeds
+PHP Version >=5.6
+
+@category  Web_Performance_Optimization
 @package   defer-wordpress
-@see       https://code.shin.company/defer-wordpress/
+@author    Mai Nhut Tan <shin@shin.company>
+@copyright 2021 AppSeeds
+@license   https://code.shin.company/defer-wordpress/blob/master/LICENSE GPL-2.0
+@link      https://code.shin.company/defer-wordpress
+@see       https://code.shin.company/defer-wordpress/blob/master/README.md
 EOF;
 
 $rules = [
@@ -27,7 +37,7 @@ $rules = [
     '@PSR2'                               => true,
     'align_multiline_comment'             => true,
     'array_indentation'                   => true,
-    'array_syntax'                        => ['syntax' => 'long'],
+    'array_syntax'                        => ['syntax' => 'short'],
     'braces'                              => ['allow_single_line_closure' => true],
     'combine_consecutive_issets'          => true,
     'combine_consecutive_unsets'          => true,
@@ -92,13 +102,13 @@ $rules = [
 ];
 
 $finder = \PhpCsFixer\Finder::create()
-    ->in(__DIR__)
+    ->in(__DIR__ . DIRECTORY_SEPARATOR)
     ->name('*.php')
-    ->exclude('.idea')
-    ->exclude('.ppm')
+    ->exclude('.dist')
+    ->exclude('.docker')
     ->exclude('cache')
     ->ignoreDotFiles(true)
-    ->ignoreVCS(false);
+    ->ignoreVCS(true);
 
 return \PhpCsFixer\Config::create()
     ->setFinder($finder)

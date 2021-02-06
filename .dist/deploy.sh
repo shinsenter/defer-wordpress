@@ -7,15 +7,22 @@
 
 rm -Rf vendor
 base_dir=`pwd`
-build_dir=$base_dir/_dist_/build
+build_dir=$base_dir/.dist/build
+deferjs_dir=$base_dir/node_modules/@shinsenter/defer.js/dist
 
-composer install -o -a -n --no-dev --prefer-dist --no-suggest
+# Install modules
+composer pull
+if [ -e $deferjs_dir/defer_plus.min.js ]; then
+    rm -f $base_dir/public/lib/*.js
+    cp -p $deferjs_dir/*.js $base_dir/public/lib/
+fi
 
+# Prepare
 plugin_url=https://plugins.svn.wordpress.org/
 plugin_name=shins-pageload-magic
 plugin_svn=$plugin_url/$plugin_name
 plugin_dir=$build_dir/$plugin_name
-black_list=$base_dir/_dist_/blacklist.txt
+black_list=$base_dir/.dist/blacklist.txt
 
 version=`head -n 1 $base_dir/VERSION`
 
@@ -39,7 +46,7 @@ svn rm trunk/* --force
 cd $base_dir
 rsync -aHxW --delete --exclude-from=$black_list $base_dir/ $plugin_dir/trunk/
 mv $plugin_dir/trunk/defer-wordpress.php $plugin_dir/trunk/$plugin_name.php
-composer fixer _dist_
+composer fixer .dist
 echo ""
 
 # ------------------------------------------------------------------------------

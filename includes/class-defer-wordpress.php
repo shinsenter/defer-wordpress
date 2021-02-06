@@ -1,14 +1,19 @@
 <?php
 
 /**
- * 🔌 A Wordpress plugin integrating my beloved "defer.js" library
- *    into your websites. Hope you guys like it.
- * (c) 2019 AppSeeds Team <hello@appseeds.net>
+ * 🚀 A WordPress plugin that focuses on minimizing payload size of HTML document
+ *    and optimizing processing on the browser when rendering the WordPress page.
+ * (c) 2021 AppSeeds <hello@appseeds.net>
  *
- * @author    Mai Nhut Tan <shin@shin.company>
- * @copyright 2019 AppSeeds
+ * PHP Version >=5.6
+ *
+ * @category  Web_Performance_Optimization
  * @package   defer-wordpress
- * @see       https://code.shin.company/defer-wordpress/
+ * @author    Mai Nhut Tan <shin@shin.company>
+ * @copyright 2021 AppSeeds
+ * @license   https://code.shin.company/defer-wordpress/blob/master/LICENSE GPL-2.0
+ * @link      https://code.shin.company/defer-wordpress
+ * @see       https://code.shin.company/defer-wordpress/blob/master/README.md
  */
 
 /**
@@ -21,23 +26,23 @@
  * version of the plugin.
  *
  * @since      1.0.0
- * @author     MAI NHUT TAN <shin@shin.company>
+ * @author     Mai Nhut Tan <shin@shin.company>
  */
-class Defer_Js
+class Defer_Wordpress
 {
     /**
      * The loader that's responsible for maintaining and registering all hooks that power
      * the plugin.
      *
-     * @since    1.0.0
-     * @var Defer_Js_Loader maintains and registers all hooks for the plugin
+     * @since 2.0.0
+     * @var Defer_Wordpress_Loader maintains and registers all hooks for the plugin
      */
     protected $loader;
 
     /**
      * The unique identifier of this plugin.
      *
-     * @since    1.0.0
+     * @since 2.0.0
      * @var string the string used to uniquely identify this plugin
      */
     protected $plugin_name;
@@ -45,7 +50,7 @@ class Defer_Js
     /**
      * The current version of the plugin.
      *
-     * @since    1.0.0
+     * @since 2.0.0
      * @var string the current version of the plugin
      */
     protected $version;
@@ -57,17 +62,12 @@ class Defer_Js
      * Load the dependencies, define the locale, and set the hooks for the admin area and
      * the public-facing side of the site.
      *
-     * @since    1.0.0
+     * @since 2.0.0
      */
     public function __construct()
     {
-        if (defined('DEFER_WORDPRESS_PLUGIN_VERSION')) {
-            $this->version = DEFER_WORDPRESS_PLUGIN_VERSION;
-        } else {
-            $this->version = '1.0.0';
-        }
-
-        $this->plugin_name = DEFER_JS_PLUGIN_NAME;
+        $this->plugin_name = DEFER_WP_PLUGIN_NAME;
+        $this->version     = DEFER_WP_PLUGIN_VERSION;
 
         $this->load_dependencies();
         $this->set_locale();
@@ -78,7 +78,7 @@ class Defer_Js
     /**
      * Run the loader to execute all of the hooks with WordPress.
      *
-     * @since    1.0.0
+     * @since 2.0.0
      */
     public function run()
     {
@@ -101,7 +101,7 @@ class Defer_Js
      * The reference to the class that orchestrates the hooks with the plugin.
      *
      * @since     1.0.0
-     * @return Defer_Js_Loader orchestrates the hooks of the plugin
+     * @return Defer_Wordpress_Loader orchestrates the hooks of the plugin
      */
     public function get_loader()
     {
@@ -119,20 +119,26 @@ class Defer_Js
         return $this->version;
     }
 
+    /*
+    |--------------------------------------------------------------------------
+    | Wordpress functions
+    |--------------------------------------------------------------------------
+     */
+
     /**
      * Load the required dependencies for this plugin.
      *
      * Include the following files that make up the plugin:
      *
-     * - Defer_Js_Loader. Orchestrates the hooks of the plugin.
-     * - Defer_Js_i18n. Defines internationalization functionality.
-     * - Defer_Js_Admin. Defines all hooks for the admin area.
-     * - Defer_Js_Public. Defines all hooks for the public side of the site.
+     * - Defer_Wordpress_Loader. Orchestrates the hooks of the plugin.
+     * - Defer_Wordpress_i18n. Defines internationalization functionality.
+     * - Defer_Wordpress_Admin. Defines all hooks for the admin area.
+     * - Defer_Wordpress_Public. Defines all hooks for the public side of the site.
      *
      * Create an instance of the loader which will be used to register the hooks
      * with WordPress.
      *
-     * @since    1.0.0
+     * @since 2.0.0
      */
     private function load_dependencies()
     {
@@ -140,39 +146,39 @@ class Defer_Js
          * The class responsible for orchestrating the actions and filters of the
          * core plugin.
          */
-        require_once plugin_dir_path(dirname(__FILE__)) . 'includes/class-defer-js-loader.php';
+        require_once plugin_dir_path(dirname(__FILE__)) . 'includes/class-defer-wordpress-loader.php';
 
         /**
          * The class responsible for defining internationalization functionality
          * of the plugin.
          */
-        require_once plugin_dir_path(dirname(__FILE__)) . 'includes/class-defer-js-i18n.php';
+        require_once plugin_dir_path(dirname(__FILE__)) . 'includes/class-defer-wordpress-i18n.php';
 
         /**
          * The class responsible for defining all actions that occur in the admin area.
          */
-        require_once plugin_dir_path(dirname(__FILE__)) . 'admin/class-defer-js-admin.php';
+        require_once plugin_dir_path(dirname(__FILE__)) . 'admin/class-defer-wordpress-admin.php';
 
         /**
          * The class responsible for defining all actions that occur in the public-facing
          * side of the site.
          */
-        require_once plugin_dir_path(dirname(__FILE__)) . 'public/class-defer-js-public.php';
+        require_once plugin_dir_path(dirname(__FILE__)) . 'public/class-defer-wordpress-public.php';
 
-        $this->loader = new Defer_Js_Loader();
+        $this->loader = new Defer_Wordpress_Loader();
     }
 
     /**
      * Define the locale for this plugin for internationalization.
      *
-     * Uses the Defer_Js_i18n class in order to set the domain and to register the hook
+     * Uses the Defer_Wordpress_i18n class in order to set the domain and to register the hook
      * with WordPress.
      *
-     * @since    1.0.0
+     * @since 2.0.0
      */
     private function set_locale()
     {
-        $plugin_i18n = new Defer_Js_i18n();
+        $plugin_i18n = new Defer_Wordpress_i18n();
 
         $this->loader->add_action('plugins_loaded', $plugin_i18n, 'load_plugin_textdomain');
     }
@@ -181,33 +187,33 @@ class Defer_Js
      * Register all of the hooks related to the admin area functionality
      * of the plugin.
      *
-     * @since    1.0.0
+     * @since 2.0.0
      */
     private function define_admin_hooks()
     {
-        $plugin_admin = new Defer_Js_Admin($this->get_plugin_name(), $this->get_version());
+        $plugin_admin = new Defer_Wordpress_Admin($this->get_plugin_name(), $this->get_version());
 
-        if (!(defined('WP_CLI') && WP_CLI) && is_admin()) {
-            $this->loader->add_action('admin_enqueue_scripts', $plugin_admin, 'enqueue_styles');
-            $this->loader->add_action('admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts');
-            $this->loader->add_action('admin_menu', $plugin_admin, 'register_menu');
-            $this->loader->add_action('admin_init', $plugin_admin, 'register_options');
-            $this->loader->add_filter(DEFER_JS_PLUGIN_HOOK, $plugin_admin, 'register_menu_plugin_options');
-        }
+        $this->loader->add_action('admin_enqueue_scripts', $plugin_admin, 'enqueue_styles');
+        $this->loader->add_action('admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts');
+        $this->loader->add_action('admin_menu', $plugin_admin, 'register_menu');
+        $this->loader->add_action('admin_init', $plugin_admin, 'register_options');
+        $this->loader->add_filter(DEFER_WP_PLUGIN_HOOK, $plugin_admin, 'register_menu_plugin_options');
+        $this->loader->add_filter(DEFER_WP_PLUGIN_DESC_HOOK, $plugin_admin, 'register_menu_plugin_options');
     }
 
     /**
      * Register all of the hooks related to the public-facing functionality
      * of the plugin.
      *
-     * @since    1.0.0
+     * @since 2.0.0
      */
     private function define_public_hooks()
     {
-        $plugin_public = new Defer_Js_Public($this->get_plugin_name(), $this->get_version());
+        $plugin_public = new Defer_Wordpress_Public($this->get_plugin_name(), $this->get_version());
 
         if (!(defined('WP_CLI') && WP_CLI) && !is_admin()) {
-            $this->loader->add_action('init', $plugin_public, 'enable_defer_wordpress', pi());
+            $this->loader->add_action('init', $plugin_public, 'init', -1);
+            $this->loader->add_action('shutdown', $plugin_public, 'shutdown', 100000);
         }
     }
 }

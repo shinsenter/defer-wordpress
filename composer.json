@@ -1,22 +1,57 @@
 {
-    "license": "MIT",
+    "name": "shinsenter/defer-wordpress",
+    "description": "🚀 A WordPress plugin that focuses on minimizing payload size of HTML document and optimizing processing on the browser when rendering the WordPress page.",
     "type": "project",
+    "license": "GPL-2.0",
+    "authors": [{
+        "name": "Mai Nhut Tan",
+        "email": "shin@shin.company",
+        "homepage": "https://code.shin.company",
+        "role": "Owner"
+    }],
+    "support": {
+        "issues": "https://github.com/shinsenter/defer.php/issues",
+        "source": "https://github.com/shinsenter/defer.php"
+    },
+    "funding": [{
+            "type": "github",
+            "url": "https://github.com/shinsenter/defer.php/stargazers"
+        },
+        {
+            "type": "paypal",
+            "url": "https://www.patreon.com/appseeds"
+        },
+        {
+            "type": "patreon",
+            "url": "https://www.patreon.com/shinsenter"
+        }
+    ],
     "scripts": {
-        "fixer": "php-cs-fixer fix --show-progress=estimating --verbose",
+        "fixer": "php-cs-fixer fix --show-progress=estimating --verbose --ansi",
+        "pull": [
+            "rm -rf ./cache/*/ ./vendor/ ./node_modules/ ./composer.lock ./package-lock.json",
+            "composer install -o -a -n --no-dev --prefer-dist --ansi",
+            "npm i --prod --ansi",
+            "cp -p ./node_modules/@shinsenter/defer.js/dist/*.js ./public/lib/"
+        ],
         "deploy": [
-            "bash ./_dist_/deploy.sh"
+            "bash ./.dist/deploy.sh"
         ]
     },
     "require": {
-        "php": "^5.6 || ^7.0 || ^8.0",
-        "shinsenter/defer.php": "^1.1"
+        "php": ">=5.6",
+        "shinsenter/defer.php": "v2.0.x-dev",
+        "symfony/polyfill-mbstring": "<=1.22.0"
     },
     "config": {
         "preferred-install": "dist",
         "optimize-autoloader": true,
-        "sort-packages": true
+        "sort-packages": true,
+        "platform": {
+            "php": "5.6"
+        }
     },
     "require-dev": {
-        "friendsofphp/php-cs-fixer": "^2.17"
+        "friendsofphp/php-cs-fixer": "^2.0"
     }
 }
