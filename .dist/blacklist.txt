@@ -41,8 +41,6 @@ vendor/**/example
 vendor/**/examples
 vendor/**/faq*
 vendor/**/history*
-vendor/**/LICENSE*
-vendor/**/license*
 vendor/**/package-lock.json
 vendor/**/package.json
 vendor/**/readme*

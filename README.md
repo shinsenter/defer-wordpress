@@ -116,31 +116,6 @@ For best use of this plugin, you should consider disabling all optimization feat
 We recommend you use it with another page-caching plugin for best performance.
 
 
-## Features
-- [x] Simplify library options
-- [x] Embed defer.js library
-- [x] Normalize DOM elements
-- [x] Fix missing meta tags
-- [x] Fix missing media attributes
-- [x] Preconnect to required origins
-- [x] Preload key requests
-- [x] Prefetch key requests
-- [x] Browser-level image lazy-loading for the web
-- [x] Lazy-load offscreen and hidden iframes
-- [x] Lazy-load offscreen and hidden videos
-- [x] Lazy-load offscreen and hidden images
-- [x] Lazy-load CSS background images
-- [x] Reduce the impact of JavaScript
-- [x] Defer non-critical CSS requests
-- [ ] Defer webfont CSS requests
-- [x] Add fallback `<noscript>` tags for lazy-loaded objects
-- [x] Add custom HTML while browser is rendering the page (splashscreen)
-- [x] Attribute to ignore optimizing the element
-- [x] Attribute to ignore lazyloading the element
-- [x] Optimize AMP document
-- [x] Minify HTML output
-
-
 ## Keep in touch
 
 [![Donate via Paypal](https://pics.paypal.com/00/s/NTQ4M2ZiN2YtZDg1My00ZmRiLWJiMDQtMTFlMjg2ODY2N2Uy/file.PNG)](https://www.paypal.me/shinsenter)
