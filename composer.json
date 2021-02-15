@@ -30,6 +30,7 @@
         "fixer": "php-cs-fixer fix --show-progress=estimating --verbose --ansi",
         "pull": [
             "rm -rf ./cache/*/ ./vendor/ ./node_modules/ ./composer.lock ./package-lock.json",
+            "composer clearcache --ansi",
             "composer install -o -a -n --no-dev --prefer-dist --ansi",
             "npm i --prod --ansi",
             "cp -p ./node_modules/@shinsenter/defer.js/dist/*.js ./public/lib/"
