@@ -80,12 +80,16 @@ Available in latest browsers. This library also works perfectly with Internet Ex
 - [x] Minify HTML output
 
 
-### Support my activities
+### Keep in touch
 
-[![Donate via Paypal](https://img.shields.io/badge/Donate-Paypal-blue)](https://www.paypal.me/shinsenter)
-[![Become a sponsor](https://img.shields.io/badge/Donate-Patreon-orange)](https://www.patreon.com/appseeds)
-[![Become a stargazer](https://img.shields.io/badge/Support-Stargazer-yellow)](https://github.com/shinsenter/defer-wordpress/stargazers)
-[![Report an issue](https://img.shields.io/badge/Support-Issues-red)](https://github.com/shinsenter/defer-wordpress/issues/new)
+[![Become a sponsor](https://c5.patreon.com/external/logo/become_a_patron_button@2x.png)](https://www.patreon.com/appseeds)
+
+- Keep up-to-date with new releases:
+[https://wordpress.org/plugins/shins-pageload-magic/](https://wordpress.org/plugins/shins-pageload-magic/)
+- Become a stargazer:
+[https://github.com/shinsenter/defer.js/stargazers](https://github.com/shinsenter/defer.js/stargazers)
+- Report an issue:
+[https://github.com/shinsenter/defer.js/issues](https://github.com/shinsenter/defer.js/issues)
 
 ---
 
