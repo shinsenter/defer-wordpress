@@ -2,6 +2,8 @@
 
 ⚡️ A native, blazing fast lazy loader. ✅ Legacy browsers support (IE9+). 💯 SEO friendly. 🧩 Lazy load almost anything.
 
+Download: [https://wordpress.org/plugins/shins-pageload-magic/](https://wordpress.org/plugins/shins-pageload-magic/)
+
 ![HitCount](http://hits.dwyl.com/shinsenter/defer-wordpress.svg)
 ![GitHub](https://img.shields.io/github/license/shinsenter/defer-wordpress.svg)
 
