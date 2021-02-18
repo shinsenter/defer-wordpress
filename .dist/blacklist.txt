@@ -30,7 +30,7 @@ vendor/**/*.xml
 vendor/**/*.yml
 vendor/**/changelog*
 vendor/**/changes*
-vendor/**/composer.lock
+vendor/**/composer.*
 vendor/**/contributing*
 vendor/**/demo
 vendor/**/doc
@@ -43,13 +43,16 @@ vendor/**/faq*
 vendor/**/history*
 vendor/**/package-lock.json
 vendor/**/package.json
+vendor/**/phpunit.*
 vendor/**/readme*
+vendor/**/README*
+vendor/**/sonar-project.properties
 vendor/**/test
 vendor/**/tests
 vendor/**/travis
 vendor/**/upgrade*
 vendor/**/upgrading*
 
+defer.php/.docker/
 defer.php/assets/
-defer.php/v1/
-defer.php/offline.php
+defer.php/public/lib/
