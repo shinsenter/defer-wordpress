@@ -28,7 +28,7 @@ if (!defined('WPINC')) {
  * Plugin Name:       An efficient lazy loader (defer.js)
  * Plugin URI:        https://wordpress.org/plugins/shins-pageload-magic/
  * Description:       🚀 A native, blazing fast lazy loader. ✅ Legacy browsers support (IE9+). 💯 SEO friendly. 🧩 Lazy load almost anything.
- * Version:           2.0.0-beta.16
+ * Version:           2.0.0-beta.17
  * Author:            Mai Nhut Tan
  * Author URI:        https://code.shin.company/
  * License:           GPL-2.0+
@@ -44,7 +44,7 @@ if (!defined('WPINC')) {
 if (!defined('DEFER_WP_PLUGIN_VERSION')) {
     define('DEFER_WP_PLUGIN_BASE', plugin_basename(__FILE__));
     define('DEFER_WP_PLUGIN_NAME', 'defer-wordpress');
-    define('DEFER_WP_PLUGIN_VERSION', '2.0.0-beta.16');
+    define('DEFER_WP_PLUGIN_VERSION', '2.0.0-beta.17');
     define('DEFER_WP_PLUGIN_PREFIX', DEFER_WP_PLUGIN_NAME . '_');
 
     define('DEFER_WP_PLUGIN_HOOK', 'plugin_action_links_' . DEFER_WP_PLUGIN_BASE);
@@ -66,6 +66,7 @@ if (!defined('DEFER_WP_PLUGIN_VERSION')) {
         : 'https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver');
 
     define('DEFER_WP_HOMEPAGE', 'https://github.com/shinsenter/defer.js');
+    define('DEFER_WP_PLUGIN_URL', 'https://wordpress.org/plugins/shins-pageload-magic/');
     define('DEFER_WP_PAYPAL', 'https://www.paypal.me/shinsenter');
     define('DEFER_WP_PATREON', 'https://www.patreon.com/appseeds');
     define('DEFER_WP_RATING', 'https://wordpress.org/support/plugin/shins-pageload-magic/reviews/?filter=5#new-post');

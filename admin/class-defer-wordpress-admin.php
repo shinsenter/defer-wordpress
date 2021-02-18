@@ -243,7 +243,10 @@ class Defer_Wordpress_Admin
                 '     ││├┤ ├┤ ├┤ ├┬┘  │└─┐' . PHP_EOL .
                 '    ─┴┘└─┘└  └─┘┴└─o└┘└─┘' . PHP_EOL .
                 'This page was optimized with defer.js' . PHP_EOL .
-                'https://wordpress.org/support/plugin/shins-pageload-magic/' . PHP_EOL,
+                DEFER_WP_PLUGIN_URL . PHP_EOL,
+
+            // Console note
+            'console_copyright' => 'Optimized by defer.php' . PHP_EOL . DEFER_WP_PLUGIN_URL,
 
             // Library injection
             'inline_deferjs'     => true,
