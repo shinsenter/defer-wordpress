@@ -33,6 +33,7 @@
             "composer clearcache --ansi",
             "composer install -o -a -n --no-dev --prefer-dist --ansi",
             "npm i --prod --ansi",
+            "rm -rf ./public/lib/*",
             "cp -p ./node_modules/@shinsenter/defer.js/dist/*.js ./public/lib/"
         ],
         "deploy": [

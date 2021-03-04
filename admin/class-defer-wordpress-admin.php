@@ -250,7 +250,7 @@ class Defer_Wordpress_Admin
 
             // Library injection
             'inline_deferjs'     => true,
-            'default_defer_time' => 200,
+            'default_defer_time' => 1,
 
             // Page optimizations
             'add_missing_meta_tags' => true,
@@ -267,6 +267,7 @@ class Defer_Wordpress_Admin
             'optimize_iframes'    => true,
             'optimize_background' => true,
             'optimize_fallback'   => true,
+            'optimize_anchors'    => true,
 
             // Web-font optimizations
             'defer_third_party' => true,

@@ -8,14 +8,9 @@
 rm -Rf vendor
 base_dir=`pwd`
 build_dir=$base_dir/.dist/build
-deferjs_dir=$base_dir/node_modules/@shinsenter/defer.js/dist
 
 # Install modules
 composer pull
-if [ -e $deferjs_dir/defer_plus.min.js ]; then
-    rm -f $base_dir/public/lib/*.js
-    cp -p $deferjs_dir/*.js $base_dir/public/lib/
-fi
 
 # Prepare
 plugin_url=https://plugins.svn.wordpress.org/

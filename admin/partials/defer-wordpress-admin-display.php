@@ -266,6 +266,26 @@
                         <tbody>
                             <tr class="top">
                                 <th>
+                                    <label for="deferjs_optimize_background">Fix unsafe anchor tags</label>
+                                </th>
+                                <td>
+                                    <fieldset>
+                                        <input type="hidden" value="0" name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'optimize_anchors'; ?>">
+                                        <input type="checkbox" value="1"
+                                        <?php echo $options['optimize_anchors'] == true ? 'checked' : ''; ?>
+                                        name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'optimize_anchors'; ?>"
+                                        id="deferjs_optimize_anchors">
+                                        <span class="description">Default: <?php echo $default['optimize_anchors'] ? 'checked' : 'none'; ?>.</span>
+                                        <p class="help">
+                                            Fix unsafe links to cross-origin destinations.<br>
+                                            Read <a rel="nofollow" href="https://web.dev/external-anchors-use-rel-noopener/" target="_blank">this article</a> for more details.</p>
+                                        </p>
+                                    </fieldset>
+                                </td>
+                            </tr>
+
+                            <tr class="top">
+                                <th>
                                     <label for="deferjs_defer_third_party">Optimized third-party resources</label>
                                 </th>
                                 <td>
