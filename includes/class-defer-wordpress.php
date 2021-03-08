@@ -211,9 +211,24 @@ class Defer_Wordpress
     {
         $plugin_public = new Defer_Wordpress_Public($this->get_plugin_name(), $this->get_version());
 
-        if (!(defined('WP_CLI') && WP_CLI) && !is_admin()) {
+        if (!(defined('WP_CLI') && WP_CLI) && !is_admin() && !$this->is_wplogin()) {
             $this->loader->add_action('init', $plugin_public, 'init', -1);
             $this->loader->add_action('shutdown', $plugin_public, 'shutdown', 100000);
         }
+    }
+
+    /**
+     * Detect login page
+     *
+     * @since 2.0.0
+     */
+    private function is_wplogin()
+    {
+        $incl_path = str_replace(['\\', '/'], DIRECTORY_SEPARATOR, ABSPATH);
+
+        return (in_array($incl_path . 'wp-login.php', get_included_files())
+            || in_array($incl_path . 'wp-register.php', get_included_files()))
+            || (isset($_GLOBALS['pagenow']) && $GLOBALS['pagenow'] === 'wp-login.php')
+            || $_SERVER['PHP_SELF'] == '/wp-login.php';
     }
 }
