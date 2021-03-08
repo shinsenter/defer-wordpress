@@ -120,12 +120,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/shinsenter/defer.php.git",
-                "reference": "e47bf416d14d073143894e82a96e693bc6cad49a"
+                "reference": "b3af357c63447988ddfa3615c527585d0ef3a210"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/shinsenter/defer.php/zipball/e47bf416d14d073143894e82a96e693bc6cad49a",
-                "reference": "e47bf416d14d073143894e82a96e693bc6cad49a",
+                "url": "https://api.github.com/repos/shinsenter/defer.php/zipball/b3af357c63447988ddfa3615c527585d0ef3a210",
+                "reference": "b3af357c63447988ddfa3615c527585d0ef3a210",
                 "shasum": ""
             },
             "require": {
@@ -205,7 +205,7 @@
                     "type": "paypal"
                 }
             ],
-            "time": "2021-03-08T02:35:43+00:00"
+            "time": "2021-03-08T07:18:25+00:00"
         },
         {
             "name": "symfony/css-selector",
