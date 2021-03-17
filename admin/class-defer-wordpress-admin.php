@@ -250,7 +250,7 @@ class Defer_Wordpress_Admin
 
             // Library injection
             'inline_deferjs'     => true,
-            'default_defer_time' => 1,
+            'default_defer_time' => 10,
 
             // Page optimizations
             'add_missing_meta_tags' => true,
@@ -266,10 +266,10 @@ class Defer_Wordpress_Admin
             'optimize_images'     => true,
             'optimize_iframes'    => true,
             'optimize_background' => true,
-            'optimize_fallback'   => true,
             'optimize_anchors'    => true,
+            'optimize_fallback'   => false,
 
-            // Web-font optimizations
+            // Third-party optimizations
             'defer_third_party' => true,
 
             // Content placeholders
@@ -282,6 +282,14 @@ class Defer_Wordpress_Admin
 
             // Splash screen
             'custom_splash_screen' => '',
+
+            // Blacklists
+            'ignore_lazyload_paths' => [],
+            'ignore_lazyload_texts' => [],
+
+            // Blacklists using CSS class names
+            'ignore_lazyload_css_class'     => [],
+            'ignore_lazyload_css_selectors' => [],
         ];
     }
 

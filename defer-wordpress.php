@@ -28,7 +28,7 @@ if (!defined('WPINC')) {
  * Plugin Name:       An efficient lazy loader (defer.js)
  * Plugin URI:        https://wordpress.org/plugins/shins-pageload-magic/
  * Description:       🚀 A native, blazing fast lazy loader. ✅ Legacy browsers support (IE9+). 💯 SEO friendly. 🧩 Lazy load almost anything.
- * Version:           2.0.0-beta.23
+ * Version:           2.0.0-beta.24
  * Author:            Mai Nhut Tan
  * Author URI:        https://code.shin.company/
  * License:           GPL-2.0+
@@ -44,7 +44,7 @@ if (!defined('WPINC')) {
 if (!defined('DEFER_WP_PLUGIN_VERSION')) {
     define('DEFER_WP_PLUGIN_BASE', plugin_basename(__FILE__));
     define('DEFER_WP_PLUGIN_NAME', 'defer-wordpress');
-    define('DEFER_WP_PLUGIN_VERSION', '2.0.0-beta.23');
+    define('DEFER_WP_PLUGIN_VERSION', '2.0.0-beta.24');
     define('DEFER_WP_PLUGIN_PREFIX', DEFER_WP_PLUGIN_NAME . '_');
 
     define('DEFER_WP_PLUGIN_HOOK', 'plugin_action_links_' . DEFER_WP_PLUGIN_BASE);
@@ -91,7 +91,7 @@ function activate_defer_wordpress()
 function deactivate_defer_wordpress()
 {
     require_once plugin_dir_path(__FILE__) . 'includes/class-defer-wordpress-deactivator.php';
-    Defer_Wordpress_Deactivator::deactivate();
+    // Defer_Wordpress_Deactivator::deactivate();
 }
 
 register_activation_hook(__FILE__, 'activate_defer_wordpress');
