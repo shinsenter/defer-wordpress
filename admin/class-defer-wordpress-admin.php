@@ -195,7 +195,13 @@ class Defer_Wordpress_Admin
             $settings = [];
 
             foreach ($options as $key => $value) {
-                $settings[$key] = get_option(DEFER_WP_PLUGIN_PREFIX . $key, $value);
+                $setting = get_option(DEFER_WP_PLUGIN_PREFIX . $key, $value);
+                if (is_array($value) && is_string($setting)) {
+                    $settings[$key] = preg_split('/\s*[\r\n\t,]+\s*/u', $setting);
+                } else {
+                    $settings[$key] = $setting;
+                }
+
             }
 
             if ($this->tryDeferOptions($defer, $settings)) {
@@ -304,7 +310,13 @@ class Defer_Wordpress_Admin
 
             foreach ($options as $key => $value) {
                 if (isset($_REQUEST[DEFER_WP_PLUGIN_PREFIX . $key])) {
-                    $settings[$key] = $_REQUEST[DEFER_WP_PLUGIN_PREFIX . $key];
+                    $form_value = $_REQUEST[DEFER_WP_PLUGIN_PREFIX . $key];
+
+                    if (is_array($value) && !is_array($form_value)) {
+                        $settings[$key] = preg_split('/\s*[\r\n\t,]+\s*/u', $form_value, -1, PREG_SPLIT_NO_EMPTY);
+                    } else {
+                        $settings[$key] = $form_value;
+                    }
                 }
             }
 
@@ -325,16 +337,11 @@ class Defer_Wordpress_Admin
 
     protected function tryDeferOptions($defer, $options = null)
     {
+        // Set new options
         try {
-            // Set new options
             if (!empty($options)) {
                 $defer->options()->setOption($options);
             }
-
-            // Test the configuration
-            $dummy = '<!DOCTYPE html><html><head></head><body></body></html>';
-            $defer->fromHtml($dummy)->toHtml();
-
             return true;
         } catch (\Exception $e) {
             return false;

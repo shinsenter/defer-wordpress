@@ -249,6 +249,26 @@
                                     </fieldset>
                                 </td>
                             </tr>
+
+                            <tr class="top">
+                                <th>
+                                    <label for="deferjs_optimize_fallback">Create fallback content when JavaScript is not available</label>
+                                </th>
+                                <td>
+                                    <fieldset>
+                                        <input type="hidden" value="0" name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'optimize_fallback'; ?>">
+                                        <input type="checkbox" value="1"
+                                        <?php echo $options['optimize_fallback'] == true ? 'checked' : ''; ?>
+                                        name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'optimize_fallback'; ?>"
+                                        id="deferjs_optimize_fallback">
+                                        <span class="description">Default: <?php echo $default['optimize_fallback'] ? 'checked' : 'none'; ?>.</span>
+                                        <p class="help">
+                                            Create <code>&lt;noscript&gt;</code> tags so lazy-loaded elements can still display even when the browser doesn't have javascript enabled. This option applies to all tags that have been lazy-loaded.<br>
+                                            Read <a rel="nofollow" href="https://web.dev/without-javascript/" target="_blank">this article</a> for more details.</p>
+                                        </p>
+                                    </fieldset>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
 
@@ -266,7 +286,7 @@
                         <tbody>
                             <tr class="top">
                                 <th>
-                                    <label for="deferjs_optimize_background">Fix unsafe anchor tags</label>
+                                    <label for="deferjs_optimize_anchors">Fix unsafe anchor tags</label>
                                 </th>
                                 <td>
                                     <fieldset>
@@ -379,6 +399,66 @@
                                         id="defer_long_copyright"><?php echo esc_html($options['long_copyright']); ?></textarea>
                                         <p class="help">If you found this plugin useful, please help me share it with other people by appending a little information at the bottom of your HTML. This information does not affect your website at all.</p>
                                     </fieldset>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p class="submit">
+                        <?php submit_button(__('Update all'), 'primary', 'save-settings', false); ?>
+                        <?php submit_button(__('Reset all to default'), 'secondary', 'reset-settings', false, ['reset-all' => true]); ?>
+                    </p>
+                </div>
+            </div>
+
+            <div class="postbox">
+                <h2>Ignore lazy-loading for some elements</h2>
+                <div class="inside">
+                    <table class="form-table">
+                        <tbody>
+                            <tr class="top">
+                                <th>
+                                    <label for="defer_ignore_lazyload_css_class">Exclude by CSS class names</label>
+                                </th>
+                                <td>
+                                    <fieldset>
+                                        <textarea rows="5"
+                                        name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'ignore_lazyload_css_class'; ?>"
+                                        id="defer_ignore_lazyload_css_class"><?php echo esc_html(implode("\n", $options['ignore_lazyload_css_class'])); ?></textarea>
+                                        <span class="description"> Default: leave it empty.</span>
+                                        <p class="help">Skip lazy-loading for tags containing one of these CSS class names. Each class name in one line.</p>
+                                        <p class="help notice">Caution: checking many CSS class names for each element will significantly reduce the performance of this plugin.</p>
+                                    </fieldset>
+                                </td>
+                            </tr>
+                            <tr class="top">
+                                <th>
+                                    <label for="defer_ignore_lazyload_css_selectors">Exclude by CSS selector</label>
+                                </th>
+                                <td>
+                                    <fieldset>
+                                        <textarea rows="5"
+                                        name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'ignore_lazyload_css_selectors'; ?>"
+                                        id="defer_ignore_lazyload_css_selectors"><?php echo esc_html(implode("\n", $options['ignore_lazyload_css_selectors'])); ?></textarea>
+                                        <span class="description"> Default: leave it empty.</span>
+                                        <p class="help">Skip lazy-loading for tags containing one of these CSS selectors. Each CSS selector in one line.<br>
+                                            Read <a rel="nofollow" href="https://www.w3schools.com/cssref/css_selectors.asp" target="_blank">this article</a> for more details.</p>
+                                        <p class="help notice">Caution: handling too many CSS selectors will significantly reduce the performance of this plugin.</p>
+                                    </fieldset>
+                                </td>
+                            </tr>
+                            <tr class="top">
+                                <th><label for="defer_ignore_lazyload_css_selectors">Better solutions</label></th>
+                                <td>
+                                    <p class="help notice-info notice">You may add an <code>data-ignore</code> attribute to element that you don't want it to be optimized by the library. This attribute can be used for all HTML elements.</p>
+
+                                    <pre><code><?php echo esc_html('<!-- Example for add data-ignore for an img tag -->
+<img data-ignore src="my_photo.jpeg" alt="Awesome photo" />'); ?></code></pre>
+
+                                    <p class="help notice-info notice">You may add an <code>data-nolazy</code> attribute to element that you don't want it to be lazy-loaded by the library. Other optimizations for that element will still be applied except lazy-load. This attribute can be used for all <code>&lt;img&gt;</code>, <code>&lt;picture&gt;</code>, <code>&lt;video&gt;</code>, <code>&lt;audio&gt;</code>, <code>&lt;iframe&gt;</code> and also <code>&lt;link rel="stylesheet"&gt;</code> elements.</p>
+
+                                    <pre><code><?php echo esc_html('<!-- Example for add data-nolazy for an img tag -->
+<img data-nolazy src="my_photo.jpeg" alt="Awesome photo" />'); ?></code></pre>
                                 </td>
                             </tr>
                         </tbody>

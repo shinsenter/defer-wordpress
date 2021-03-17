@@ -40,6 +40,15 @@
 .toplevel_page_defer-wordpress .wrap p {
     line-height: 1.5;
 }
+.toplevel_page_defer-wordpress .wrap code {
+    font-size: small;
+    line-height: inherit;
+}
+
+.toplevel_page_defer-wordpress .wrap pre code {
+    display: block;
+    line-height: 1.5;
+}
 
 .toplevel_page_defer-wordpress .wrap tr {
     border-bottom: 1px #f0f0f0 solid;
@@ -58,6 +67,11 @@
 .toplevel_page_defer-wordpress .wrap fieldset .help {
     font-size: smaller;
     color: #555;
+}
+
+.toplevel_page_defer-wordpress .wrap fieldset .help.notice {
+    font-size: smaller;
+    color: rgb(255, 123, 0);
 }
 
 .toplevel_page_defer-wordpress .wrap .submit {
