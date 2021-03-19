@@ -242,8 +242,8 @@
                                         id="deferjs_optimize_background">
                                         <span class="description">Default: <?php echo $default['optimize_background'] ? 'checked' : 'none'; ?>.</span>
                                         <p class="help">
-                                            Optimize tags that containing CSS for loading images from external sources.
-                                            For example, style properties contain background-image:url() etc.<br>
+                                            Optimize tags that containing CSS for loading images from external sources.<br>
+                                            For example, style properties contain <code>background-image:url()</code> etc.<br>
                                             Read <a rel="nofollow" href="https://web.dev/optimize-css-background-images-with-media-queries/" target="_blank">this article</a> for more details.</p>
                                         </p>
                                     </fieldset>
@@ -263,7 +263,8 @@
                                         id="deferjs_optimize_fallback">
                                         <span class="description">Default: <?php echo $default['optimize_fallback'] ? 'checked' : 'none'; ?>.</span>
                                         <p class="help">
-                                            Create <code>&lt;noscript&gt;</code> tags so lazy-loaded elements can still display even when the browser doesn't have javascript enabled. This option applies to all tags that have been lazy-loaded.<br>
+                                            Create <code>&lt;noscript&gt;</code> tags so lazy-loaded elements can still display even when the browser doesn't have javascript enabled.<br>
+                                            This option applies to all tags that have been lazy-loaded.<br>
                                             Read <a rel="nofollow" href="https://web.dev/without-javascript/" target="_blank">this article</a> for more details.</p>
                                         </p>
                                     </fieldset>
@@ -366,7 +367,7 @@
                                         name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'img_placeholder'; ?>"
                                         id="deferjs_img_placeholder"
                                         value="<?php echo esc_html($options['img_placeholder']); ?>">
-                                        <span class="description">Default: <?php echo $default['img_placeholder'] ?: 'empty string'; ?>.</span>
+                                        <p><span class="description">Default: <?php echo $default['img_placeholder'] ?: 'empty string'; ?>.</span></p>
                                         <p class="help">Default placeholder for lazy-loaded IMG tags.</p>
                                     </fieldset>
                                 </td>
@@ -382,7 +383,7 @@
                                         name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'iframe_placeholder'; ?>"
                                         id="deferjs_iframe_placeholder"
                                         value="<?php echo esc_html($options['iframe_placeholder']); ?>">
-                                        <span class="description">Default: <?php echo $default['iframe_placeholder'] ?: 'empty string'; ?>.</span>
+                                        <p><span class="description">Default: <?php echo $default['iframe_placeholder'] ?: 'empty string'; ?>.</span></p>
                                         <p class="help">Default placeholder for lazy-loaded IFRAME tags.</p>
                                     </fieldset>
                                 </td>
@@ -394,7 +395,7 @@
                                 </th>
                                 <td>
                                     <fieldset>
-                                        <textarea rows="6" style="font-family: monospace;"
+                                        <textarea rows="5" style="font-family: monospace;"
                                         name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'long_copyright'; ?>"
                                         id="defer_long_copyright"><?php echo esc_html($options['long_copyright']); ?></textarea>
                                         <p class="help">If you found this plugin useful, please help me share it with other people by appending a little information at the bottom of your HTML. This information does not affect your website at all.</p>
@@ -425,8 +426,8 @@
                                         <textarea rows="5"
                                         name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'ignore_lazyload_css_class'; ?>"
                                         id="defer_ignore_lazyload_css_class"><?php echo esc_html(implode("\n", $options['ignore_lazyload_css_class'])); ?></textarea>
-                                        <span class="description"> Default: leave it empty.</span>
-                                        <p class="help">Skip lazy-loading for tags containing one of these CSS class names. Each class name in one line.</p>
+                                        <p><span class="description">Default: leave it empty.</span></p>
+                                        <p class="help">Skip lazy-loading for tags containing any of these CSS class names. Each class name is in one line.</p>
                                         <p class="help notice">Caution: checking many CSS class names for each element will significantly reduce the performance of this plugin.</p>
                                     </fieldset>
                                 </td>
@@ -440,8 +441,8 @@
                                         <textarea rows="5"
                                         name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'ignore_lazyload_css_selectors'; ?>"
                                         id="defer_ignore_lazyload_css_selectors"><?php echo esc_html(implode("\n", $options['ignore_lazyload_css_selectors'])); ?></textarea>
-                                        <span class="description"> Default: leave it empty.</span>
-                                        <p class="help">Skip lazy-loading for tags containing one of these CSS selectors. Each CSS selector in one line.<br>
+                                        <p><span class="description">Default: leave it empty.</span></p>
+                                        <p class="help">Skip lazy-loading for tags matching any of these CSS selectors. Each CSS selector is in one line.<br>
                                             Read <a rel="nofollow" href="https://www.w3schools.com/cssref/css_selectors.asp" target="_blank">this article</a> for more details.</p>
                                         <p class="help notice">Caution: handling too many CSS selectors will significantly reduce the performance of this plugin.</p>
                                     </fieldset>
@@ -472,7 +473,7 @@
             </div>
 
             <div class="postbox">
-                <h2>Add defer.js library</h2>
+                <h2>Support for old browsers (IE9)</h2>
                 <div class="inside">
                     <table class="form-table">
                         <tbody>
@@ -486,8 +487,8 @@
                                         name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'polyfill_src'; ?>"
                                         id="defer_polyfill_src"
                                         value="<?php echo esc_html($options['polyfill_src']); ?>">
-                                        <p class="help">Polyfill library that contains fixes for some older browsers that do not support IntersectionObserver feature.<br>
-                                            Default: <code><?php echo $default['polyfill_src']; ?></code>.</p>
+                                        <p><span class="description">Default: <code><?php echo $default['polyfill_src']; ?></code>.</span></p>
+                                        <p class="help">This library polyfills the native <code>IntersectionObserver</code> API in unsupporting browsers.<br>See the <a rel="nofollow" href="https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API" target="_blank">API documentation</a> for usage information.</p>
                                     </fieldset>
                                 </td>
                             </tr>

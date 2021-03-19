@@ -196,12 +196,12 @@ class Defer_Wordpress_Admin
 
             foreach ($options as $key => $value) {
                 $setting = get_option(DEFER_WP_PLUGIN_PREFIX . $key, $value);
+
                 if (is_array($value) && is_string($setting)) {
                     $settings[$key] = preg_split('/\s*[\r\n\t,]+\s*/u', $setting);
                 } else {
                     $settings[$key] = $setting;
                 }
-
             }
 
             if ($this->tryDeferOptions($defer, $settings)) {
@@ -342,6 +342,7 @@ class Defer_Wordpress_Admin
             if (!empty($options)) {
                 $defer->options()->setOption($options);
             }
+
             return true;
         } catch (\Exception $e) {
             return false;

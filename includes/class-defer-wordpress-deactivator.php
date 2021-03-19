@@ -35,6 +35,11 @@ class Defer_Wordpress_Deactivator
      */
     public static function deactivate()
     {
+        delete_option(DEFER_WP_PLUGIN_NAME . 'version');
+    }
+
+    public static function resetOptions()
+    {
         if (class_exists('AppSeeds\Defer')) {
             $defer   = defer_wp_instance([]);
             $options = $defer->optionArray();
@@ -42,8 +47,6 @@ class Defer_Wordpress_Deactivator
             foreach ($options as $key => $value) {
                 delete_option(DEFER_WP_PLUGIN_PREFIX . $key);
             }
-
-            delete_option(DEFER_WP_PLUGIN_NAME . 'version');
         }
     }
 }

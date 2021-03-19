@@ -41,7 +41,7 @@
     line-height: 1.5;
 }
 .toplevel_page_defer-wordpress .wrap code {
-    font-size: small;
+    font-size: smaller;
     line-height: inherit;
 }
 

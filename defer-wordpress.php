@@ -28,7 +28,7 @@ if (!defined('WPINC')) {
  * Plugin Name:       An efficient lazy loader (defer.js)
  * Plugin URI:        https://wordpress.org/plugins/shins-pageload-magic/
  * Description:       🚀 A native, blazing fast lazy loader. ✅ Legacy browsers support (IE9+). 💯 SEO friendly. 🧩 Lazy load almost anything.
- * Version:           2.0.0-beta.24
+ * Version:           2.0.0-beta.25
  * Author:            Mai Nhut Tan
  * Author URI:        https://code.shin.company/
  * License:           GPL-2.0+
@@ -44,7 +44,7 @@ if (!defined('WPINC')) {
 if (!defined('DEFER_WP_PLUGIN_VERSION')) {
     define('DEFER_WP_PLUGIN_BASE', plugin_basename(__FILE__));
     define('DEFER_WP_PLUGIN_NAME', 'defer-wordpress');
-    define('DEFER_WP_PLUGIN_VERSION', '2.0.0-beta.24');
+    define('DEFER_WP_PLUGIN_VERSION', '2.0.0-beta.25');
     define('DEFER_WP_PLUGIN_PREFIX', DEFER_WP_PLUGIN_NAME . '_');
 
     define('DEFER_WP_PLUGIN_HOOK', 'plugin_action_links_' . DEFER_WP_PLUGIN_BASE);
@@ -91,7 +91,7 @@ function activate_defer_wordpress()
 function deactivate_defer_wordpress()
 {
     require_once plugin_dir_path(__FILE__) . 'includes/class-defer-wordpress-deactivator.php';
-    // Defer_Wordpress_Deactivator::deactivate();
+    Defer_Wordpress_Deactivator::deactivate();
 }
 
 register_activation_hook(__FILE__, 'activate_defer_wordpress');
@@ -102,21 +102,6 @@ register_deactivation_hook(__FILE__, 'deactivate_defer_wordpress');
  * admin-specific hooks, and public-facing site hooks.
  */
 require plugin_dir_path(__FILE__) . 'includes/class-defer-wordpress.php';
-
-/**
- * Begins execution of the plugin.
- *
- * Since everything within the plugin is registered via hooks,
- * then kicking off the plugin from this point in the file does
- * not affect the page life cycle.
- *
- * @since 2.0.0
- */
-function run_defer_wordpress()
-{
-    $plugin = new Defer_Wordpress();
-    $plugin->run();
-}
 
 // Version check
 if (!function_exists('defer_wp_update_note')) {
@@ -169,11 +154,25 @@ if (!function_exists('defer_wp_ob')) {
     }
 }
 
-// Main work
-run_defer_wordpress();
+/**
+ * Begins execution of the plugin.
+ *
+ * Since everything within the plugin is registered via hooks,
+ * then kicking off the plugin from this point in the file does
+ * not affect the page life cycle.
+ *
+ * @since 2.0.0
+ */
+function run_defer_wordpress()
+{
+    $plugin = new Defer_Wordpress();
+    $plugin->run();
 
-if (get_option(DEFER_WP_PLUGIN_NAME . 'version', '') !== DEFER_WP_PLUGIN_VERSION) {
-    $admin = new Defer_Wordpress_Admin(DEFER_WP_PLUGIN_NAME, DEFER_WP_PLUGIN_VERSION);
-    $admin->reset_settings();
-    add_action('admin_notices', 'defer_wp_update_note');
+    add_filter('wp_lazy_loading_enabled', '__return_false');
+
+    if (get_option(DEFER_WP_PLUGIN_NAME . 'version', '') !== DEFER_WP_PLUGIN_VERSION) {
+        add_action('admin_notices', 'defer_wp_update_note');
+    }
 }
+
+run_defer_wordpress();
