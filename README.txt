@@ -1,4 +1,4 @@
-=== Your site can be faster (with defer.js)! ===
+=== A faster website (with defer.js)! ===
 Contributors: shinsenter
 Donate link: https://www.paypal.me/shinsenter
 Tags: defer.js,optimization,core-web-vitals,lazyload,loading-lazy,lazy-loading,lazyload-image,lazyload-video,lazyload-font,lazyload-js,lazyload-css,lazyload-wordpress,lazyload-facebook,lazyload-youtube,site-performance,speed,pagespeed,page-speed,html-minify,shinsenter
