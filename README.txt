@@ -9,11 +9,11 @@ Requires PHP: 5.6
 License: GPL-2.0+
 License URI: https://code.shin.company/defer-wordpress/blob/master/LICENSE
 
-⚡️ A native, blazing fast lazy loader. ✅ Legacy browsers support (IE9+). 💯 SEO friendly. 🧩 Lazy load almost anything.
+⚡️ A native, blazing fast lazy loader. ✅ Legacy browsers support (IE9+). 💯 SEO friendly. 🧩 Lazy-load everything.
 
 == Description ==
 
-⚡️ A native, blazing fast lazy loader. ✅ Legacy browsers support (IE9+). 💯 SEO friendly. 🧩 Lazy load almost anything.
+⚡️ A native, blazing fast lazy loader. ✅ Legacy browsers support (IE9+). 💯 SEO friendly. 🧩 Lazy-load everything.
 
 This plugin helps you to optimize everything like image tags, video, audio, iframes as well as stylesheets, and JavaScript.
 

@@ -27,7 +27,7 @@ if (!defined('WPINC')) {
  * @wordpress-plugin
  * Plugin Name:       Your site can be faster (with defer.js)!
  * Plugin URI:        https://wordpress.org/plugins/shins-pageload-magic/
- * Description:       🚀 A native, blazing fast lazy loader. ✅ Legacy browsers support (IE9+). 💯 SEO friendly. 🧩 Lazy load almost anything.
+ * Description:       🚀 A native, blazing fast lazy loader. ✅ Legacy browsers support (IE9+). 💯 SEO friendly. 🧩 Lazy-load everything.
  * Version:           2.0.0-beta.27
  * Author:            Mai Nhut Tan
  * Author URI:        https://code.shin.company/
