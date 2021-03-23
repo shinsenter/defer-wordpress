@@ -3,17 +3,20 @@
     "description": "🚀 A WordPress plugin that focuses on minimizing payload size of HTML document and optimizing processing on the browser when rendering the WordPress page.",
     "type": "project",
     "license": "GPL-2.0",
-    "authors": [{
-        "name": "Mai Nhut Tan",
-        "email": "shin@shin.company",
-        "homepage": "https://code.shin.company",
-        "role": "Owner"
-    }],
+    "authors": [
+        {
+            "name": "Mai Nhut Tan",
+            "email": "shin@shin.company",
+            "homepage": "https://code.shin.company",
+            "role": "Owner"
+        }
+    ],
     "support": {
         "issues": "https://github.com/shinsenter/defer.php/issues",
         "source": "https://github.com/shinsenter/defer.php"
     },
-    "funding": [{
+    "funding": [
+        {
             "type": "github",
             "url": "https://github.com/shinsenter/defer.php/stargazers"
         },
@@ -41,7 +44,7 @@
         ]
     },
     "config": {
-        "classmap-authoritative": false,
+        "classloader-suffix": "ShinSenterDeferWordpress",
         "preferred-install": "dist",
         "optimize-autoloader": true,
         "sort-packages": true,
@@ -52,7 +55,8 @@
     "require": {
         "php": ">=5.6",
         "shinsenter/defer.php": "v2.0.x-dev",
-        "symfony/polyfill-mbstring": "<=1.22.0"
+        "symfony/polyfill-mbstring": "<=1.22.0",
+        "dangoodman/composer-for-wordpress": "^2.0"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^2.0"

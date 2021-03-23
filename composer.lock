@@ -4,8 +4,44 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2fe58afdf5ba3906723e2c43c62c7c1d",
+    "content-hash": "feecb30298200e1f36d34d3f5deb2ec8",
     "packages": [
+        {
+            "name": "dangoodman/composer-for-wordpress",
+            "version": "2.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dangoodman/composer-for-wordpress.git",
+                "reference": "cc5b3d0a1122d87d60f378071159bac0dbd93daa"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dangoodman/composer-for-wordpress/zipball/cc5b3d0a1122d87d60f378071159bac0dbd93daa",
+                "reference": "cc5b3d0a1122d87d60f378071159bac0dbd93daa",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.0 || ^2.0"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "Dangoodman\\ComposerForWordpress\\ComposerForWordpress"
+            },
+            "autoload": {
+                "psr-4": {
+                    "Dangoodman\\ComposerForWordpress\\": "."
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "support": {
+                "issues": "https://github.com/dangoodman/composer-for-wordpress/issues",
+                "source": "https://github.com/dangoodman/composer-for-wordpress/tree/2.0.2"
+            },
+            "time": "2020-11-16T19:32:10+00:00"
+        },
         {
             "name": "mrclay/jsmin-php",
             "version": "2.4.0",
@@ -120,12 +156,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/shinsenter/defer.php.git",
-                "reference": "d17b2d29706c1fbbd356b2c5812f103351e2e024"
+                "reference": "c2581f9b6fa73e2c6cdf7b744065d6907e5fa22e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/shinsenter/defer.php/zipball/d17b2d29706c1fbbd356b2c5812f103351e2e024",
-                "reference": "d17b2d29706c1fbbd356b2c5812f103351e2e024",
+                "url": "https://api.github.com/repos/shinsenter/defer.php/zipball/c2581f9b6fa73e2c6cdf7b744065d6907e5fa22e",
+                "reference": "c2581f9b6fa73e2c6cdf7b744065d6907e5fa22e",
                 "shasum": ""
             },
             "require": {
@@ -205,7 +241,7 @@
                     "type": "paypal"
                 }
             ],
-            "time": "2021-03-22T02:30:33+00:00"
+            "time": "2021-03-23T01:36:37+00:00"
         },
         {
             "name": "symfony/css-selector",

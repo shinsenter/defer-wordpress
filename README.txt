@@ -1,7 +1,7 @@
-=== An efficient lazy loader (defer.js) ===
+=== Your site can be faster (with defer.js)! ===
 Contributors: shinsenter
 Donate link: https://www.paypal.me/shinsenter
-Tags: lazy,lazyload,lazy-js,lazy-css,lazy-image,lazy-iframe,lazy-video,pagespeed,website-performance,lazy-loading,lazy-loader,defer,lazy-ads,efficient,avoid-render-blocking,browser-compatibility,intersection-observer,browser-perf,defer.js
+Tags: defer.js,optimization,core-web-vitals,lazyload,loading-lazy,lazy-loading,lazyload-image,lazyload-video,lazyload-font,lazyload-js,lazyload-css,lazyload-wordpress,lazyload-facebook,lazyload-youtube,site-performance,speed,pagespeed,page-speed,html-minify,shinsenter
 Requires at least: 4.0
 Tested up to: 5.8-beta
 Stable tag: trunk
@@ -158,7 +158,7 @@ We recommend you use it with another page-caching plugin for best performance.
 
 == Changelog ==
 
-2.0.0-beta Upgraded to v2
+2.0.0-beta Upgraded to v2. Renamed plugin.
 
 1.1.15 Fixed bugs in defer.js 1.1.13, 1.1.14
 
