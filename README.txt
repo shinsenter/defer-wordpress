@@ -158,7 +158,7 @@ We recommend you use it with another page-caching plugin for best performance.
 
 == Changelog ==
 
-2.0.0-beta Upgraded to v2. Renamed plugin.
+2.0.0 Upgraded to v2. Renamed plugin.
 
 1.1.15 Fixed bugs in defer.js 1.1.13, 1.1.14
 
