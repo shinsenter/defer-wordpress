@@ -1,8 +1,8 @@
-#adminmenu .toplevel_page_defer-wordpress {
+#toplevel_page_defer-wordpress {
     display: none;
 }
 
-.toplevel_page_defer-wordpress .menu-top img {
+#toplevel_page_defer-wordpress img {
     width: 16px;
     height: 16px;
 }
@@ -22,7 +22,6 @@
 }
 
 .toplevel_page_defer-wordpress .wrap h2 {
-
     padding: 8px 12px;
     margin: 0;
     line-height: 1.4;
@@ -39,6 +38,15 @@
 }
 
 .toplevel_page_defer-wordpress .wrap p {
+    line-height: 1.5;
+}
+.toplevel_page_defer-wordpress .wrap code {
+    font-size: smaller;
+    line-height: inherit;
+}
+
+.toplevel_page_defer-wordpress .wrap pre code {
+    display: block;
     line-height: 1.5;
 }
 
@@ -61,6 +69,11 @@
     color: #555;
 }
 
+.toplevel_page_defer-wordpress .wrap fieldset .help.notice {
+    font-size: smaller;
+    color: rgb(255, 123, 0);
+}
+
 .toplevel_page_defer-wordpress .wrap .submit {
     padding: 0;
 }
@@ -81,7 +94,6 @@
         float: left;
         padding-right: 2rem;
     }
-
     .toplevel_page_defer-wordpress .wrap .side {
         margin-top: 0;
         margin-left: 70%;

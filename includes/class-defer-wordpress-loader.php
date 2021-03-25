@@ -1,14 +1,19 @@
 <?php
 
 /**
- * 🔌 A Wordpress plugin integrating my beloved "defer.js" library
- *    into your websites. Hope you guys like it.
- * (c) 2019 AppSeeds Team <hello@appseeds.net>
+ * 🚀 A WordPress plugin that focuses on minimizing payload size of HTML document
+ *    and optimizing processing on the browser when rendering the WordPress page.
+ * (c) 2021 AppSeeds <hello@appseeds.net>
  *
- * @author    Mai Nhut Tan <shin@shin.company>
- * @copyright 2019 AppSeeds
+ * PHP Version >=5.6
+ *
+ * @category  Web_Performance_Optimization
  * @package   defer-wordpress
- * @see       https://code.shin.company/defer-wordpress/
+ * @author    Mai Nhut Tan <shin@shin.company>
+ * @copyright 2021 AppSeeds
+ * @license   https://code.shin.company/defer-wordpress/blob/master/LICENSE GPL-2.0
+ * @link      https://code.shin.company/defer-wordpress
+ * @see       https://code.shin.company/defer-wordpress/blob/master/README.md
  */
 
 /**
@@ -18,14 +23,14 @@
  * the plugin, and register them with the WordPress API. Call the
  * run function to execute the list of actions and filters.
  *
- * @author     MAI NHUT TAN <shin@shin.company>
+ * @author     Mai Nhut Tan <shin@shin.company>
  */
-class Defer_Js_Loader
+class Defer_Wordpress_Loader
 {
     /**
      * The array of actions registered with WordPress.
      *
-     * @since    1.0.0
+     * @since 2.0.0
      * @var array the actions registered with WordPress to fire when the plugin loads
      */
     protected $actions;
@@ -33,7 +38,7 @@ class Defer_Js_Loader
     /**
      * The array of filters registered with WordPress.
      *
-     * @since    1.0.0
+     * @since 2.0.0
      * @var array the filters registered with WordPress to fire when the plugin loads
      */
     protected $filters;
@@ -41,18 +46,18 @@ class Defer_Js_Loader
     /**
      * Initialize the collections used to maintain the actions and filters.
      *
-     * @since    1.0.0
+     * @since 2.0.0
      */
     public function __construct()
     {
-        $this->actions = array();
-        $this->filters = array();
+        $this->actions = [];
+        $this->filters = [];
     }
 
     /**
      * Add a new action to the collection to be registered with WordPress.
      *
-     * @since    1.0.0
+     * @since 2.0.0
      * @param string $hook          the name of the WordPress action that is being registered
      * @param object $component     a reference to the instance of the object on which the action is defined
      * @param string $callback      the name of the function definition on the $component
@@ -67,7 +72,7 @@ class Defer_Js_Loader
     /**
      * Add a new filter to the collection to be registered with WordPress.
      *
-     * @since    1.0.0
+     * @since 2.0.0
      * @param string $hook          the name of the WordPress filter that is being registered
      * @param object $component     a reference to the instance of the object on which the filter is defined
      * @param string $callback      the name of the function definition on the $component
@@ -82,16 +87,16 @@ class Defer_Js_Loader
     /**
      * Register the filters and actions with WordPress.
      *
-     * @since    1.0.0
+     * @since 2.0.0
      */
     public function run()
     {
         foreach ($this->filters as $hook) {
-            add_filter($hook['hook'], array($hook['component'], $hook['callback']), $hook['priority'], $hook['accepted_args']);
+            add_filter($hook['hook'], [$hook['component'], $hook['callback']], $hook['priority'], $hook['accepted_args']);
         }
 
         foreach ($this->actions as $hook) {
-            add_action($hook['hook'], array($hook['component'], $hook['callback']), $hook['priority'], $hook['accepted_args']);
+            add_action($hook['hook'], [$hook['component'], $hook['callback']], $hook['priority'], $hook['accepted_args']);
         }
     }
 
@@ -99,7 +104,7 @@ class Defer_Js_Loader
      * A utility function that is used to register the actions and hooks into a single
      * collection.
      *
-     * @since    1.0.0
+     * @since 2.0.0
      * @param  array  $hooks         the collection of hooks that is being registered (that is, actions or filters)
      * @param  string $hook          the name of the WordPress filter that is being registered
      * @param  object $component     a reference to the instance of the object on which the filter is defined
@@ -110,13 +115,13 @@ class Defer_Js_Loader
      */
     private function add($hooks, $hook, $component, $callback, $priority, $accepted_args)
     {
-        $hooks[] = array(
-            'hook'          => (string) $hook,
+        $hooks[] = [
+            'hook'          => $hook,
             'component'     => $component,
             'callback'      => $callback,
-            'priority'      => (int) $priority,
-            'accepted_args' => (int) $accepted_args,
-        );
+            'priority'      => $priority,
+            'accepted_args' => $accepted_args,
+        ];
 
         return $hooks;
     }

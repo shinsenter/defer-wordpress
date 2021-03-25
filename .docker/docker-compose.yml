@@ -1,0 +1,28 @@
+version: '3.3'
+
+services:
+  mariadb:
+    image: mariadb:10.5
+    volumes:
+      - "./data:/var/lib/mysql"
+    environment:
+      MYSQL_ROOT_PASSWORD: somewordpress
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpress
+  wordpress:
+    container_name: defer-wp
+    hostname: defer-wp-test
+    depends_on:
+      - mariadb
+    image: wordpress:php5.6
+    ports:
+      - "8000:80"
+    volumes:
+      - "./wordpress/:/var/www/html"
+      - "../:/var/www/html/wp-content/plugins/defer-wordpress"
+    environment:
+      WORDPRESS_DB_HOST: mariadb:3306
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: wordpress
+      WORDPRESS_DB_NAME: wordpress
