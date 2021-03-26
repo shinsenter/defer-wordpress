@@ -9,13 +9,13 @@ Requires PHP: 5.6
 License: GPL-2.0+
 License URI: https://github.com/shinsenter/defer-wordpress/blob/master/LICENSE
 
-⚡️ A native, blazing fast lazy loader. ✅ Legacy browsers support (IE9+). 💯 SEO friendly. 🧩 Lazy load almost anything.
+⚡️ A native, blazing fast lazy loader. ✅ Legacy browsers support (IE9+). 💯 SEO friendly. 🧩 Lazy load almost everything.
 
 == Description ==
 
 WordPress remains one of the most popular CMS platform until now, and I'm excited to make a Wordpress plugin that focuses on minimizing payload size of HTML document and optimizing processing on the browser when rendering the web page.
 
-⚡️ A native, blazing fast lazy loader. ✅ Legacy browsers support (IE9+). 💯 SEO friendly. 🧩 Lazy load almost anything.
+⚡️ A native, blazing fast lazy loader. ✅ Legacy browsers support (IE9+). 💯 SEO friendly. 🧩 Lazy load almost everything.
 
 Rate [5 stars (⭐️⭐️⭐️⭐️⭐️)](https://wordpress.org/support/plugin/shins-pageload-magic/reviews/?filter=5) if you guys like it.
 

@@ -27,7 +27,7 @@ define('DEFER_JS_PREFIX', 'shinsenter_deferjs_');
  * @wordpress-plugin
  * Plugin Name:       An efficient lazy loader (defer.js)
  * Plugin URI:        https://wordpress.org/plugins/shins-pageload-magic/
- * Description:       ⚡️ A native, blazing fast lazy loader. ✅ Legacy browsers support (IE9+). 💯 SEO friendly. 🧩 Lazy load almost anything.
+ * Description:       ⚡️ A native, blazing fast lazy loader. ✅ Legacy browsers support (IE9+). 💯 SEO friendly. 🧩 Lazy load almost everything.
  * Version:           1.1.15
  * Author:            Mai Nhut Tan
  * Author URI:        https://code.shin.company/
