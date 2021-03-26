@@ -25,14 +25,16 @@ Rate [5 stars (⭐️⭐️⭐️⭐️⭐️)](https://wordpress.org/support/pl
 
 [defer.js](https://github.com/shinsenter/defer.js) is a super tiny, native performance library for lazy-loading JS, CSS, images, iframes...
 
-- ⚡️ Native API, blazing fast
-- 👍 Legacy browsers support (IE9+)
-- 🥇 SEO friendly
-- ✅ Very easy to use
-- 💯 No dependencies, no jQuery
-- 🤝 Works well with your favorite frameworks
+
+- 🔰 Very easy to use
+- 🚀 Native API, blazing fast
+- 👍 No dependencies, no jQuery
+- ✅ Supports legacy browsers (IE9+)
+- 🎯 [Core Web Vitals](https://web.dev/vitals/) friendly
+- 🧩 Lazy load almost everything
 - 🧩 Uses [IntersectionObserver API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) for optimized CPU usage
 - 🏞 Supports for responsive images, both `srcset` and `sizes` attributes
+- 🤝 Works well with your favorite frameworks
 
 ![Scoring 100/100 in Google PageSpeed Test](https://raw.githubusercontent.com/shinsenter/defer.js/master/docs/assets/scores.jpg)
 
