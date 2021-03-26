@@ -9,7 +9,7 @@
     },
     "require": {
         "php": "^5.6 || ^7.0 || ^8.0",
-        "shinsenter/defer.php": "^1.1"
+        "shinsenter/defer.php": "^2.0"
     },
     "config": {
         "preferred-install": "dist",
