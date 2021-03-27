@@ -22,14 +22,15 @@ Rate [5 stars (⭐️⭐️⭐️⭐️⭐️)](https://wordpress.org/support/pl
 
 ## Good points
 
-- ⚡️ Native API, blazing fast
-- 👍 Legacy browsers support (IE9+)
-- 🥇 SEO friendly
-- ✅ Very easy to use
-- 💯 No dependencies, no jQuery
-- 🤝 Works well with your favorite frameworks
+- 🔰 Very easy to use
+- 🚀 Native API, blazing fast
+- 👍 No dependencies, no jQuery
+- ✅ Supports legacy browsers (IE9+)
+- 🎯 [Core Web Vitals](https://web.dev/vitals/) friendly
+- 🧩 Lazy load almost everything
 - 🧩 Uses [IntersectionObserver API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) for optimized CPU usage
 - 🏞 Supports for responsive images, both `srcset` and `sizes` attributes
+- 🤝 Works well with your favorite frameworks
 
 💡 Tip: To archive better result, you should consider disabling all optimization features (Eg. lazy-loading, HTML minification, JS minification, etc.) by other plugins.
 
