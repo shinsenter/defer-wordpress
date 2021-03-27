@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fb8acccbd287c05f02529c3739dec9c4",
+    "content-hash": "172b16ed3092399b49bbafa10c659b57",
     "packages": [
         {
             "name": "dangoodman/composer-for-wordpress",
@@ -152,16 +152,16 @@
         },
         {
             "name": "shinsenter/defer.php",
-            "version": "2.0.0",
+            "version": "dev-develop",
             "source": {
                 "type": "git",
                 "url": "https://github.com/shinsenter/defer.php.git",
-                "reference": "abc844b2c141c50f6a3c2ae4ffebcbb6fc99bba3"
+                "reference": "97b36b97d81d546a3bc025905640a9cd3e7ee2b2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/shinsenter/defer.php/zipball/abc844b2c141c50f6a3c2ae4ffebcbb6fc99bba3",
-                "reference": "abc844b2c141c50f6a3c2ae4ffebcbb6fc99bba3",
+                "url": "https://api.github.com/repos/shinsenter/defer.php/zipball/97b36b97d81d546a3bc025905640a9cd3e7ee2b2",
+                "reference": "97b36b97d81d546a3bc025905640a9cd3e7ee2b2",
                 "shasum": ""
             },
             "require": {
@@ -241,7 +241,7 @@
                     "type": "paypal"
                 }
             ],
-            "time": "2021-03-25T02:16:10+00:00"
+            "time": "2021-03-27T05:15:26+00:00"
         },
         {
             "name": "symfony/css-selector",
@@ -539,16 +539,16 @@
         },
         {
             "name": "composer/xdebug-handler",
-            "version": "1.4.5",
+            "version": "1.4.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/xdebug-handler.git",
-                "reference": "f28d44c286812c714741478d968104c5e604a1d4"
+                "reference": "f27e06cd9675801df441b3656569b328e04aa37c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/xdebug-handler/zipball/f28d44c286812c714741478d968104c5e604a1d4",
-                "reference": "f28d44c286812c714741478d968104c5e604a1d4",
+                "url": "https://api.github.com/repos/composer/xdebug-handler/zipball/f27e06cd9675801df441b3656569b328e04aa37c",
+                "reference": "f27e06cd9675801df441b3656569b328e04aa37c",
                 "shasum": ""
             },
             "require": {
@@ -556,7 +556,8 @@
                 "psr/log": "^1.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^4.8.35 || ^5.7 || 6.5 - 8"
+                "phpstan/phpstan": "^0.12.55",
+                "symfony/phpunit-bridge": "^4.2 || ^5"
             },
             "type": "library",
             "autoload": {
@@ -582,7 +583,7 @@
             "support": {
                 "irc": "irc://irc.freenode.org/composer",
                 "issues": "https://github.com/composer/xdebug-handler/issues",
-                "source": "https://github.com/composer/xdebug-handler/tree/1.4.5"
+                "source": "https://github.com/composer/xdebug-handler/tree/1.4.6"
             },
             "funding": [
                 {
@@ -598,7 +599,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-11-13T08:04:11+00:00"
+            "time": "2021-03-25T17:01:18+00:00"
         },
         {
             "name": "doctrine/annotations",
@@ -1710,7 +1711,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "shinsenter/defer.php": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
