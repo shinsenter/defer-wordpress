@@ -54,7 +54,7 @@
     },
     "require": {
         "php": ">=5.6",
-        "shinsenter/defer.php": "dev-develop",
+        "shinsenter/defer.php": "^2.1.0",
         "symfony/polyfill-mbstring": "<=1.22.0",
         "dangoodman/composer-for-wordpress": "^2.0"
     },

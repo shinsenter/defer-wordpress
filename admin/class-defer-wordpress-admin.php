@@ -29,7 +29,7 @@ class Defer_Wordpress_Admin
     /**
      * The ID of this plugin.
      *
-     * @since 2.0.0
+     * @since 2.0
      * @var string the ID of this plugin
      */
     private $plugin_name;
@@ -37,7 +37,7 @@ class Defer_Wordpress_Admin
     /**
      * The version of this plugin.
      *
-     * @since 2.0.0
+     * @since 2.0
      * @var string the current version of this plugin
      */
     private $version;
@@ -45,7 +45,7 @@ class Defer_Wordpress_Admin
     /**
      * Initialize the class and set its properties.
      *
-     * @since 2.0.0
+     * @since 2.0
      * @param string $plugin_name the name of this plugin
      * @param string $version     the version of this plugin
      */
@@ -58,7 +58,7 @@ class Defer_Wordpress_Admin
     /**
      * Register the stylesheets for the admin area.
      *
-     * @since 2.0.0
+     * @since 2.0
      */
     public function enqueue_styles()
     {
@@ -80,7 +80,7 @@ class Defer_Wordpress_Admin
     /**
      * Register the JavaScript for the admin area.
      *
-     * @since 2.0.0
+     * @since 2.0
      */
     public function enqueue_scripts()
     {

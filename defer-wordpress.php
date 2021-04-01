@@ -25,10 +25,10 @@ if (!defined('WPINC')) {
  * The plugin bootstrap file
  *
  * @wordpress-plugin
- * Plugin Name:       A faster website (with defer.js)!
+ * Plugin Name:       A faster website! (aka defer.js)
  * Plugin URI:        https://wordpress.org/plugins/shins-pageload-magic/
  * Description:       🚀 A native, blazing fast lazy loader. ✅ Legacy browsers support (IE9+). 💯 SEO friendly. 🧩 Lazy-load everything.
- * Version:           2.0.0
+ * Version:           2.1.0
  * Author:            Mai Nhut Tan
  * Author URI:        https://code.shin.company/
  * License:           GPL-2.0+
@@ -44,7 +44,7 @@ if (!defined('WPINC')) {
 if (!defined('DEFER_WP_PLUGIN_VERSION')) {
     define('DEFER_WP_PLUGIN_BASE', plugin_basename(__FILE__));
     define('DEFER_WP_PLUGIN_NAME', 'defer-wordpress');
-    define('DEFER_WP_PLUGIN_VERSION', '2.0.0');
+    define('DEFER_WP_PLUGIN_VERSION', '2.1.0');
     define('DEFER_WP_PLUGIN_PREFIX', DEFER_WP_PLUGIN_NAME . '_');
 
     define('DEFER_WP_PLUGIN_HOOK', 'plugin_action_links_' . DEFER_WP_PLUGIN_BASE);
@@ -58,14 +58,14 @@ if (!defined('DEFER_WP_PLUGIN_VERSION')) {
     $has_deferjs = file_exists(__DIR__ . '/public/lib/defer_plus.min.js');
     define('DEFER_WP_SRC_DEFERJS_CDN', $has_deferjs
         ? __DIR__ . '/public/lib/defer_plus.min.js'
-        : 'https://cdn.jsdelivr.net/npm/@shinsenter/defer.js@2.2.0/dist/defer_plus.min.js');
+        : 'https://cdn.jsdelivr.net/npm/@shinsenter/defer.js@2.3.0/dist/defer_plus.min.js');
 
     $has_polyfill = file_exists(__DIR__ . '/public/lib/polyfill.min.js');
     define('DEFER_WP_SRC_POLYFILL_CDN', $has_polyfill
         ? plugin_dir_url(__FILE__) . 'public/lib/polyfill.min.js'
         : 'https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver');
 
-    define('DEFER_WP_HOMEPAGE', 'https://github.com/shinsenter/defer.js');
+    define('DEFER_WP_HOMEPAGE', 'https://shinsenter.github.com/defer.js/');
     define('DEFER_WP_PLUGIN_URL', 'https://wordpress.org/plugins/shins-pageload-magic/');
     define('DEFER_WP_PAYPAL', 'https://www.paypal.me/shinsenter');
     define('DEFER_WP_PATREON', 'https://www.patreon.com/appseeds');
@@ -161,7 +161,7 @@ if (!function_exists('defer_wp_ob')) {
  * then kicking off the plugin from this point in the file does
  * not affect the page life cycle.
  *
- * @since 2.0.0
+ * @since 2.1.0
  */
 function run_defer_wordpress()
 {

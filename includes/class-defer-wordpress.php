@@ -34,7 +34,7 @@ class Defer_Wordpress
      * The loader that's responsible for maintaining and registering all hooks that power
      * the plugin.
      *
-     * @since 2.0.0
+     * @since 2.0
      * @var Defer_Wordpress_Loader maintains and registers all hooks for the plugin
      */
     protected $loader;
@@ -42,7 +42,7 @@ class Defer_Wordpress
     /**
      * The unique identifier of this plugin.
      *
-     * @since 2.0.0
+     * @since 2.0
      * @var string the string used to uniquely identify this plugin
      */
     protected $plugin_name;
@@ -50,7 +50,7 @@ class Defer_Wordpress
     /**
      * The current version of the plugin.
      *
-     * @since 2.0.0
+     * @since 2.0
      * @var string the current version of the plugin
      */
     protected $version;
@@ -62,7 +62,7 @@ class Defer_Wordpress
      * Load the dependencies, define the locale, and set the hooks for the admin area and
      * the public-facing side of the site.
      *
-     * @since 2.0.0
+     * @since 2.0
      */
     public function __construct()
     {
@@ -78,7 +78,7 @@ class Defer_Wordpress
     /**
      * Run the loader to execute all of the hooks with WordPress.
      *
-     * @since 2.0.0
+     * @since 2.0
      */
     public function run()
     {
@@ -138,7 +138,7 @@ class Defer_Wordpress
      * Create an instance of the loader which will be used to register the hooks
      * with WordPress.
      *
-     * @since 2.0.0
+     * @since 2.0
      */
     private function load_dependencies()
     {
@@ -174,7 +174,7 @@ class Defer_Wordpress
      * Uses the Defer_Wordpress_i18n class in order to set the domain and to register the hook
      * with WordPress.
      *
-     * @since 2.0.0
+     * @since 2.0
      */
     private function set_locale()
     {
@@ -187,7 +187,7 @@ class Defer_Wordpress
      * Register all of the hooks related to the admin area functionality
      * of the plugin.
      *
-     * @since 2.0.0
+     * @since 2.0
      */
     private function define_admin_hooks()
     {
@@ -205,7 +205,7 @@ class Defer_Wordpress
      * Register all of the hooks related to the public-facing functionality
      * of the plugin.
      *
-     * @since 2.0.0
+     * @since 2.0
      */
     private function define_public_hooks()
     {
@@ -220,7 +220,7 @@ class Defer_Wordpress
     /**
      * Detect login page
      *
-     * @since 2.0.0
+     * @since 2.0
      */
     private function is_wplogin()
     {

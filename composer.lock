@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "172b16ed3092399b49bbafa10c659b57",
+    "content-hash": "662e391c32aaad092924fa2cdacf1122",
     "packages": [
         {
             "name": "dangoodman/composer-for-wordpress",
@@ -152,16 +152,16 @@
         },
         {
             "name": "shinsenter/defer.php",
-            "version": "dev-develop",
+            "version": "2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/shinsenter/defer.php.git",
-                "reference": "97b36b97d81d546a3bc025905640a9cd3e7ee2b2"
+                "reference": "bc19edb18916d984c5d3e7912aad9e404a367d2b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/shinsenter/defer.php/zipball/97b36b97d81d546a3bc025905640a9cd3e7ee2b2",
-                "reference": "97b36b97d81d546a3bc025905640a9cd3e7ee2b2",
+                "url": "https://api.github.com/repos/shinsenter/defer.php/zipball/bc19edb18916d984c5d3e7912aad9e404a367d2b",
+                "reference": "bc19edb18916d984c5d3e7912aad9e404a367d2b",
                 "shasum": ""
             },
             "require": {
@@ -181,6 +181,9 @@
                 "ext-mbstring": "*"
             },
             "type": "library",
+            "extra": {
+                "branch-alias": []
+            },
             "autoload": {
                 "psr-4": {
                     "AppSeeds\\": "src/"
@@ -241,7 +244,7 @@
                     "type": "paypal"
                 }
             ],
-            "time": "2021-03-27T05:15:26+00:00"
+            "time": "2021-04-01T04:02:58+00:00"
         },
         {
             "name": "symfony/css-selector",
@@ -1711,9 +1714,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "shinsenter/defer.php": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

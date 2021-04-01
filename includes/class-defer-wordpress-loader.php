@@ -30,7 +30,7 @@ class Defer_Wordpress_Loader
     /**
      * The array of actions registered with WordPress.
      *
-     * @since 2.0.0
+     * @since 2.0
      * @var array the actions registered with WordPress to fire when the plugin loads
      */
     protected $actions;
@@ -38,7 +38,7 @@ class Defer_Wordpress_Loader
     /**
      * The array of filters registered with WordPress.
      *
-     * @since 2.0.0
+     * @since 2.0
      * @var array the filters registered with WordPress to fire when the plugin loads
      */
     protected $filters;
@@ -46,7 +46,7 @@ class Defer_Wordpress_Loader
     /**
      * Initialize the collections used to maintain the actions and filters.
      *
-     * @since 2.0.0
+     * @since 2.0
      */
     public function __construct()
     {
@@ -57,7 +57,7 @@ class Defer_Wordpress_Loader
     /**
      * Add a new action to the collection to be registered with WordPress.
      *
-     * @since 2.0.0
+     * @since 2.0
      * @param string $hook          the name of the WordPress action that is being registered
      * @param object $component     a reference to the instance of the object on which the action is defined
      * @param string $callback      the name of the function definition on the $component
@@ -72,7 +72,7 @@ class Defer_Wordpress_Loader
     /**
      * Add a new filter to the collection to be registered with WordPress.
      *
-     * @since 2.0.0
+     * @since 2.0
      * @param string $hook          the name of the WordPress filter that is being registered
      * @param object $component     a reference to the instance of the object on which the filter is defined
      * @param string $callback      the name of the function definition on the $component
@@ -87,7 +87,7 @@ class Defer_Wordpress_Loader
     /**
      * Register the filters and actions with WordPress.
      *
-     * @since 2.0.0
+     * @since 2.0
      */
     public function run()
     {
@@ -104,7 +104,7 @@ class Defer_Wordpress_Loader
      * A utility function that is used to register the actions and hooks into a single
      * collection.
      *
-     * @since 2.0.0
+     * @since 2.0
      * @param  array  $hooks         the collection of hooks that is being registered (that is, actions or filters)
      * @param  string $hook          the name of the WordPress filter that is being registered
      * @param  object $component     a reference to the instance of the object on which the filter is defined

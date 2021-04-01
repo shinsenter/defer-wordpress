@@ -17,7 +17,7 @@ This plugin helps you to optimize everything like image tags, video, audio, ifra
 
 This plugin incorporates tips used a lot by experienced web experts, as well as making the most of the latest web technologies in lazy-loading resources on the page.
 
-Rate [5 stars (⭐️⭐️⭐️⭐️⭐️)](https://wordpress.org/support/plugin/shins-pageload-magic/reviews/?filter=5) if you guys like it.
+Rate [5 stars (⭐️⭐️⭐️⭐️⭐️)](https://wordpress.org/support/plugin/shins-pageload-magic/reviews/?filter=5#new-post) if you guys like it.
 
 
 ## Good points
@@ -49,10 +49,15 @@ Available in latest browsers. This library also works perfectly with Internet Ex
 - 📱 Android 4+
 - 📱 iOS 3.2+
 
+## Powered by defer.js, defer.php
 
-## Powered by defer.php
+[defer.js](https://github.com/shinsenter/defer.js)
+🥇 A super small, super efficient library that helps you lazy load almost everything like images, video, audio, iframes as well as stylesheets, and JavaScript.
 
-[defer.php](https://github.com/shinsenter/defer.php) is a library that focuses on minimizing payload size of HTML document and optimizing processing on the browser when rendering web pages.
+[defer.php](https://github.com/shinsenter/defer.php)
+🚀 A PHP library that focuses on minimizing payload size of HTML document and optimizing processing on the browser when rendering the web page.
+
+### Key features
 
 - [x] Simplify library options
 - [x] Embed defer.js library
@@ -124,7 +129,7 @@ We recommend you use it with another page-caching plugin for best performance.
 [![Donate via Paypal](https://img.shields.io/badge/Donate-Paypal-blue)](https://www.paypal.me/shinsenter)
 [![Become a sponsor](https://img.shields.io/badge/Donate-Patreon-orange)](https://www.patreon.com/appseeds)
 [![Become a stargazer](https://img.shields.io/badge/Support-Stargazer-yellow)](https://github.com/shinsenter/defer-wordpress/stargazers)
-[![Report an issue](https://img.shields.io/badge/Support-Issues-red)](https://github.com/shinsenter/defer-wordpress/issues/new)
+[![Report an issue](https://img.shields.io/badge/Support-Issues-green)](https://github.com/shinsenter/defer-wordpress/issues/new)
 
 ---
 
