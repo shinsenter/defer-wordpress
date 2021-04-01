@@ -31,7 +31,7 @@ class Defer_Wordpress_Deactivator
      *
      * Long Description.
      *
-     * @since 2.0.0
+     * @since 2.0
      */
     public static function deactivate()
     {

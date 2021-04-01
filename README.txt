@@ -1,4 +1,4 @@
-=== A faster website (with defer.js)! ===
+=== A faster website! (aka defer.js) ===
 Contributors: shinsenter
 Donate link: https://www.paypal.me/shinsenter
 Tags: defer.js,optimization,core-web-vitals,lazyload,loading-lazy,lazy-loading,lazyload-image,lazyload-video,lazyload-font,lazyload-js,lazyload-css,lazyload-wordpress,lazyload-facebook,lazyload-youtube,site-performance,speed,pagespeed,page-speed,html-minify,shinsenter
@@ -19,7 +19,7 @@ This plugin helps you to optimize everything like image tags, video, audio, ifra
 
 This plugin incorporates tips used a lot by experienced web experts, as well as making the most of the latest web technologies in lazy-loading resources on the page.
 
-Rate [5 stars (⭐️⭐️⭐️⭐️⭐️)](https://wordpress.org/support/plugin/shins-pageload-magic/reviews/?filter=5) if you guys like it.
+Rate [5 stars (⭐️⭐️⭐️⭐️⭐️)](https://wordpress.org/support/plugin/shins-pageload-magic/reviews/?filter=5#new-post) if you guys like it.
 
 
 ### Good points
@@ -52,9 +52,15 @@ Available in latest browsers. This library also works perfectly with Internet Ex
 - 📱 Android 4+
 - 📱 iOS 3.2+
 
-### Powered by defer.php
+### Powered by defer.js, defer.php
 
-[defer.php](https://github.com/shinsenter/defer.php) is a library that focuses on minimizing payload size of HTML document and optimizing processing on the browser when rendering web pages.
+[defer.js](https://github.com/shinsenter/defer.js)
+🥇 A super small, super efficient library that helps you lazy load almost everything like images, video, audio, iframes as well as stylesheets, and JavaScript.
+
+[defer.php](https://github.com/shinsenter/defer.php)
+🚀 A PHP library that focuses on minimizing payload size of HTML document and optimizing processing on the browser when rendering the web page.
+
+#### Key features
 
 - [x] Simplify library options
 - [x] Embed defer.js library
@@ -80,16 +86,16 @@ Available in latest browsers. This library also works perfectly with Internet Ex
 - [x] Minify HTML output
 
 
-### Keep in touch
+### Support my activities
 
-[![Become a sponsor](https://c5.patreon.com/external/logo/become_a_patron_button@2x.png)](https://www.patreon.com/appseeds)
-
-- Keep up-to-date with new releases:
+Keep up-to-date with new releases:
 [https://wordpress.org/plugins/shins-pageload-magic/](https://wordpress.org/plugins/shins-pageload-magic/)
-- Become a stargazer:
-[https://github.com/shinsenter/defer.js/stargazers](https://github.com/shinsenter/defer.js/stargazers)
-- Report an issue:
-[https://github.com/shinsenter/defer.js/issues](https://github.com/shinsenter/defer.js/issues)
+
+[![Donate via Paypal](https://img.shields.io/badge/Donate-Paypal-blue)](https://www.paypal.me/shinsenter)
+[![Become a sponsor](https://img.shields.io/badge/Donate-Patreon-orange)](https://www.patreon.com/appseeds)
+[![Become a stargazer](https://img.shields.io/badge/Support-Stargazer-yellow)](https://github.com/shinsenter/defer-wordpress/stargazers)
+[![Report an issue](https://img.shields.io/badge/Support-Issues-green)](https://github.com/shinsenter/defer-wordpress/issues/new)
+
 
 ---
 
@@ -157,6 +163,8 @@ We recommend you use it with another page-caching plugin for best performance.
 
 
 == Changelog ==
+
+2.1.0 Bug fixes (https://github.com/shinsenter/defer.js/issues/82)
 
 2.0.0 Upgraded to v2. Renamed plugin.
 
