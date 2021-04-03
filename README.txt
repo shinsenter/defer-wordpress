@@ -164,9 +164,11 @@ We recommend you use it with another page-caching plugin for best performance.
 
 == Changelog ==
 
-2.1.0 Bug fixes (https://github.com/shinsenter/defer.js/issues/82)
+2.2 Code improvements
 
-2.0.0 Upgraded to v2. Renamed plugin.
+2.1 Bug fixes (https://github.com/shinsenter/defer.js/issues/82)
+
+2.0 Upgraded to v2. Renamed plugin.
 
 1.1.15 Fixed bugs in defer.js 1.1.13, 1.1.14
 
