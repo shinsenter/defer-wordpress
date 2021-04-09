@@ -26,14 +26,14 @@
  */
 class Defer_Wordpress_Activator
 {
-    /**
-     * Short Description. (use period)
-     *
-     * Long Description.
-     *
-     * @since 2.0
-     */
-    public static function activate()
-    {
-    }
+  /**
+   * Short Description. (use period)
+   *
+   * Long Description.
+   *
+   * @since 2.0
+   */
+  public static function activate()
+  {
+  }
 }

@@ -32,10 +32,10 @@
         <?php } ?>
 
         <?php if (isset($save_settings)) {
-    $msg = $save_settings === false ?
+  $msg = $save_settings === false ?
                 'Cannot save the settings you selected.'
                 : 'All changes have been saved. Please clear Wordpress cache for these changes to take effect.';
-    $err = $save_settings === false ? 'error' : 'updated'; ?>
+  $err = $save_settings === false ? 'error' : 'updated'; ?>
             <div id="message" class="<?php echo $err; ?> fade">
                 <p><strong><?php echo esc_html($msg); ?></strong></p>
             </div>

@@ -26,27 +26,27 @@
  */
 class Defer_Wordpress_Deactivator
 {
-    /**
-     * Short Description. (use period)
-     *
-     * Long Description.
-     *
-     * @since 2.0
-     */
-    public static function deactivate()
-    {
-        delete_option(DEFER_WP_PLUGIN_NAME . 'version');
-    }
+  /**
+   * Short Description. (use period)
+   *
+   * Long Description.
+   *
+   * @since 2.0
+   */
+  public static function deactivate()
+  {
+    delete_option(DEFER_WP_PLUGIN_NAME . 'version');
+  }
 
-    public static function resetOptions()
-    {
-        if (class_exists('AppSeeds\Defer')) {
-            $defer   = defer_wp_instance([]);
-            $options = $defer->optionArray();
+  public static function resetOptions()
+  {
+    if (class_exists('AppSeeds\Defer')) {
+      $defer   = defer_wp_instance([]);
+      $options = $defer->optionArray();
 
-            foreach ($options as $key => $value) {
-                delete_option(DEFER_WP_PLUGIN_PREFIX . $key);
-            }
-        }
+      foreach ($options as $key => $value) {
+        delete_option(DEFER_WP_PLUGIN_PREFIX . $key);
+      }
     }
+  }
 }
