@@ -26,93 +26,93 @@
  */
 class Defer_Wordpress_Public
 {
-    /**
-     * The ID of this plugin.
-     *
-     * @since 2.0
-     * @var string the ID of this plugin
-     */
-    private $plugin_name;
+  /**
+   * The ID of this plugin.
+   *
+   * @since 2.0
+   * @var string the ID of this plugin
+   */
+  private $plugin_name;
 
-    /**
-     * The version of this plugin.
-     *
-     * @since 2.0
-     * @var string the current version of this plugin
-     */
-    private $version;
+  /**
+   * The version of this plugin.
+   *
+   * @since 2.0
+   * @var string the current version of this plugin
+   */
+  private $version;
 
-    /**
-     * Initialize the class and set its properties.
+  /**
+   * Initialize the class and set its properties.
+   *
+   * @since 2.0
+   * @param string $plugin_name the name of the plugin
+   * @param string $version     the version of this plugin
+   */
+  public function __construct($plugin_name, $version)
+  {
+    $this->plugin_name = $plugin_name;
+    $this->version     = $version;
+  }
+
+  /**
+   * Register the stylesheets for the public-facing side of the site.
+   *
+   * @since 2.0
+   */
+  public function enqueue_styles()
+  {
+    /*
+     * This function is provided for demonstration purposes only.
      *
-     * @since 2.0
-     * @param string $plugin_name the name of the plugin
-     * @param string $version     the version of this plugin
+     * An instance of this class should be passed to the run() function
+     * defined in Defer_Wordpress_Loader as all of the hooks are defined
+     * in that particular class.
+     *
+     * The Defer_Wordpress_Loader will then create the relationship
+     * between the defined hooks and the functions defined in this
+     * class.
      */
-    public function __construct($plugin_name, $version)
-    {
-        $this->plugin_name = $plugin_name;
-        $this->version     = $version;
+
+    wp_enqueue_style($this->plugin_name, plugin_dir_url(__FILE__) . 'css/defer-wordpress-public.css', [], $this->version, 'all');
+  }
+
+  /**
+   * Register the JavaScript for the public-facing side of the site.
+   *
+   * @since 2.0
+   */
+  public function enqueue_scripts()
+  {
+    /*
+     * This function is provided for demonstration purposes only.
+     *
+     * An instance of this class should be passed to the run() function
+     * defined in Defer_Wordpress_Loader as all of the hooks are defined
+     * in that particular class.
+     *
+     * The Defer_Wordpress_Loader will then create the relationship
+     * between the defined hooks and the functions defined in this
+     * class.
+     */
+
+    wp_enqueue_script($this->plugin_name, plugin_dir_url(__FILE__) . 'js/defer-wordpress-public.js', ['jquery'], $this->version, false);
+  }
+
+  public function init()
+  {
+    ob_start('defer_wp_ob');
+  }
+
+  public function shutdown()
+  {
+    $final  = '';
+    $levels = ob_get_level();
+
+    for ($i = 0; $i < $levels; $i++) {
+      $final .= ob_get_clean();
     }
 
-    /**
-     * Register the stylesheets for the public-facing side of the site.
-     *
-     * @since 2.0
-     */
-    public function enqueue_styles()
-    {
-        /*
-         * This function is provided for demonstration purposes only.
-         *
-         * An instance of this class should be passed to the run() function
-         * defined in Defer_Wordpress_Loader as all of the hooks are defined
-         * in that particular class.
-         *
-         * The Defer_Wordpress_Loader will then create the relationship
-         * between the defined hooks and the functions defined in this
-         * class.
-         */
-
-        wp_enqueue_style($this->plugin_name, plugin_dir_url(__FILE__) . 'css/defer-wordpress-public.css', [], $this->version, 'all');
-    }
-
-    /**
-     * Register the JavaScript for the public-facing side of the site.
-     *
-     * @since 2.0
-     */
-    public function enqueue_scripts()
-    {
-        /*
-         * This function is provided for demonstration purposes only.
-         *
-         * An instance of this class should be passed to the run() function
-         * defined in Defer_Wordpress_Loader as all of the hooks are defined
-         * in that particular class.
-         *
-         * The Defer_Wordpress_Loader will then create the relationship
-         * between the defined hooks and the functions defined in this
-         * class.
-         */
-
-        wp_enqueue_script($this->plugin_name, plugin_dir_url(__FILE__) . 'js/defer-wordpress-public.js', ['jquery'], $this->version, false);
-    }
-
-    public function init()
-    {
-        ob_start('defer_wp_ob');
-    }
-
-    public function shutdown()
-    {
-        $final  = '';
-        $levels = ob_get_level();
-
-        for ($i = 0; $i < $levels; $i++) {
-            $final .= ob_get_clean();
-        }
-
-        echo $final;
-    }
+    echo $final;
+  }
 }

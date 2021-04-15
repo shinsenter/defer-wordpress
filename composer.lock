@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "792d9fd85e432f597faa24352c35d70a",
+    "content-hash": "b8a09c692b07e908814329cc1a7b95cf",
     "packages": [
         {
             "name": "dangoodman/composer-for-wordpress",
@@ -152,16 +152,16 @@
         },
         {
             "name": "shinsenter/defer.php",
-            "version": "2.2.0",
+            "version": "2.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/shinsenter/defer.php.git",
-                "reference": "63e7ed246db49aa75b1952a6b512e307b8ddf2c6"
+                "reference": "0eb9830b4161a445110c2f668e376545fecd5f9b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/shinsenter/defer.php/zipball/63e7ed246db49aa75b1952a6b512e307b8ddf2c6",
-                "reference": "63e7ed246db49aa75b1952a6b512e307b8ddf2c6",
+                "url": "https://api.github.com/repos/shinsenter/defer.php/zipball/0eb9830b4161a445110c2f668e376545fecd5f9b",
+                "reference": "0eb9830b4161a445110c2f668e376545fecd5f9b",
                 "shasum": ""
             },
             "require": {
@@ -244,7 +244,7 @@
                     "type": "paypal"
                 }
             ],
-            "time": "2021-04-03T15:02:59+00:00"
+            "time": "2021-04-15T02:45:36+00:00"
         },
         {
             "name": "symfony/css-selector",
@@ -742,16 +742,16 @@
         },
         {
             "name": "friendsofphp/php-cs-fixer",
-            "version": "v2.18.4",
+            "version": "v2.18.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfPHP/PHP-CS-Fixer.git",
-                "reference": "06f764e3cb6d60822d8f5135205f9d32b5508a31"
+                "reference": "e0f6d05c8b157f50029ca6c65c19ed2694f475bf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfPHP/PHP-CS-Fixer/zipball/06f764e3cb6d60822d8f5135205f9d32b5508a31",
-                "reference": "06f764e3cb6d60822d8f5135205f9d32b5508a31",
+                "url": "https://api.github.com/repos/FriendsOfPHP/PHP-CS-Fixer/zipball/e0f6d05c8b157f50029ca6c65c19ed2694f475bf",
+                "reference": "e0f6d05c8b157f50029ca6c65c19ed2694f475bf",
                 "shasum": ""
             },
             "require": {
@@ -834,7 +834,7 @@
             "description": "A tool to automatically fix PHP code style",
             "support": {
                 "issues": "https://github.com/FriendsOfPHP/PHP-CS-Fixer/issues",
-                "source": "https://github.com/FriendsOfPHP/PHP-CS-Fixer/tree/v2.18.4"
+                "source": "https://github.com/FriendsOfPHP/PHP-CS-Fixer/tree/v2.18.5"
             },
             "funding": [
                 {
@@ -842,7 +842,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-03-20T14:52:33+00:00"
+            "time": "2021-04-06T18:37:33+00:00"
         },
         {
             "name": "paragonie/random_compat",

@@ -54,11 +54,11 @@
     },
     "require": {
         "php": ">=5.6",
-        "shinsenter/defer.php": "^2.2",
+        "shinsenter/defer.php": "^2.3",
         "symfony/polyfill-mbstring": "<=1.22.0",
         "dangoodman/composer-for-wordpress": "^2.0"
     },
     "require-dev": {
-        "friendsofphp/php-cs-fixer": "^2.0"
+        "friendsofphp/php-cs-fixer": ">=2"
     }
 }

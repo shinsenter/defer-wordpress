@@ -32,19 +32,23 @@
         <?php } ?>
 
         <?php if (isset($save_settings)) {
-    $msg = $save_settings === false ?
+  $msg = $save_settings === false ?
                 'Cannot save the settings you selected.'
                 : 'All changes have been saved. Please clear Wordpress cache for these changes to take effect.';
-    $err = $save_settings === false ? 'error' : 'updated'; ?>
+  $err = $save_settings === false ? 'error' : 'updated'; ?>
             <div id="message" class="<?php echo $err; ?> fade">
                 <p><strong><?php echo esc_html($msg); ?></strong></p>
             </div>
-        <?php
-} ?>
+        <?php } ?>
 
         <?php if (!isset($reset_settings) && !isset($save_settings)) { ?>
             <div id="message" class="notice notice-info fade">
+                <p>💯 Feel free to leave all options as defaults. The plugin will take care of your website.</p>
+            </div>
+
+            <div id="message" class="notice notice-warning fade">
                 <p><strong>💡 Tip:</strong> For this plugin to be most effective, please <u>turn OFF</u> optimization features for HTML, JS, CSS, images... by other plugins.</p>
+
                 <p><strong>🧩 Tip:</strong> This plugin is recommended for use with another <a href="plugin-install.php?s=caching&tab=search&type=tag">caching plugin</a> for best results.</p>
             </div>
         <?php } ?>
@@ -506,9 +510,14 @@
 
     <div class="side">
         <div class="postbox">
-            <h2><a href='<?php echo DEFER_WP_HOMEPAGE; ?>' target='_blank' class='url'>@shinsenter/defer.js</a></h2>
+            <h2>A faster website! (aka defer.js)</h2>
             <div class="inside">
-                <p>🥇 A super tiny, native performance library for lazy-loading JS, CSS, images, iframes... Defer almost anything, easily speed up your website.</p>
+                <p>💯 Latest web technologies in website optimization by experienced web experts. 🔰 Very easy to use.</p>
+                <p>View more: <a href='<?php echo DEFER_WP_PLUGIN_URL; ?>' target='_blank' class='url'>A faster website! (aka defer.js)</a>.</p>
+                <hr />
+
+                <h3>Powered by <a href='<?php echo DEFER_WP_HOMEPAGE; ?>' target='_blank' class='url'>@shinsenter/defer.js</a></h3>
+                <p>🥇 A super small, super efficient library that helps you lazy load almost everything like images, video, audio, iframes as well as stylesheets, and JavaScript.</p>
                 <p><a href="<?php echo DEFER_WP_RATING; ?>" target="rating">Rate 5 stars (⭐️⭐️⭐️⭐️⭐️)</a> if you guys like it.</p>
                 <p>
                     <img src='https://img.shields.io/github/license/shinsenter/defer.js.svg' alt='GitHub' referrerPolicy='no-referrer' />
@@ -540,7 +549,7 @@
                 <hr />
                 <p>Released under the MIT license.
                     <a href='<?php echo DEFER_WP_HOMEPAGE; ?>/LICENSE' target='_blank' class='url'><?php echo DEFER_WP_HOMEPAGE; ?>/LICENSE</a></p>
-                <p>Copyright (c) 2019 Mai Nhut Tan &lt;<a href='mailto:shin@shin.company'>shin@shin.company</a>&gt;.</p>
+                <p>Copyright (c) 2021 Mai Nhut Tan &lt;<a href='mailto:shin@shin.company'>shin@shin.company</a>&gt;.</p>
                 <p>From Vietnam 🇻🇳 with love.</p>
             </div>
         </div>
