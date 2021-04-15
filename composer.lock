@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "792d9fd85e432f597faa24352c35d70a",
+    "content-hash": "b8a09c692b07e908814329cc1a7b95cf",
     "packages": [
         {
             "name": "dangoodman/composer-for-wordpress",
@@ -152,16 +152,16 @@
         },
         {
             "name": "shinsenter/defer.php",
-            "version": "2.2.0",
+            "version": "2.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/shinsenter/defer.php.git",
-                "reference": "63e7ed246db49aa75b1952a6b512e307b8ddf2c6"
+                "reference": "0eb9830b4161a445110c2f668e376545fecd5f9b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/shinsenter/defer.php/zipball/63e7ed246db49aa75b1952a6b512e307b8ddf2c6",
-                "reference": "63e7ed246db49aa75b1952a6b512e307b8ddf2c6",
+                "url": "https://api.github.com/repos/shinsenter/defer.php/zipball/0eb9830b4161a445110c2f668e376545fecd5f9b",
+                "reference": "0eb9830b4161a445110c2f668e376545fecd5f9b",
                 "shasum": ""
             },
             "require": {
@@ -244,7 +244,7 @@
                     "type": "paypal"
                 }
             ],
-            "time": "2021-04-03T15:02:59+00:00"
+            "time": "2021-04-15T02:45:36+00:00"
         },
         {
             "name": "symfony/css-selector",
