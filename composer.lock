@@ -152,16 +152,16 @@
         },
         {
             "name": "shinsenter/defer.php",
-            "version": "2.3.0",
+            "version": "2.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/shinsenter/defer.php.git",
-                "reference": "0eb9830b4161a445110c2f668e376545fecd5f9b"
+                "reference": "b097d3630e0f5ddf2639b4deabb2ddd2ae2cec7e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/shinsenter/defer.php/zipball/0eb9830b4161a445110c2f668e376545fecd5f9b",
-                "reference": "0eb9830b4161a445110c2f668e376545fecd5f9b",
+                "url": "https://api.github.com/repos/shinsenter/defer.php/zipball/b097d3630e0f5ddf2639b4deabb2ddd2ae2cec7e",
+                "reference": "b097d3630e0f5ddf2639b4deabb2ddd2ae2cec7e",
                 "shasum": ""
             },
             "require": {
@@ -244,7 +244,7 @@
                     "type": "paypal"
                 }
             ],
-            "time": "2021-04-15T02:45:36+00:00"
+            "time": "2021-04-16T12:31:44+00:00"
         },
         {
             "name": "symfony/css-selector",
