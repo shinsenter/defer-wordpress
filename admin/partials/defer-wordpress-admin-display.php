@@ -512,13 +512,13 @@
         <div class="postbox">
             <h2>A faster website! (aka defer.js)</h2>
             <div class="inside">
-                <p>💯 Latest web technologies in website optimization by experienced web experts. 🔰 Very easy to use.</p>
+                <p>🥇 Latest website optimization technologies by experienced web experts. 💯 SEO friendly. 🔰 Very easy to use.</p>
+                <p><a href="<?php echo DEFER_WP_RATING; ?>" target="rating">Rate 5 stars (⭐️⭐️⭐️⭐️⭐️)</a> if you guys like it.</p>
                 <p>View more: <a href='<?php echo DEFER_WP_PLUGIN_URL; ?>' target='_blank' class='url'>A faster website! (aka defer.js)</a>.</p>
                 <hr />
 
                 <h3>Powered by <a href='<?php echo DEFER_WP_HOMEPAGE; ?>' target='_blank' class='url'>@shinsenter/defer.js</a></h3>
                 <p>🥇 A super small, super efficient library that helps you lazy load almost everything like images, video, audio, iframes as well as stylesheets, and JavaScript.</p>
-                <p><a href="<?php echo DEFER_WP_RATING; ?>" target="rating">Rate 5 stars (⭐️⭐️⭐️⭐️⭐️)</a> if you guys like it.</p>
                 <p>
                     <img src='https://img.shields.io/github/license/shinsenter/defer.js.svg' alt='GitHub' referrerPolicy='no-referrer' />
                     <a href='https://www.codefactor.io/repository/github/shinsenter/defer.js'><img src='https://www.codefactor.io/repository/github/shinsenter/defer.js/badge' alt='CodeFactor' referrerPolicy='no-referrer' /></a></p>
