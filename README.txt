@@ -9,7 +9,7 @@ Requires PHP: 5.6
 License: GPL-2.0+
 License URI: https://code.shin.company/defer-wordpress/blob/master/LICENSE
 
-⚡️ A native, blazing fast lazy loader. ✅ Legacy browsers support (IE9+). 💯 SEO friendly. 🧩 Lazy-load everything.
+🥇 Latest website optimization technologies for WordPress by experienced experts. 💯 SEO friendly. 🔰 Very easy to use.
 
 == Description ==
 
@@ -42,13 +42,13 @@ We recommend you use it with another page-caching plugin for best performance.
 
 ### Browser support
 
-Available in latest browsers. This library also works perfectly with Internet Explorer 9 and later.
+This plugin also works perfectly on popular browsers, including Internet Explorer 9 and later.
 
-- 🖥 IE9+ / Microsoft EDGE *
+- 🖥 IE9+ / Microsoft EDGE
 - 🖥 Firefox 4+
 - 🖥 Safari 3+
-- 🖥 Chrome *
-- 🖥 Opera *
+- 🖥 Chrome
+- 🖥 Opera
 - 📱 Android 4+
 - 📱 iOS 3.2+
 
@@ -62,8 +62,7 @@ Available in latest browsers. This library also works perfectly with Internet Ex
 
 #### Key features
 
-- [x] Simplify library options
-- [x] Embed defer.js library
+- [x] Embed [defer.js](https://github.com/shinsenter/defer.js) plugin
 - [x] Normalize DOM elements
 - [x] Fix missing meta tags
 - [x] Fix missing media attributes
@@ -91,10 +90,10 @@ Available in latest browsers. This library also works perfectly with Internet Ex
 Keep up-to-date with new releases:
 [https://wordpress.org/plugins/shins-pageload-magic/](https://wordpress.org/plugins/shins-pageload-magic/)
 
-[![Donate via Paypal](https://img.shields.io/badge/Donate-Paypal-blue)](https://www.paypal.me/shinsenter)
-[![Become a sponsor](https://img.shields.io/badge/Donate-Patreon-orange)](https://www.patreon.com/appseeds)
-[![Become a stargazer](https://img.shields.io/badge/Support-Stargazer-yellow)](https://github.com/shinsenter/defer-wordpress/stargazers)
-[![Report an issue](https://img.shields.io/badge/Support-Issues-green)](https://github.com/shinsenter/defer-wordpress/issues/new)
+[Donate via Paypal](https://www.paypal.me/shinsenter)
+[Become a sponsor](https://www.patreon.com/appseeds)
+[Become a stargazer](https://github.com/shinsenter/defer-wordpress/stargazers)
+[Report an issue](https://github.com/shinsenter/defer-wordpress/issues/new)
 
 
 ---
@@ -110,7 +109,7 @@ Copyright (c) 2019 Mai Nhut Tan &lt;[shin@shin.company](mailto:shin@shin.company
 1. Upload `defer-wordpress` to the `/wp-content/plugins/` directory
 2. Activate the plugin through the 'Plugins' menu in WordPress
 
-This library still supports PHP 5.6, but we recommend that your server should be running PHP version 7.3 or greater for better performance.
+This plugin still supports PHP 5.6, but we recommend that your server should be running PHP version 7.4 or greater for better performance.
 
 
 == Frequently Asked Questions ==
@@ -200,7 +199,7 @@ We recommend you use it with another page-caching plugin for best performance.
 
 1.1.3 Unify lazy attributes of another plugins
 
-1.1.2 Fixed some known issues with gtm.js, improve library's caches
+1.1.2 Fixed some known issues with gtm.js, improve plugin's caches
 
 1.1.1 Small bug fixes (IE polyfill, missing meta tags, preloading ads)
 
@@ -225,4 +224,4 @@ Nothing to do, just install and enjoy!
 
 If you are using older version of this plugin, please update now!
 
-This library still supports PHP 5.6, but we recommend that your server should be running PHP version 7.3 or greater for better performance.
+This plugin still supports PHP 5.6, but we recommend that your server should be running PHP version 7.3 or greater for better performance.

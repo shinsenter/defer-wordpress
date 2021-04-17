@@ -1,6 +1,6 @@
 # defer-wordpress
 
-⚡️ A native, blazing fast lazy loader. ✅ Legacy browsers support (IE9+). 💯 SEO friendly. 🧩 Lazy-load everything.
+🥇 Latest website optimization technologies by experienced web experts. 💯 SEO friendly. 🔰 Very easy to use.
 
 Download: [https://wordpress.org/plugins/shins-pageload-magic/](https://wordpress.org/plugins/shins-pageload-magic/)
 
@@ -12,6 +12,7 @@ Download: [https://wordpress.org/plugins/shins-pageload-magic/](https://wordpres
 ![GitHub issues](https://img.shields.io/github/issues-raw/shinsenter/defer-wordpress.svg)
 ![GitHub Release Date](https://img.shields.io/github/release-date/shinsenter/defer-wordpress.svg)
 
+⚡️ A native, blazing fast lazy loader. ✅ Legacy browsers support (IE9+). 💯 SEO friendly. 🧩 Lazy-load everything.
 
 This plugin helps you to optimize everything like image tags, video, audio, iframes as well as stylesheets, and JavaScript.
 
@@ -39,13 +40,13 @@ We recommend you use it with another page-caching plugin for best performance.
 
 ## Browser support
 
-Available in latest browsers. This library also works perfectly with Internet Explorer 9 and later.
+This plugin also works perfectly on popular browsers, including Internet Explorer 9 and later.
 
-- 🖥 IE9+ / Microsoft EDGE *
+- 🖥 IE9+ / Microsoft EDGE
 - 🖥 Firefox 4+
 - 🖥 Safari 3+
-- 🖥 Chrome *
-- 🖥 Opera *
+- 🖥 Chrome
+- 🖥 Opera
 - 📱 Android 4+
 - 📱 iOS 3.2+
 
@@ -59,8 +60,7 @@ Available in latest browsers. This library also works perfectly with Internet Ex
 
 ### Key features
 
-- [x] Simplify library options
-- [x] Embed defer.js library
+- [x] Embed [defer.js](https://github.com/shinsenter/defer.js) plugin
 - [x] Normalize DOM elements
 - [x] Fix missing meta tags
 - [x] Fix missing media attributes
