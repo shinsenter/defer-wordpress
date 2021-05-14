@@ -30,7 +30,7 @@
         }
     ],
     "scripts": {
-        "fixer": "php-cs-fixer fix --show-progress=estimating --verbose --ansi",
+        "fixer": "php-cs-fixer fix --show-progress=dots --verbose --ansi",
         "pull": [
             "rm -rf ./cache/*/ ./vendor/ ./node_modules/ ./composer.lock ./package-lock.json",
             "composer clearcache --ansi",
