@@ -22,7 +22,7 @@ This plugin incorporates tips used a lot by experienced web experts, as well as 
 Rate [5 stars (⭐️⭐️⭐️⭐️⭐️)](https://wordpress.org/support/plugin/shins-pageload-magic/reviews/?filter=5#new-post) if you guys like it.
 
 
-### Good points
+### What people loves
 
 - ⚡️ Native API, blazing fast
 - 👍 Legacy browsers support (IE9+)
@@ -162,6 +162,8 @@ We recommend you use it with another page-caching plugin for best performance.
 
 
 == Changelog ==
+
+2.4 Small updates and documentations
 
 2.3 Bug fixes and improvements
 
