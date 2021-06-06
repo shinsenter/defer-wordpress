@@ -39,7 +39,8 @@
             <div id="message" class="<?php echo $err; ?> fade">
                 <p><strong><?php echo esc_html($msg); ?></strong></p>
             </div>
-        <?php } ?>
+        <?php
+} ?>
 
         <?php if (!isset($reset_settings) && !isset($save_settings)) { ?>
             <div id="message" class="notice notice-info fade">
