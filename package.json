@@ -5,7 +5,7 @@
     "author": "Mai Nhut Tan <shin@shin.company>",
     "license": "GPL-2.0",
     "dependencies": {
-        "@shinsenter/defer.js": "^2.4.2"
+        "@shinsenter/defer.js": "^2.5.0"
     },
     "repository": {
         "type": "git",
