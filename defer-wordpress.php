@@ -28,7 +28,7 @@ if (!defined('WPINC')) {
  * Plugin Name:       A faster website! (aka defer.js)
  * Plugin URI:        https://wordpress.org/plugins/shins-pageload-magic/
  * Description:       💯 Latest web technologies in website optimization by experienced web experts. 🔰 Very easy to use.
- * Version:           2.4.2b
+ * Version:           2.4.3
  * Author:            Mai Nhut Tan
  * Author URI:        https://code.shin.company/
  * License:           GPL-2.0+
@@ -44,7 +44,7 @@ if (!defined('WPINC')) {
 if (!defined('DEFER_WP_PLUGIN_VERSION')) {
   define('DEFER_WP_PLUGIN_BASE', plugin_basename(__FILE__));
   define('DEFER_WP_PLUGIN_NAME', 'defer-wordpress');
-  define('DEFER_WP_PLUGIN_VERSION', '2.4.2b');
+  define('DEFER_WP_PLUGIN_VERSION', '2.4.3');
   define('DEFER_WP_PLUGIN_PREFIX', DEFER_WP_PLUGIN_NAME . '_');
 
   define('DEFER_WP_PLUGIN_HOOK', 'plugin_action_links_' . DEFER_WP_PLUGIN_BASE);
