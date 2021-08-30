@@ -541,15 +541,15 @@
                 <h3>Keep in touch</h3>
                 <ul>
                     <li>■ Become a stargazer:
-                        <a href='<?php echo DEFER_WP_HOMEPAGE; ?>/stargazers' target='_blank' class='url'><?php echo DEFER_WP_HOMEPAGE; ?>/stargazers</a></li>
+                        <a href='<?php echo DEFER_SOURCE_HOMEPAGE; ?>/stargazers' target='_blank' class='url'><?php echo DEFER_SOURCE_HOMEPAGE; ?>/stargazers</a></li>
                     <li>■ Report an issue:
-                        <a href='<?php echo DEFER_WP_HOMEPAGE; ?>/issues' target='_blank' class='url'><?php echo DEFER_WP_HOMEPAGE; ?>/issues</a></li>
+                        <a href='<?php echo DEFER_SOURCE_HOMEPAGE; ?>/issues' target='_blank' class='url'><?php echo DEFER_SOURCE_HOMEPAGE; ?>/issues</a></li>
                     <li>■ Keep up-to-date with new releases:
-                        <a href='<?php echo DEFER_WP_HOMEPAGE; ?>/releases' target='_blank' class='url'><?php echo DEFER_WP_HOMEPAGE; ?>/releases</a></li>
+                        <a href='<?php echo DEFER_SOURCE_HOMEPAGE; ?>/releases' target='_blank' class='url'><?php echo DEFER_SOURCE_HOMEPAGE; ?>/releases</a></li>
                 </ul>
                 <hr />
                 <p>Released under the MIT license.
-                    <a href='<?php echo DEFER_WP_HOMEPAGE; ?>/LICENSE' target='_blank' class='url'><?php echo DEFER_WP_HOMEPAGE; ?>/LICENSE</a></p>
+                    <a href='<?php echo DEFER_SOURCE_HOMEPAGE; ?>/LICENSE' target='_blank' class='url'><?php echo DEFER_SOURCE_HOMEPAGE; ?>/LICENSE</a></p>
                 <p>Copyright (c) 2021 Mai Nhut Tan &lt;<a href='mailto:shin@shin.company'>shin@shin.company</a>&gt;.</p>
                 <p>From Vietnam 🇻🇳 with love.</p>
             </div>
