@@ -3,14 +3,14 @@
 /**
  * 🚀 A WordPress plugin that focuses on minimizing payload size of HTML document
  *    and optimizing processing on the browser when rendering the WordPress page.
- * (c) 2021 AppSeeds <hello@appseeds.net>
+ * (c) 2021-2023 SHIN Company <service@shin.company>
  *
  * PHP Version >=5.6
  *
  * @category  Web_Performance_Optimization
  * @package   defer-wordpress
  * @author    Mai Nhut Tan <shin@shin.company>
- * @copyright 2021 AppSeeds
+ * @copyright 2021-2023 SHIN Company
  * @license   https://code.shin.company/defer-wordpress/blob/master/LICENSE GPL-2.0
  * @link      https://code.shin.company/defer-wordpress
  * @see       https://code.shin.company/defer-wordpress/blob/master/README.md
@@ -28,7 +28,7 @@ if (!defined('WPINC')) {
  * Plugin Name:       A faster website! (aka defer.js)
  * Plugin URI:        https://wordpress.org/plugins/shins-pageload-magic/
  * Description:       💯 Latest web technologies in website optimization by experienced web experts. 🔰 Very easy to use.
- * Version:           2.4.2
+ * Version:           2.5.0
  * Author:            Mai Nhut Tan
  * Author URI:        https://code.shin.company/
  * License:           GPL-2.0+
@@ -44,7 +44,7 @@ if (!defined('WPINC')) {
 if (!defined('DEFER_WP_PLUGIN_VERSION')) {
   define('DEFER_WP_PLUGIN_BASE', plugin_basename(__FILE__));
   define('DEFER_WP_PLUGIN_NAME', 'defer-wordpress');
-  define('DEFER_WP_PLUGIN_VERSION', '2.4.2');
+  define('DEFER_WP_PLUGIN_VERSION', '2.5.0');
   define('DEFER_WP_PLUGIN_PREFIX', DEFER_WP_PLUGIN_NAME . '_');
 
   define('DEFER_WP_PLUGIN_HOOK', 'plugin_action_links_' . DEFER_WP_PLUGIN_BASE);
@@ -70,13 +70,14 @@ if (!defined('DEFER_WP_PLUGIN_VERSION')) {
   define('DEFER_WP_PAYPAL', 'https://www.paypal.me/shinsenter');
   define('DEFER_WP_PATREON', 'https://www.patreon.com/appseeds');
   define('DEFER_WP_RATING', 'https://wordpress.org/support/plugin/shins-pageload-magic/reviews/?filter=5#new-post');
+  define('DEFER_SOURCE_HOMEPAGE', 'https://github.com/shinsenter/defer.js');
 
   require_once __DIR__ . '/vendor/autoload.php';
 }
 
 /**
  * The code that runs during plugin activation.
- * This action is documented in includes/class-defer-wordpress-activator.php
+ * This action is documented in includes/class-defer-wordpress-activator.php.
  */
 function activate_defer_wordpress()
 {
@@ -86,7 +87,7 @@ function activate_defer_wordpress()
 
 /**
  * The code that runs during plugin deactivation.
- * This action is documented in includes/class-defer-wordpress-deactivator.php
+ * This action is documented in includes/class-defer-wordpress-deactivator.php.
  */
 function deactivate_defer_wordpress()
 {
@@ -170,7 +171,7 @@ function run_defer_wordpress()
 
   add_filter('wp_lazy_loading_enabled', '__return_false');
 
-  if (get_option(DEFER_WP_PLUGIN_NAME . 'version', '') !== DEFER_WP_PLUGIN_VERSION) {
+  if (DEFER_WP_PLUGIN_VERSION !== get_option(DEFER_WP_PLUGIN_NAME . 'version', '')) {
     add_action('admin_notices', 'defer_wp_update_note');
   }
 }

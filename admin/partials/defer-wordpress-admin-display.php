@@ -3,14 +3,16 @@
 /**
  * 🚀 A WordPress plugin that focuses on minimizing payload size of HTML document
  *    and optimizing processing on the browser when rendering the WordPress page.
- * (c) 2021 AppSeeds <hello@appseeds.net>
+ * (c) 2021-2023 SHIN Company <service@shin.company>.
  *
  * PHP Version >=5.6
  *
  * @category  Web_Performance_Optimization
+ *
  * @author    Mai Nhut Tan <shin@shin.company>
- * @copyright 2021 AppSeeds
+ * @copyright 2021-2023 SHIN Company
  * @license   https://code.shin.company/defer-wordpress/blob/master/LICENSE GNU
+ *
  * @see      https://code.shin.company/defer-wordpress
  * @see       https://code.shin.company/defer-wordpress/blob/master/README.md
  */
@@ -32,10 +34,10 @@
         <?php } ?>
 
         <?php if (isset($save_settings)) {
-  $msg = $save_settings === false ?
+  $msg = false === $save_settings ?
                 'Cannot save the settings you selected.'
                 : 'All changes have been saved. Please clear Wordpress cache for these changes to take effect.';
-  $err = $save_settings === false ? 'error' : 'updated'; ?>
+  $err = false === $save_settings ? 'error' : 'updated'; ?>
             <div id="message" class="<?php echo $err; ?> fade">
                 <p><strong><?php echo esc_html($msg); ?></strong></p>
             </div>
@@ -71,7 +73,7 @@
                                     <fieldset>
                                         <input type="hidden" value="0" name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'enable_preloading'; ?>">
                                         <input type="checkbox" value="1"
-                                        <?php echo $options['enable_preloading'] == true ? 'checked' : ''; ?>
+                                        <?php echo true == $options['enable_preloading'] ? 'checked' : ''; ?>
                                         name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'enable_preloading'; ?>"
                                         id="deferjs_enable_preloading">
                                         <span class="description">Default: <?php echo $default['enable_preloading'] ? 'checked' : 'none'; ?>.</span>
@@ -90,7 +92,7 @@
                                     <fieldset>
                                         <input type="hidden" value="0" name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'enable_dns_prefetch'; ?>">
                                         <input type="checkbox" value="1"
-                                        <?php echo $options['enable_dns_prefetch'] == true ? 'checked' : ''; ?>
+                                        <?php echo true == $options['enable_dns_prefetch'] ? 'checked' : ''; ?>
                                         name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'enable_dns_prefetch'; ?>"
                                         id="deferjs_enable_dns_prefetch">
                                         <span class="description">Default: <?php echo $default['enable_dns_prefetch'] ? 'checked' : 'none'; ?>.</span>
@@ -109,7 +111,7 @@
                                     <fieldset>
                                         <input type="hidden" value="0" name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'fix_render_blocking'; ?>">
                                         <input type="checkbox" value="1"
-                                        <?php echo $options['fix_render_blocking'] == true ? 'checked' : ''; ?>
+                                        <?php echo true == $options['fix_render_blocking'] ? 'checked' : ''; ?>
                                         name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'fix_render_blocking'; ?>"
                                         id="deferjs_fix_render_blocking">
                                         <span class="description">Default: <?php echo $default['fix_render_blocking'] ? 'checked' : 'none'; ?>.</span>
@@ -128,7 +130,7 @@
                                     <fieldset>
                                         <input type="hidden" value="0" name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'minify_output_html'; ?>">
                                         <input type="checkbox" value="1"
-                                        <?php echo $options['minify_output_html'] == true ? 'checked' : ''; ?>
+                                        <?php echo true == $options['minify_output_html'] ? 'checked' : ''; ?>
                                         name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'minify_output_html'; ?>"
                                         id="deferjs_minify_output_html">
                                         <span class="description">Default: <?php echo $default['minify_output_html'] ? 'checked' : 'none'; ?>.</span>
@@ -162,7 +164,7 @@
                                     <fieldset>
                                         <input type="hidden" value="0" name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'optimize_css'; ?>">
                                         <input type="checkbox" value="1"
-                                        <?php echo $options['optimize_css'] == true ? 'checked' : ''; ?>
+                                        <?php echo true == $options['optimize_css'] ? 'checked' : ''; ?>
                                         name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'optimize_css'; ?>"
                                         id="deferjs_optimize_css">
                                         <span class="description">Default: <?php echo $default['optimize_css'] ? 'checked' : 'none'; ?>.</span>
@@ -182,7 +184,7 @@
                                     <fieldset>
                                         <input type="hidden" value="0" name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'optimize_scripts'; ?>">
                                         <input type="checkbox" value="1"
-                                        <?php echo $options['optimize_scripts'] == true ? 'checked' : ''; ?>
+                                        <?php echo true == $options['optimize_scripts'] ? 'checked' : ''; ?>
                                         name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'optimize_scripts'; ?>"
                                         id="deferjs_optimize_scripts">
                                         <span class="description">Default: <?php echo $default['optimize_scripts'] ? 'checked' : 'none'; ?>.</span>
@@ -202,7 +204,7 @@
                                     <fieldset>
                                         <input type="hidden" value="0" name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'optimize_images'; ?>">
                                         <input type="checkbox" value="1"
-                                        <?php echo $options['optimize_images'] == true ? 'checked' : ''; ?>
+                                        <?php echo true == $options['optimize_images'] ? 'checked' : ''; ?>
                                         name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'optimize_images'; ?>"
                                         id="deferjs_optimize_images">
                                         <span class="description">Default: <?php echo $default['optimize_images'] ? 'checked' : 'none'; ?>.</span>
@@ -222,7 +224,7 @@
                                     <fieldset>
                                         <input type="hidden" value="0" name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'optimize_iframes'; ?>">
                                         <input type="checkbox" value="1"
-                                        <?php echo $options['optimize_iframes'] == true ? 'checked' : ''; ?>
+                                        <?php echo true == $options['optimize_iframes'] ? 'checked' : ''; ?>
                                         name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'optimize_iframes'; ?>"
                                         id="deferjs_optimize_iframes">
                                         <span class="description">Default: <?php echo $default['optimize_iframes'] ? 'checked' : 'none'; ?>.</span>
@@ -242,7 +244,7 @@
                                     <fieldset>
                                         <input type="hidden" value="0" name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'optimize_background'; ?>">
                                         <input type="checkbox" value="1"
-                                        <?php echo $options['optimize_background'] == true ? 'checked' : ''; ?>
+                                        <?php echo true == $options['optimize_background'] ? 'checked' : ''; ?>
                                         name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'optimize_background'; ?>"
                                         id="deferjs_optimize_background">
                                         <span class="description">Default: <?php echo $default['optimize_background'] ? 'checked' : 'none'; ?>.</span>
@@ -263,7 +265,7 @@
                                     <fieldset>
                                         <input type="hidden" value="0" name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'optimize_fallback'; ?>">
                                         <input type="checkbox" value="1"
-                                        <?php echo $options['optimize_fallback'] == true ? 'checked' : ''; ?>
+                                        <?php echo true == $options['optimize_fallback'] ? 'checked' : ''; ?>
                                         name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'optimize_fallback'; ?>"
                                         id="deferjs_optimize_fallback">
                                         <span class="description">Default: <?php echo $default['optimize_fallback'] ? 'checked' : 'none'; ?>.</span>
@@ -298,7 +300,7 @@
                                     <fieldset>
                                         <input type="hidden" value="0" name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'optimize_anchors'; ?>">
                                         <input type="checkbox" value="1"
-                                        <?php echo $options['optimize_anchors'] == true ? 'checked' : ''; ?>
+                                        <?php echo true == $options['optimize_anchors'] ? 'checked' : ''; ?>
                                         name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'optimize_anchors'; ?>"
                                         id="deferjs_optimize_anchors">
                                         <span class="description">Default: <?php echo $default['optimize_anchors'] ? 'checked' : 'none'; ?>.</span>
@@ -318,7 +320,7 @@
                                     <fieldset>
                                         <input type="hidden" value="0" name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'defer_third_party'; ?>">
                                         <input type="checkbox" value="1"
-                                        <?php echo $options['defer_third_party'] == true ? 'checked' : ''; ?>
+                                        <?php echo true == $options['defer_third_party'] ? 'checked' : ''; ?>
                                         name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'defer_third_party'; ?>"
                                         id="deferjs_defer_third_party">
                                         <span class="description">Default: <?php echo $default['defer_third_party'] ? 'checked' : 'none'; ?>.</span>
@@ -338,7 +340,7 @@
                                     <fieldset>
                                         <input type="hidden" value="0" name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'use_css_fadein_effects'; ?>">
                                         <input type="checkbox" value="1"
-                                        <?php echo $options['use_css_fadein_effects'] == true ? 'checked' : ''; ?>
+                                        <?php echo true == $options['use_css_fadein_effects'] ? 'checked' : ''; ?>
                                         name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'use_css_fadein_effects'; ?>"
                                         id="deferjs_use_css_fadein_effects">
                                         <span class="description">Default: <?php echo $default['use_css_fadein_effects'] ? 'checked' : 'none'; ?>.</span>
@@ -354,7 +356,7 @@
                                     <fieldset>
                                         <input type="hidden" value="0" name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'use_color_placeholder'; ?>">
                                         <input type="checkbox" value="1"
-                                        <?php echo $options['use_color_placeholder'] == true ? 'checked' : ''; ?>
+                                        <?php echo true == $options['use_color_placeholder'] ? 'checked' : ''; ?>
                                         name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'use_color_placeholder'; ?>"
                                         id="deferjs_use_color_placeholder">
                                         <span class="description">Default: <?php echo $default['use_color_placeholder'] ? 'checked' : 'none'; ?>.</span>
@@ -541,15 +543,15 @@
                 <h3>Keep in touch</h3>
                 <ul>
                     <li>■ Become a stargazer:
-                        <a href='<?php echo DEFER_WP_HOMEPAGE; ?>/stargazers' target='_blank' class='url'><?php echo DEFER_WP_HOMEPAGE; ?>/stargazers</a></li>
+                        <a href='<?php echo DEFER_SOURCE_HOMEPAGE; ?>/stargazers' target='_blank' class='url'><?php echo DEFER_SOURCE_HOMEPAGE; ?>/stargazers</a></li>
                     <li>■ Report an issue:
-                        <a href='<?php echo DEFER_WP_HOMEPAGE; ?>/issues' target='_blank' class='url'><?php echo DEFER_WP_HOMEPAGE; ?>/issues</a></li>
+                        <a href='<?php echo DEFER_SOURCE_HOMEPAGE; ?>/issues' target='_blank' class='url'><?php echo DEFER_SOURCE_HOMEPAGE; ?>/issues</a></li>
                     <li>■ Keep up-to-date with new releases:
-                        <a href='<?php echo DEFER_WP_HOMEPAGE; ?>/releases' target='_blank' class='url'><?php echo DEFER_WP_HOMEPAGE; ?>/releases</a></li>
+                        <a href='<?php echo DEFER_SOURCE_HOMEPAGE; ?>/releases' target='_blank' class='url'><?php echo DEFER_SOURCE_HOMEPAGE; ?>/releases</a></li>
                 </ul>
                 <hr />
                 <p>Released under the MIT license.
-                    <a href='<?php echo DEFER_WP_HOMEPAGE; ?>/LICENSE' target='_blank' class='url'><?php echo DEFER_WP_HOMEPAGE; ?>/LICENSE</a></p>
+                    <a href='<?php echo DEFER_SOURCE_HOMEPAGE; ?>/LICENSE' target='_blank' class='url'><?php echo DEFER_SOURCE_HOMEPAGE; ?>/LICENSE</a></p>
                 <p>Copyright (c) 2021 Mai Nhut Tan &lt;<a href='mailto:shin@shin.company'>shin@shin.company</a>&gt;.</p>
                 <p>From Vietnam 🇻🇳 with love.</p>
             </div>

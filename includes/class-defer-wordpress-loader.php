@@ -3,14 +3,14 @@
 /**
  * 🚀 A WordPress plugin that focuses on minimizing payload size of HTML document
  *    and optimizing processing on the browser when rendering the WordPress page.
- * (c) 2021 AppSeeds <hello@appseeds.net>
+ * (c) 2021-2023 SHIN Company <service@shin.company>
  *
  * PHP Version >=5.6
  *
  * @category  Web_Performance_Optimization
  * @package   defer-wordpress
  * @author    Mai Nhut Tan <shin@shin.company>
- * @copyright 2021 AppSeeds
+ * @copyright 2021-2023 SHIN Company
  * @license   https://code.shin.company/defer-wordpress/blob/master/LICENSE GPL-2.0
  * @link      https://code.shin.company/defer-wordpress
  * @see       https://code.shin.company/defer-wordpress/blob/master/README.md
@@ -31,6 +31,7 @@ class Defer_Wordpress_Loader
    * The array of actions registered with WordPress.
    *
    * @since 2.0
+   *
    * @var array the actions registered with WordPress to fire when the plugin loads
    */
   protected $actions;
@@ -39,6 +40,7 @@ class Defer_Wordpress_Loader
    * The array of filters registered with WordPress.
    *
    * @since 2.0
+   *
    * @var array the filters registered with WordPress to fire when the plugin loads
    */
   protected $filters;
@@ -58,6 +60,7 @@ class Defer_Wordpress_Loader
    * Add a new action to the collection to be registered with WordPress.
    *
    * @since 2.0
+   *
    * @param string $hook          the name of the WordPress action that is being registered
    * @param object $component     a reference to the instance of the object on which the action is defined
    * @param string $callback      the name of the function definition on the $component
@@ -73,6 +76,7 @@ class Defer_Wordpress_Loader
    * Add a new filter to the collection to be registered with WordPress.
    *
    * @since 2.0
+   *
    * @param string $hook          the name of the WordPress filter that is being registered
    * @param object $component     a reference to the instance of the object on which the filter is defined
    * @param string $callback      the name of the function definition on the $component
@@ -105,13 +109,15 @@ class Defer_Wordpress_Loader
    * collection.
    *
    * @since 2.0
-   * @param  array  $hooks         the collection of hooks that is being registered (that is, actions or filters)
-   * @param  string $hook          the name of the WordPress filter that is being registered
-   * @param  object $component     a reference to the instance of the object on which the filter is defined
-   * @param  string $callback      the name of the function definition on the $component
-   * @param  int    $priority      the priority at which the function should be fired
-   * @param  int    $accepted_args the number of arguments that should be passed to the $callback
-   * @return array  the collection of actions and filters registered with WordPress
+   *
+   * @param array  $hooks         the collection of hooks that is being registered (that is, actions or filters)
+   * @param string $hook          the name of the WordPress filter that is being registered
+   * @param object $component     a reference to the instance of the object on which the filter is defined
+   * @param string $callback      the name of the function definition on the $component
+   * @param int    $priority      the priority at which the function should be fired
+   * @param int    $accepted_args the number of arguments that should be passed to the $callback
+   *
+   * @return array the collection of actions and filters registered with WordPress
    */
   private function add($hooks, $hook, $component, $callback, $priority, $accepted_args)
   {

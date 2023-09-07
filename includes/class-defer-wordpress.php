@@ -3,14 +3,14 @@
 /**
  * 🚀 A WordPress plugin that focuses on minimizing payload size of HTML document
  *    and optimizing processing on the browser when rendering the WordPress page.
- * (c) 2021 AppSeeds <hello@appseeds.net>
+ * (c) 2021-2023 SHIN Company <service@shin.company>
  *
  * PHP Version >=5.6
  *
  * @category  Web_Performance_Optimization
  * @package   defer-wordpress
  * @author    Mai Nhut Tan <shin@shin.company>
- * @copyright 2021 AppSeeds
+ * @copyright 2021-2023 SHIN Company
  * @license   https://code.shin.company/defer-wordpress/blob/master/LICENSE GPL-2.0
  * @link      https://code.shin.company/defer-wordpress
  * @see       https://code.shin.company/defer-wordpress/blob/master/README.md
@@ -26,6 +26,7 @@
  * version of the plugin.
  *
  * @since      1.0.0
+ *
  * @author     Mai Nhut Tan <shin@shin.company>
  */
 class Defer_Wordpress
@@ -35,6 +36,7 @@ class Defer_Wordpress
    * the plugin.
    *
    * @since 2.0
+   *
    * @var Defer_Wordpress_Loader maintains and registers all hooks for the plugin
    */
   protected $loader;
@@ -43,6 +45,7 @@ class Defer_Wordpress
    * The unique identifier of this plugin.
    *
    * @since 2.0
+   *
    * @var string the string used to uniquely identify this plugin
    */
   protected $plugin_name;
@@ -51,6 +54,7 @@ class Defer_Wordpress
    * The current version of the plugin.
    *
    * @since 2.0
+   *
    * @var string the current version of the plugin
    */
   protected $version;
@@ -90,6 +94,7 @@ class Defer_Wordpress
    * WordPress and to define internationalization functionality.
    *
    * @since     1.0.0
+   *
    * @return string the name of the plugin
    */
   public function get_plugin_name()
@@ -101,6 +106,7 @@ class Defer_Wordpress
    * The reference to the class that orchestrates the hooks with the plugin.
    *
    * @since     1.0.0
+   *
    * @return Defer_Wordpress_Loader orchestrates the hooks of the plugin
    */
   public function get_loader()
@@ -112,6 +118,7 @@ class Defer_Wordpress
    * Retrieve the version number of the plugin.
    *
    * @since     1.0.0
+   *
    * @return string the version number of the plugin
    */
   public function get_version()
@@ -218,7 +225,7 @@ class Defer_Wordpress
   }
 
   /**
-   * Detect login page
+   * Detect login page.
    *
    * @since 2.0
    */
@@ -228,7 +235,7 @@ class Defer_Wordpress
 
     return (in_array($incl_path . 'wp-login.php', get_included_files())
             || in_array($incl_path . 'wp-register.php', get_included_files()))
-            || (isset($_GLOBALS['pagenow']) && $GLOBALS['pagenow'] === 'wp-login.php')
-            || $_SERVER['PHP_SELF'] == '/wp-login.php';
+            || (isset($_GLOBALS['pagenow']) && 'wp-login.php' === $GLOBALS['pagenow'])
+            || '/wp-login.php' == $_SERVER['PHP_SELF'];
   }
 }

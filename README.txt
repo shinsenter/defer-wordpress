@@ -3,23 +3,23 @@ Contributors: shinsenter
 Donate link: https://www.paypal.me/shinsenter
 Tags: defer.js,optimization,core-web-vitals,lazyload,loading-lazy,lazy-loading,lazyload-image,lazyload-video,lazyload-font,lazyload-js,lazyload-css,lazyload-wordpress,lazyload-facebook,lazyload-youtube,site-performance,speed,pagespeed,page-speed,html-minify,shinsenter
 Requires at least: 4.0
-Tested up to: 5.8-beta
+Tested up to: 6.3.1
 Stable tag: trunk
 Requires PHP: 5.6
 License: GPL-2.0+
 License URI: https://code.shin.company/defer-wordpress/blob/master/LICENSE
 
-🥇 Latest website optimization technologies for WordPress by experienced experts. 💯 SEO friendly. 🔰 Very easy to use.
+🥇 Harness the latest WordPress optimization tech, 💯 SEO-friendly, and 🔰 effortlessly user-friendly!
 
 == Description ==
 
-⚡️ A native, blazing fast lazy loader. ✅ Legacy browsers support (IE9+). 💯 SEO friendly. 🧩 Lazy-load everything.
+⚡️ Experience the speed of a native, lightning-fast lazy loader. ✅ Backward compatibility for legacy browsers (IE9+). 💯 SEO-friendly. 🧩 Lazy-load everything.
 
-This plugin helps you to optimize everything like image tags, video, audio, iframes as well as stylesheets, and JavaScript.
+This plugin empowers you to optimize various elements, including image tags, videos, audio, iframes, stylesheets, and JavaScript.
 
-This plugin incorporates tips used a lot by experienced web experts, as well as making the most of the latest web technologies in lazy-loading resources on the page.
+Leveraging tips endorsed by seasoned web experts and harnessing the latest web technologies for resource lazy-loading, this plugin ensures your website operates at peak efficiency.
 
-Rate [5 stars (⭐️⭐️⭐️⭐️⭐️)](https://wordpress.org/support/plugin/shins-pageload-magic/reviews/?filter=5#new-post) if you guys like it.
+If you find this plugin valuable, please consider leaving a [5-star review (⭐️⭐️⭐️⭐️⭐️)](https://wordpress.org/support/plugin/shins-pageload-magic/reviews/?filter=5#new-post).
 
 
 ### What people loves
@@ -106,124 +106,126 @@ Copyright (c) 2019 Mai Nhut Tan &lt;[shin@shin.company](mailto:shin@shin.company
 
 == Installation ==
 
-1. Upload `defer-wordpress` to the `/wp-content/plugins/` directory
-2. Activate the plugin through the 'Plugins' menu in WordPress
+1. Upload the `defer-wordpress` folder to the `./wp-content/plugins/` directory.
+2. Activate the plugin via the 'Plugins' menu in WordPress.
 
-This plugin still supports PHP 5.6, but we recommend that your server should be running PHP version 7.4 or greater for better performance.
+While this plugin maintains compatibility with PHP 5.6, we advise running your server on PHP version 7.3 or higher for optimal performance.
 
 
 == Frequently Asked Questions ==
 
 = What is defer.js? =
 
-🥇 A super tiny, native performance library for lazy-loading JS, CSS, images, iframes... Defer almost anything, easily speed up your website.
+🥇 Defer.js is an exceptionally lightweight, native performance library designed for lazy-loading resources such as JS, CSS, images, and iframes.
 
-= Why should I lazy-load my content? =
+With Defer.js, you can easily enhance your website's speed.
 
-The loading of contents on web page may make your load speed more slow, no one likes staring at a blank white page; users are impatient and will leave quickly.
+= Why should I implement lazy-loading? =
 
-Lazy loading content on web page can help reduce resource contention and improve performance.
+Loading all page contents at once can slow down your website's loading speed. Users dislike staring at a blank white page and tend to leave quickly.
+
+Implementing lazy loading can alleviate resource contention, resulting in improved performance.
 
 = Why should I use this plugin? =
 
-This plugin supports you to handle some common tips to help your website optimize the download of on-page resources.
+This plugin offers practical solutions for optimizing on-page resource downloads, based on recommendations from Google Developers available at this website.
 
-These tips are published at [following website](https://web.dev/) by Google Developers, if you are interested you can consult to understand more about website optimization.
+You could manually implement these optimizations, but it's time-consuming and requires expertise.
 
-You can also manually implement these tips your-self, but it takes a lot of time and requires a lot of expertise.
+= How does this plugin function? =
 
-= How does this plugin work? =
+This plugin optimizes a wide range of elements, including image tags, videos, audio, iframes, stylesheets, and JavaScript.
 
-This plugin helps you to optimize everything like image tags, video, audio, iframes as well as stylesheets, and JavaScript.
+It incorporates best practices endorsed by experienced web experts and leverages the latest web technologies for lazy-loading resources.
 
-This plugin incorporates tips used a lot by experienced web experts, as well as making the most of the latest web technologies in lazy-loading resources on the page.
+This includes features like creating "data-src" attributes for media and utilizing the loading="lazy" attribute recently introduced by Google Developers.
 
-Among them are creating "data-src" attributes to laza-load the media, even the [loading="lazy" feature](https://web.dev/browser-level-image-lazy-loading/) recently introduced by Google Developers.
+= High performance and precision =
 
-= High performance and accuracy =
+Additionally, this plugin utilizes the DOM to analyze website structure, delivering precise results and outperforming other plugins that rely on HTML text processing.
 
-In addition, this plugin uses DOM to process the website structure so it produces accurate results and is faster than any other plugin that uses HTML text processing.
+Give it a try, and you'll likely be pleasantly surprised by the performance improvements it brings to your website.
 
-You can give it a try and I believe you will be surprised by the results it brings to your website.
+= What about performance and compatibility? =
 
-= How about performance and compatibility? =
+We've thoroughly tested this plugin alongside numerous others and haven't encountered any significant conflicts.
 
-We have tested this plugin with quite a few others and have not found any significant conflicts.
+For optimal use of this plugin, consider disabling other optimization features (e.g., lazy-loading, HTML minification, JS minification) offered by other plugins.
 
-For best use of this plugin, you should consider disabling all optimization features (Eg. lazy-loading, HTML minification, JS minification, etc.) by other plugins.
-
-We recommend you use it with another page-caching plugin for best performance.
+We also recommend using it in conjunction with a page-caching plugin for the best performance.
 
 
 == Screenshots ==
 
-1. Scoring 100/100 in Google PageSpeed Test!
-2. Defer almost anything, easily speed up your website.
+1. Achieving a perfect 100/100 score in Google PageSpeed Test!
+2. Defer.js empowers you to easily accelerate your website by deferring resource loading.
 
 
 == Changelog ==
 
-2.4 Small updates and documentations
+2.5: Addressed deprecation errors for compatibility with newer PHP versions.
 
-2.3 Bug fixes and improvements
+2.4: Made minor updates and improvements to the documentation.
 
-2.2 Code improvements
+2.3: Resolved various bugs and implemented improvements.
 
-2.1 Bug fixes (https://github.com/shinsenter/defer.js/issues/82)
+2.2: Enhanced the codebase for better performance.
 
-2.0 Upgraded to v2. Renamed plugin.
+2.1: Fixed bugs (see https://github.com/shinsenter/defer.js/issues/82).
 
-1.1.15 Fixed bugs in defer.js 1.1.13, 1.1.14
+2.0: Upgraded to version 2 and renamed the plugin.
 
-1.1.14 Improved performance
+1.1.15: Fixed bugs present in defer.js versions 1.1.13 and 1.1.14.
 
-1.1.13 Fixed some Firefox bugs
+1.1.14: Improved overall performance.
 
-1.1.12 Fixed some IE bugs, tested with the latest WordPress version
+1.1.13: Fixed specific issues affecting Firefox.
 
-1.1.11 Fixed security issue (Fixed CVE-2019-18888)
+1.1.12: Addressed problems related to Internet Explorer and ensured compatibility with the latest WordPress version.
 
-1.1.10+5 Removed external resources
+1.1.11: Fixed a security issue (CVE-2019-18888).
 
-1.1.10 Bug fixes and improvements
+1.1.10+5: Removed external resources, bug fixes, and general improvements.
 
-1.1.9 Fixed wrong encoding when using mb_detect_encoding() function
+1.1.10: Resolved various bugs and introduced improvements.
 
-1.1.8 Updated defer.php library (v1.0.15)
+1.1.9: Corrected encoding issues related to the mb_detect_encoding() function.
 
-1.1.7 Fixed issues of FireFox, code improvements
+1.1.8: Updated defer.php library to version 1.0.15.
 
-1.1.6 Updated library version, improved javascript execution order
+1.1.7: Fixed issues affecting Firefox and made code improvements.
 
-1.1.5 Hotfix: Escape HTML node value
+1.1.6: Updated the library version and enhanced JavaScript execution order.
 
-1.1.4 Many improvements
+1.1.5: Hotfix for escaping HTML node values.
 
-1.1.3 Unify lazy attributes of another plugins
+1.1.4: Implemented numerous improvements.
 
-1.1.2 Fixed some known issues with gtm.js, improve plugin's caches
+1.1.3: Unified lazy attributes with other plugins.
 
-1.1.1 Small bug fixes (IE polyfill, missing meta tags, preloading ads)
+1.1.2: Fixed known issues with gtm.js and improved plugin caching.
 
-1.1.0 Added settings page
+1.1.1: Addressed small bugs, including IE polyfill, missing meta tags, and preloading ads.
 
-1.0.9 Improved preloading code
+1.1.0: Added a settings page.
 
-1.0.8 Fixed issues with open web fonts
+1.0.9: Enhanced preloading code.
 
-1.0.7 Optimized scriptloader, polyfill, scrset
+1.0.8: Fixed issues related to open web fonts.
 
-1.0.6 Small bug fixes (color placeholders, css)
+1.0.7: Optimized script loader, polyfill, and scrset.
 
-1.0.5 Migrated with defer.js library
+1.0.6: Addressed minor bugs, including color placeholders and CSS issues.
 
-1.0.0 ~ 1.0.4 The first implement
+1.0.5: Migrated to defer.js library.
+
+1.0.0 to 1.0.4: Initial implementation and development phases.
 
 
 == Upgrade Notice ==
 
-Nothing to do, just install and enjoy!
+No action required, simply install and enjoy!
 
-If you are using older version of this plugin, please update now!
+If you are currently using an older version of this plugin, we strongly recommend updating now.
 
-This plugin still supports PHP 5.6, but we recommend that your server should be running PHP version 7.3 or greater for better performance.
+While this plugin maintains compatibility with PHP 5.6, we advise running your server on PHP version 7.3 or higher for optimal performance.
