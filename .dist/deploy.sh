@@ -1,5 +1,8 @@
 #!/bin/bash
 
+shopt -s expand_aliases
+alias sed=$(which gsed)
+
 # git checkout master
 # git fetch --all
 # git reset --hard origin/master
@@ -45,7 +48,7 @@ svn rm --force trunk/*
 cd $base_dir
 rsync -aHxW --delete --exclude-from=${black_list/$base_dir/.} ./ ${plugin_dir/$base_dir/.}/trunk/
 mv $plugin_dir/trunk/defer-wordpress.php $plugin_dir/trunk/$plugin_name.php
-composer fixer .dist
+# composer fixer .dist
 echo ""
 
 # ------------------------------------------------------------------------------

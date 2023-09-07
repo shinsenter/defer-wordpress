@@ -3,14 +3,14 @@
 /**
  * 🚀 A WordPress plugin that focuses on minimizing payload size of HTML document
  *    and optimizing processing on the browser when rendering the WordPress page.
- * (c) 2021 AppSeeds <hello@appseeds.net>
+ * (c) 2021-2023 SHIN Company <service@shin.company>
  *
  * PHP Version >=5.6
  *
  * @category  Web_Performance_Optimization
  * @package   defer-wordpress
  * @author    Mai Nhut Tan <shin@shin.company>
- * @copyright 2021 AppSeeds
+ * @copyright 2021-2023 SHIN Company
  * @license   https://code.shin.company/defer-wordpress/blob/master/LICENSE GPL-2.0
  * @link      https://code.shin.company/defer-wordpress
  * @see       https://code.shin.company/defer-wordpress/blob/master/README.md
@@ -30,6 +30,7 @@ class Defer_Wordpress_Public
    * The ID of this plugin.
    *
    * @since 2.0
+   *
    * @var string the ID of this plugin
    */
   private $plugin_name;
@@ -38,6 +39,7 @@ class Defer_Wordpress_Public
    * The version of this plugin.
    *
    * @since 2.0
+   *
    * @var string the current version of this plugin
    */
   private $version;
@@ -46,6 +48,7 @@ class Defer_Wordpress_Public
    * Initialize the class and set its properties.
    *
    * @since 2.0
+   *
    * @param string $plugin_name the name of the plugin
    * @param string $version     the version of this plugin
    */
