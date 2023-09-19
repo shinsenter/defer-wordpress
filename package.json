@@ -1,7 +1,7 @@
 {
     "name": "shinsenter/defer-wordpress",
     "description": "🚀 A PHP library that focuses on minimizing payload size of HTML document and optimizing processing on the browser when rendering the WordPress page.",
-    "homepage": "https://github.com/shinsenter/defer-wordpress#readme",
+    "homepage": "https://code.shin.company/defer-wordpress#readme",
     "author": "Mai Nhut Tan <shin@shin.company>",
     "license": "GPL-2.0",
     "dependencies": {
@@ -9,9 +9,9 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/shinsenter/defer-wordpress.git"
+        "url": "git+https://code.shin.company/defer-wordpress.git"
     },
     "bugs": {
-        "url": "https://github.com/shinsenter/defer-wordpress/issues"
+        "url": "https://code.shin.company/defer-wordpress/issues"
     }
 }

@@ -12,13 +12,13 @@
         }
     ],
     "support": {
-        "issues": "https://github.com/shinsenter/defer.php/issues",
-        "source": "https://github.com/shinsenter/defer.php"
+        "issues": "https://code.shin.company/defer-wordpress/issues",
+        "source": "https://code.shin.company/defer-wordpress"
     },
     "funding": [
         {
             "type": "github",
-            "url": "https://github.com/shinsenter/defer.php/stargazers"
+            "url": "https://code.shin.company/defer-wordpress/stargazers"
         },
         {
             "type": "paypal",

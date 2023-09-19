@@ -54,15 +54,15 @@ This plugin also works perfectly on popular browsers, including Internet Explore
 
 ### Powered by defer.js, defer.php
 
-[defer.js](https://github.com/shinsenter/defer.js)
+[defer.js](https://code.shin.company/defer.js)
 🥇 A super small, super efficient library that helps you lazy load almost everything like images, video, audio, iframes as well as stylesheets, and JavaScript.
 
-[defer.php](https://github.com/shinsenter/defer.php)
+[defer.php](https://code.shin.company/defer.php)
 🚀 A PHP library that focuses on minimizing payload size of HTML document and optimizing processing on the browser when rendering the web page.
 
 #### Key features
 
-- [x] Embed [defer.js](https://github.com/shinsenter/defer.js) plugin
+- [x] Embed [defer.js](https://code.shin.company/defer.js) plugin
 - [x] Normalize DOM elements
 - [x] Fix missing meta tags
 - [x] Fix missing media attributes
@@ -92,14 +92,14 @@ Keep up-to-date with new releases:
 
 [Donate via Paypal](https://www.paypal.me/shinsenter)
 [Become a sponsor](https://www.patreon.com/appseeds)
-[Become a stargazer](https://github.com/shinsenter/defer-wordpress/stargazers)
-[Report an issue](https://github.com/shinsenter/defer-wordpress/issues/new)
+[Become a stargazer](https://code.shin.company/defer-wordpress/stargazers)
+[Report an issue](https://code.shin.company/defer-wordpress/issues/new)
 
 
 ---
 
 Released under the GNU General Public License v2 license.
-[https://github.com/shinsenter/defer-wordpress/blob/master/LICENSE](https://github.com/shinsenter/defer-wordpress/blob/master/LICENSE)
+[https://code.shin.company/defer-wordpress/blob/master/LICENSE](https://code.shin.company/defer-wordpress/blob/master/LICENSE)
 
 Copyright (c) 2019 Mai Nhut Tan &lt;[shin@shin.company](mailto:shin@shin.company)&gt;
 
@@ -163,6 +163,8 @@ We also recommend using it in conjunction with a page-caching plugin for the bes
 
 == Changelog ==
 
+2.6: Fixed bugs related to JSON requests
+
 2.5: Addressed deprecation errors for compatibility with newer PHP versions.
 
 2.4: Made minor updates and improvements to the documentation.
@@ -171,7 +173,7 @@ We also recommend using it in conjunction with a page-caching plugin for the bes
 
 2.2: Enhanced the codebase for better performance.
 
-2.1: Fixed bugs (see https://github.com/shinsenter/defer.js/issues/82).
+2.1: Fixed bugs (see https://code.shin.company/defer.js/issues/82).
 
 2.0: Upgraded to version 2 and renamed the plugin.
 

@@ -218,7 +218,7 @@ class Defer_Wordpress
   {
     $plugin_public = new Defer_Wordpress_Public($this->get_plugin_name(), $this->get_version());
 
-    if (!(defined('WP_CLI') && WP_CLI) && !is_admin() && !$this->is_wplogin()) {
+    if (!(defined('WP_CLI') && WP_CLI) && !$this->is_ajax() && !is_admin() && !$this->is_wplogin()) {
       $this->loader->add_action('init', $plugin_public, 'init', -1);
       $this->loader->add_action('shutdown', $plugin_public, 'shutdown', 100000);
     }
@@ -234,8 +234,27 @@ class Defer_Wordpress
     $incl_path = str_replace(['\\', '/'], DIRECTORY_SEPARATOR, ABSPATH);
 
     return (in_array($incl_path . 'wp-login.php', get_included_files())
-            || in_array($incl_path . 'wp-register.php', get_included_files()))
-            || (isset($_GLOBALS['pagenow']) && 'wp-login.php' === $GLOBALS['pagenow'])
-            || '/wp-login.php' == $_SERVER['PHP_SELF'];
+      || in_array($incl_path . 'wp-register.php', get_included_files()))
+      || (isset($_GLOBALS['pagenow']) && 'wp-login.php' === $GLOBALS['pagenow'])
+      || '/wp-login.php' == $_SERVER['PHP_SELF'];
+  }
+
+  private function is_ajax()
+  {
+    if (
+      !empty($_SERVER['HTTP_X_REQUESTED_WITH'])
+      && 'xmlhttprequest' == strtolower($_SERVER['HTTP_X_REQUESTED_WITH'])
+    ) {
+      return true;
+    }
+
+    if (
+      empty($_SERVER['HTTP_ACCEPT'])
+      || false === strstr(strtolower($_SERVER['HTTP_ACCEPT']), 'html')
+    ) {
+      return true;
+    }
+
+    return false;
   }
 }
