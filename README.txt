@@ -1,7 +1,7 @@
 === A faster website! (aka defer.js) ===
 Contributors: shinsenter
 Donate link: https://www.paypal.me/shinsenter
-Tags: defer.js,optimization,core-web-vitals,lazyload,loading-lazy,lazy-loading,lazyload-image,lazyload-video,lazyload-font,lazyload-js,lazyload-css,lazyload-wordpress,lazyload-facebook,lazyload-youtube,site-performance,speed,pagespeed,page-speed,html-minify,shinsenter
+Tags: lazyload,lazy-load,defer.js,core-web-vitals,pagespeed,page-speed,html-minify
 Requires at least: 4.0
 Tested up to: 6.3.1
 Stable tag: trunk
@@ -101,7 +101,7 @@ Keep up-to-date with new releases:
 Released under the GNU General Public License v2 license.
 [https://code.shin.company/defer-wordpress/blob/master/LICENSE](https://code.shin.company/defer-wordpress/blob/master/LICENSE)
 
-Copyright (c) 2019 Mai Nhut Tan &lt;[shin@shin.company](mailto:shin@shin.company)&gt;
+Copyright (c) 2024 Mai Nhut Tan &lt;[shin@shin.company](mailto:shin@shin.company)&gt;
 
 
 == Installation ==

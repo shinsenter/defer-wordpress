@@ -15,7 +15,7 @@ services:
     hostname: defer-wp-test
     depends_on:
       - mariadb
-    image: wordpress:php5.6
+    image: shinsenter/wordpress:php${PHP_VERSION:-7.4}
     ports:
       - "8000:80"
     volumes:
