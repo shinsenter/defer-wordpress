@@ -3,14 +3,14 @@
 /**
  * 🚀 A WordPress plugin that focuses on minimizing payload size of HTML document
  *    and optimizing processing on the browser when rendering the WordPress page.
- * (c) 2021-2023 SHIN Company <service@shin.company>
+ * (c) 2021-2024 SHIN Company <service@shin.company>
  *
  * PHP Version >=5.6
  *
  * @category  Web_Performance_Optimization
  * @package   defer-wordpress
  * @author    Mai Nhut Tan <shin@shin.company>
- * @copyright 2021-2023 SHIN Company
+ * @copyright 2021-2024 SHIN Company
  * @license   https://code.shin.company/defer-wordpress/blob/master/LICENSE GPL-2.0
  * @link      https://code.shin.company/defer-wordpress
  * @see       https://code.shin.company/defer-wordpress/blob/master/README.md
@@ -28,7 +28,7 @@ if (!defined('WPINC')) {
  * Plugin Name:       A faster website! (aka defer.js)
  * Plugin URI:        https://wordpress.org/plugins/shins-pageload-magic/
  * Description:       💯 Latest web technologies in website optimization by experienced web experts. 🔰 Very easy to use.
- * Version:           2.6.0
+ * Version:           2.8.0
  * Author:            Mai Nhut Tan
  * Author URI:        https://code.shin.company/
  * License:           GPL-2.0+
@@ -44,7 +44,7 @@ if (!defined('WPINC')) {
 if (!defined('DEFER_WP_PLUGIN_VERSION')) {
   define('DEFER_WP_PLUGIN_BASE', plugin_basename(__FILE__));
   define('DEFER_WP_PLUGIN_NAME', 'defer-wordpress');
-  define('DEFER_WP_PLUGIN_VERSION', '2.6.0');
+  define('DEFER_WP_PLUGIN_VERSION', '2.8.0');
   define('DEFER_WP_PLUGIN_PREFIX', DEFER_WP_PLUGIN_NAME . '_');
 
   define('DEFER_WP_PLUGIN_HOOK', 'plugin_action_links_' . DEFER_WP_PLUGIN_BASE);
@@ -58,7 +58,7 @@ if (!defined('DEFER_WP_PLUGIN_VERSION')) {
   $has_deferjs = file_exists(__DIR__ . '/public/lib/defer_plus.min.js');
   define('DEFER_WP_SRC_DEFERJS_CDN', $has_deferjs
     ? __DIR__ . '/public/lib/defer_plus.min.js'
-    : 'https://cdn.jsdelivr.net/npm/@shinsenter/defer.js@2.6.0/dist/defer_plus.min.js');
+    : 'https://cdn.jsdelivr.net/npm/@shinsenter/defer.js@3.7.0/dist/defer_plus.min.js');
 
   $has_polyfill = file_exists(__DIR__ . '/public/lib/polyfill.min.js');
   define('DEFER_WP_SRC_POLYFILL_CDN', $has_polyfill

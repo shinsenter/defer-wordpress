@@ -152,10 +152,10 @@
         },
         {
             "name": "shinsenter/defer.php",
-            "version": "2.6.0",
+            "version": "2.5.0",
             "source": {
                 "type": "git",
-                "url": "https://code.shin.company/defer.php.git",
+                "url": "https://github.com/shinsenter/defer.php.git",
                 "reference": "9e09debab85b3087552068ab5d934a63dd30d097"
             },
             "dist": {

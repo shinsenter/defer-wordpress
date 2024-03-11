@@ -3,14 +3,14 @@
 /**
  * 🚀 A WordPress plugin that focuses on minimizing payload size of HTML document
  *    and optimizing processing on the browser when rendering the WordPress page.
- * (c) 2021-2023 SHIN Company <service@shin.company>.
+ * (c) 2021-2024 SHIN Company <service@shin.company>.
  *
  * PHP Version >=5.6
  *
  * @category  Web_Performance_Optimization
  *
  * @author    Mai Nhut Tan <shin@shin.company>
- * @copyright 2021-2023 SHIN Company
+ * @copyright 2021-2024 SHIN Company
  * @license   https://code.shin.company/defer-wordpress/blob/master/LICENSE GNU
  *
  * @see      https://code.shin.company/defer-wordpress
@@ -34,15 +34,15 @@
         <?php } ?>
 
         <?php if (isset($save_settings)) {
-  $msg = false === $save_settings ?
+            $msg = false === $save_settings ?
                 'Cannot save the settings you selected.'
                 : 'All changes have been saved. Please clear Wordpress cache for these changes to take effect.';
-  $err = false === $save_settings ? 'error' : 'updated'; ?>
+            $err = false === $save_settings ? 'error' : 'updated'; ?>
             <div id="message" class="<?php echo $err; ?> fade">
                 <p><strong><?php echo esc_html($msg); ?></strong></p>
             </div>
         <?php
-} ?>
+        } ?>
 
         <?php if (!isset($reset_settings) && !isset($save_settings)) { ?>
             <div id="message" class="notice notice-info fade">
@@ -72,10 +72,7 @@
                                 <td>
                                     <fieldset>
                                         <input type="hidden" value="0" name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'enable_preloading'; ?>">
-                                        <input type="checkbox" value="1"
-                                        <?php echo true == $options['enable_preloading'] ? 'checked' : ''; ?>
-                                        name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'enable_preloading'; ?>"
-                                        id="deferjs_enable_preloading">
+                                        <input type="checkbox" value="1" <?php echo true == $options['enable_preloading'] ? 'checked' : ''; ?> name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'enable_preloading'; ?>" id="deferjs_enable_preloading">
                                         <span class="description">Default: <?php echo $default['enable_preloading'] ? 'checked' : 'none'; ?>.</span>
                                         <p class="help">
                                             Preload key requests such as stylesheets or external scripts.<br>
@@ -91,10 +88,7 @@
                                 <td>
                                     <fieldset>
                                         <input type="hidden" value="0" name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'enable_dns_prefetch'; ?>">
-                                        <input type="checkbox" value="1"
-                                        <?php echo true == $options['enable_dns_prefetch'] ? 'checked' : ''; ?>
-                                        name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'enable_dns_prefetch'; ?>"
-                                        id="deferjs_enable_dns_prefetch">
+                                        <input type="checkbox" value="1" <?php echo true == $options['enable_dns_prefetch'] ? 'checked' : ''; ?> name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'enable_dns_prefetch'; ?>" id="deferjs_enable_dns_prefetch">
                                         <span class="description">Default: <?php echo $default['enable_dns_prefetch'] ? 'checked' : 'none'; ?>.</span>
                                         <p class="help">
                                             DNS resolution time can lead to a significant amount of user perceived latency. Enabling DNS prefetch saves about 200 milliseconds in browser navigation.<br>
@@ -110,10 +104,7 @@
                                 <td>
                                     <fieldset>
                                         <input type="hidden" value="0" name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'fix_render_blocking'; ?>">
-                                        <input type="checkbox" value="1"
-                                        <?php echo true == $options['fix_render_blocking'] ? 'checked' : ''; ?>
-                                        name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'fix_render_blocking'; ?>"
-                                        id="deferjs_fix_render_blocking">
+                                        <input type="checkbox" value="1" <?php echo true == $options['fix_render_blocking'] ? 'checked' : ''; ?> name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'fix_render_blocking'; ?>" id="deferjs_fix_render_blocking">
                                         <span class="description">Default: <?php echo $default['fix_render_blocking'] ? 'checked' : 'none'; ?>.</span>
                                         <p class="help">
                                             This option moves all stylesheets to bottom of the head tag, and moves script tags to bottom of the body tag.<br>
@@ -129,10 +120,7 @@
                                 <td>
                                     <fieldset>
                                         <input type="hidden" value="0" name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'minify_output_html'; ?>">
-                                        <input type="checkbox" value="1"
-                                        <?php echo true == $options['minify_output_html'] ? 'checked' : ''; ?>
-                                        name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'minify_output_html'; ?>"
-                                        id="deferjs_minify_output_html">
+                                        <input type="checkbox" value="1" <?php echo true == $options['minify_output_html'] ? 'checked' : ''; ?> name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'minify_output_html'; ?>" id="deferjs_minify_output_html">
                                         <span class="description">Default: <?php echo $default['minify_output_html'] ? 'checked' : 'none'; ?>.</span>
                                         <p class="help">
                                             Minify HTML output.<br>
@@ -163,10 +151,7 @@
                                 <td>
                                     <fieldset>
                                         <input type="hidden" value="0" name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'optimize_css'; ?>">
-                                        <input type="checkbox" value="1"
-                                        <?php echo true == $options['optimize_css'] ? 'checked' : ''; ?>
-                                        name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'optimize_css'; ?>"
-                                        id="deferjs_optimize_css">
+                                        <input type="checkbox" value="1" <?php echo true == $options['optimize_css'] ? 'checked' : ''; ?> name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'optimize_css'; ?>" id="deferjs_optimize_css">
                                         <span class="description">Default: <?php echo $default['optimize_css'] ? 'checked' : 'none'; ?>.</span>
                                         <p class="help">
                                             Turn on optimization for stylesheets. This optimization applies to style and link[rel="stylesheet"] tags.<br>
@@ -183,10 +168,7 @@
                                 <td>
                                     <fieldset>
                                         <input type="hidden" value="0" name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'optimize_scripts'; ?>">
-                                        <input type="checkbox" value="1"
-                                        <?php echo true == $options['optimize_scripts'] ? 'checked' : ''; ?>
-                                        name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'optimize_scripts'; ?>"
-                                        id="deferjs_optimize_scripts">
+                                        <input type="checkbox" value="1" <?php echo true == $options['optimize_scripts'] ? 'checked' : ''; ?> name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'optimize_scripts'; ?>" id="deferjs_optimize_scripts">
                                         <span class="description">Default: <?php echo $default['optimize_scripts'] ? 'checked' : 'none'; ?>.</span>
                                         <p class="help">
                                             Optimize script tags (both inline and external scripts). Note: The library only minify for inline script tags.<br>
@@ -203,10 +185,7 @@
                                 <td>
                                     <fieldset>
                                         <input type="hidden" value="0" name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'optimize_images'; ?>">
-                                        <input type="checkbox" value="1"
-                                        <?php echo true == $options['optimize_images'] ? 'checked' : ''; ?>
-                                        name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'optimize_images'; ?>"
-                                        id="deferjs_optimize_images">
+                                        <input type="checkbox" value="1" <?php echo true == $options['optimize_images'] ? 'checked' : ''; ?> name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'optimize_images'; ?>" id="deferjs_optimize_images">
                                         <span class="description">Default: <?php echo $default['optimize_images'] ? 'checked' : 'none'; ?>.</span>
                                         <p class="help">
                                             Optimize img, picture, video, audio and source tags.<br>
@@ -223,10 +202,7 @@
                                 <td>
                                     <fieldset>
                                         <input type="hidden" value="0" name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'optimize_iframes'; ?>">
-                                        <input type="checkbox" value="1"
-                                        <?php echo true == $options['optimize_iframes'] ? 'checked' : ''; ?>
-                                        name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'optimize_iframes'; ?>"
-                                        id="deferjs_optimize_iframes">
+                                        <input type="checkbox" value="1" <?php echo true == $options['optimize_iframes'] ? 'checked' : ''; ?> name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'optimize_iframes'; ?>" id="deferjs_optimize_iframes">
                                         <span class="description">Default: <?php echo $default['optimize_iframes'] ? 'checked' : 'none'; ?>.</span>
                                         <p class="help">
                                             Optimize iframe, frame, embed tags.<br>
@@ -243,10 +219,7 @@
                                 <td>
                                     <fieldset>
                                         <input type="hidden" value="0" name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'optimize_background'; ?>">
-                                        <input type="checkbox" value="1"
-                                        <?php echo true == $options['optimize_background'] ? 'checked' : ''; ?>
-                                        name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'optimize_background'; ?>"
-                                        id="deferjs_optimize_background">
+                                        <input type="checkbox" value="1" <?php echo true == $options['optimize_background'] ? 'checked' : ''; ?> name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'optimize_background'; ?>" id="deferjs_optimize_background">
                                         <span class="description">Default: <?php echo $default['optimize_background'] ? 'checked' : 'none'; ?>.</span>
                                         <p class="help">
                                             Optimize tags that containing CSS for loading images from external sources.<br>
@@ -264,10 +237,7 @@
                                 <td>
                                     <fieldset>
                                         <input type="hidden" value="0" name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'optimize_fallback'; ?>">
-                                        <input type="checkbox" value="1"
-                                        <?php echo true == $options['optimize_fallback'] ? 'checked' : ''; ?>
-                                        name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'optimize_fallback'; ?>"
-                                        id="deferjs_optimize_fallback">
+                                        <input type="checkbox" value="1" <?php echo true == $options['optimize_fallback'] ? 'checked' : ''; ?> name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'optimize_fallback'; ?>" id="deferjs_optimize_fallback">
                                         <span class="description">Default: <?php echo $default['optimize_fallback'] ? 'checked' : 'none'; ?>.</span>
                                         <p class="help">
                                             Create <code>&lt;noscript&gt;</code> tags so lazy-loaded elements can still display even when the browser doesn't have javascript enabled.<br>
@@ -299,10 +269,7 @@
                                 <td>
                                     <fieldset>
                                         <input type="hidden" value="0" name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'optimize_anchors'; ?>">
-                                        <input type="checkbox" value="1"
-                                        <?php echo true == $options['optimize_anchors'] ? 'checked' : ''; ?>
-                                        name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'optimize_anchors'; ?>"
-                                        id="deferjs_optimize_anchors">
+                                        <input type="checkbox" value="1" <?php echo true == $options['optimize_anchors'] ? 'checked' : ''; ?> name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'optimize_anchors'; ?>" id="deferjs_optimize_anchors">
                                         <span class="description">Default: <?php echo $default['optimize_anchors'] ? 'checked' : 'none'; ?>.</span>
                                         <p class="help">
                                             Fix unsafe links to cross-origin destinations.<br>
@@ -319,10 +286,7 @@
                                 <td>
                                     <fieldset>
                                         <input type="hidden" value="0" name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'defer_third_party'; ?>">
-                                        <input type="checkbox" value="1"
-                                        <?php echo true == $options['defer_third_party'] ? 'checked' : ''; ?>
-                                        name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'defer_third_party'; ?>"
-                                        id="deferjs_defer_third_party">
+                                        <input type="checkbox" value="1" <?php echo true == $options['defer_third_party'] ? 'checked' : ''; ?> name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'defer_third_party'; ?>" id="deferjs_defer_third_party">
                                         <span class="description">Default: <?php echo $default['defer_third_party'] ? 'checked' : 'none'; ?>.</span>
                                         <p class="help">
                                             Turn on optimization for third-party resources such as web fonts.<br>
@@ -339,10 +303,7 @@
                                 <td>
                                     <fieldset>
                                         <input type="hidden" value="0" name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'use_css_fadein_effects'; ?>">
-                                        <input type="checkbox" value="1"
-                                        <?php echo true == $options['use_css_fadein_effects'] ? 'checked' : ''; ?>
-                                        name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'use_css_fadein_effects'; ?>"
-                                        id="deferjs_use_css_fadein_effects">
+                                        <input type="checkbox" value="1" <?php echo true == $options['use_css_fadein_effects'] ? 'checked' : ''; ?> name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'use_css_fadein_effects'; ?>" id="deferjs_use_css_fadein_effects">
                                         <span class="description">Default: <?php echo $default['use_css_fadein_effects'] ? 'checked' : 'none'; ?>.</span>
                                         <p class="help">Apply fade-in animation to tags after being lazy-loaded.</p>
                                     </fieldset>
@@ -355,10 +316,7 @@
                                 <td>
                                     <fieldset>
                                         <input type="hidden" value="0" name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'use_color_placeholder'; ?>">
-                                        <input type="checkbox" value="1"
-                                        <?php echo true == $options['use_color_placeholder'] ? 'checked' : ''; ?>
-                                        name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'use_color_placeholder'; ?>"
-                                        id="deferjs_use_color_placeholder">
+                                        <input type="checkbox" value="1" <?php echo true == $options['use_color_placeholder'] ? 'checked' : ''; ?> name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'use_color_placeholder'; ?>" id="deferjs_use_color_placeholder">
                                         <span class="description">Default: <?php echo $default['use_color_placeholder'] ? 'checked' : 'none'; ?>.</span>
                                         <p class="help">Use random background colors for images to be lazy-loaded.</p>
                                     </fieldset>
@@ -370,10 +328,7 @@
                                 </th>
                                 <td>
                                     <fieldset>
-                                        <input type="text"
-                                        name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'img_placeholder'; ?>"
-                                        id="deferjs_img_placeholder"
-                                        value="<?php echo esc_html($options['img_placeholder']); ?>">
+                                        <input type="text" name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'img_placeholder'; ?>" id="deferjs_img_placeholder" value="<?php echo esc_html($options['img_placeholder']); ?>">
                                         <p><span class="description">Default: <?php echo $default['img_placeholder'] ?: 'empty string'; ?>.</span></p>
                                         <p class="help">Default placeholder for lazy-loaded IMG tags.</p>
                                     </fieldset>
@@ -386,10 +341,7 @@
                                 </th>
                                 <td>
                                     <fieldset>
-                                        <input type="text"
-                                        name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'iframe_placeholder'; ?>"
-                                        id="deferjs_iframe_placeholder"
-                                        value="<?php echo esc_html($options['iframe_placeholder']); ?>">
+                                        <input type="text" name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'iframe_placeholder'; ?>" id="deferjs_iframe_placeholder" value="<?php echo esc_html($options['iframe_placeholder']); ?>">
                                         <p><span class="description">Default: <?php echo $default['iframe_placeholder'] ?: 'empty string'; ?>.</span></p>
                                         <p class="help">Default placeholder for lazy-loaded IFRAME tags.</p>
                                     </fieldset>
@@ -402,9 +354,7 @@
                                 </th>
                                 <td>
                                     <fieldset>
-                                        <textarea rows="5" style="font-family: monospace;"
-                                        name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'long_copyright'; ?>"
-                                        id="defer_long_copyright"><?php echo esc_html($options['long_copyright']); ?></textarea>
+                                        <textarea rows="5" style="font-family: monospace;" name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'long_copyright'; ?>" id="defer_long_copyright"><?php echo esc_html($options['long_copyright']); ?></textarea>
                                         <p class="help">If you found this plugin useful, please help me share it with other people by appending a little information at the bottom of your HTML. This information does not affect your website at all.</p>
                                     </fieldset>
                                 </td>
@@ -430,9 +380,7 @@
                                 </th>
                                 <td>
                                     <fieldset>
-                                        <textarea rows="5"
-                                        name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'ignore_lazyload_css_class'; ?>"
-                                        id="defer_ignore_lazyload_css_class"><?php echo esc_html(implode("\n", $options['ignore_lazyload_css_class'])); ?></textarea>
+                                        <textarea rows="5" name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'ignore_lazyload_css_class'; ?>" id="defer_ignore_lazyload_css_class"><?php echo esc_html(implode("\n", $options['ignore_lazyload_css_class'])); ?></textarea>
                                         <p><span class="description">Default: leave it empty.</span></p>
                                         <p class="help">Skip lazy-loading for tags containing any of these CSS class names. Each class name is in one line.</p>
                                         <p class="help notice">Caution: checking many CSS class names for each element will significantly reduce the performance of this plugin.</p>
@@ -445,9 +393,7 @@
                                 </th>
                                 <td>
                                     <fieldset>
-                                        <textarea rows="5"
-                                        name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'ignore_lazyload_css_selectors'; ?>"
-                                        id="defer_ignore_lazyload_css_selectors"><?php echo esc_html(implode("\n", $options['ignore_lazyload_css_selectors'])); ?></textarea>
+                                        <textarea rows="5" name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'ignore_lazyload_css_selectors'; ?>" id="defer_ignore_lazyload_css_selectors"><?php echo esc_html(implode("\n", $options['ignore_lazyload_css_selectors'])); ?></textarea>
                                         <p><span class="description">Default: leave it empty.</span></p>
                                         <p class="help">Skip lazy-loading for tags matching any of these CSS selectors. Each CSS selector is in one line.<br>
                                             Read <a rel="nofollow" href="https://www.w3schools.com/cssref/css_selectors.asp" target="_blank">this article</a> for more details.</p>
@@ -490,10 +436,7 @@
                                 </th>
                                 <td>
                                     <fieldset>
-                                        <input type="text"
-                                        name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'polyfill_src'; ?>"
-                                        id="defer_polyfill_src"
-                                        value="<?php echo esc_html($options['polyfill_src']); ?>">
+                                        <input type="text" name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'polyfill_src'; ?>" id="defer_polyfill_src" value="<?php echo esc_html($options['polyfill_src']); ?>">
                                         <p><span class="description">Default: <code><?php echo $default['polyfill_src']; ?></code>.</span></p>
                                         <p class="help">This library polyfills the native <code>IntersectionObserver</code> API in unsupporting browsers.<br>See the <a rel="nofollow" href="https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API" target="_blank">API documentation</a> for usage information.</p>
                                     </fieldset>
@@ -524,11 +467,11 @@
                 <p>🥇 A super small, super efficient library that helps you lazy load almost everything like images, video, audio, iframes as well as stylesheets, and JavaScript.</p>
                 <p>
                     <img src='https://img.shields.io/github/license/shinsenter/defer.js.svg' alt='GitHub' referrerPolicy='no-referrer' />
-                    <a href='https://www.codefactor.io/repository/github/shinsenter/defer.js'><img src='https://www.codefactor.io/repository/github/shinsenter/defer.js/badge' alt='CodeFactor' referrerPolicy='no-referrer' /></a></p>
-                <p><img src='https://img.shields.io/github/release-date/shinsenter/defer.js.svg' alt='GitHub Release Date' referrerPolicy='no-referrer' />
+                    <img src='https://img.shields.io/github/release-date/shinsenter/defer.js.svg' alt='GitHub Release Date' referrerPolicy='no-referrer' />
                     <img src='https://img.shields.io/npm/v/@shinsenter/defer.js.svg' alt='npm' referrerPolicy='no-referrer' />
                     <img src='https://img.shields.io/bundlephobia/minzip/@shinsenter/defer.js.svg' alt='npm bundle size' referrerPolicy='no-referrer' />
-                    <a href='https://www.jsdelivr.com/package/npm/@shinsenter/defer.js'><img src='https://data.jsdelivr.com/v1/package/npm/@shinsenter/defer.js/badge?style=rounded' alt='jsDelivr hits (GitHub)' referrerPolicy='no-referrer' /></a></p>
+                    <a href='https://www.jsdelivr.com/package/npm/@shinsenter/defer.js'><img src='https://data.jsdelivr.com/v1/package/npm/@shinsenter/defer.js/badge?style=rounded' alt='jsDelivr hits (GitHub)' referrerPolicy='no-referrer' /></a>
+                </p>
 
                 <h3 class="section-heading">Support my work</h3>
                 <p class="section-description">
@@ -543,16 +486,20 @@
                 <h3>Keep in touch</h3>
                 <ul>
                     <li>■ Become a stargazer:
-                        <a href='<?php echo DEFER_SOURCE_HOMEPAGE; ?>/stargazers' target='_blank' class='url'><?php echo DEFER_SOURCE_HOMEPAGE; ?>/stargazers</a></li>
+                        <a href='<?php echo DEFER_SOURCE_HOMEPAGE; ?>/stargazers' target='_blank' class='url'><?php echo DEFER_SOURCE_HOMEPAGE; ?>/stargazers</a>
+                    </li>
                     <li>■ Report an issue:
-                        <a href='<?php echo DEFER_SOURCE_HOMEPAGE; ?>/issues' target='_blank' class='url'><?php echo DEFER_SOURCE_HOMEPAGE; ?>/issues</a></li>
+                        <a href='<?php echo DEFER_SOURCE_HOMEPAGE; ?>/issues' target='_blank' class='url'><?php echo DEFER_SOURCE_HOMEPAGE; ?>/issues</a>
+                    </li>
                     <li>■ Keep up-to-date with new releases:
-                        <a href='<?php echo DEFER_SOURCE_HOMEPAGE; ?>/releases' target='_blank' class='url'><?php echo DEFER_SOURCE_HOMEPAGE; ?>/releases</a></li>
+                        <a href='<?php echo DEFER_SOURCE_HOMEPAGE; ?>/releases' target='_blank' class='url'><?php echo DEFER_SOURCE_HOMEPAGE; ?>/releases</a>
+                    </li>
                 </ul>
                 <hr />
                 <p>Released under the MIT license.
-                    <a href='<?php echo DEFER_SOURCE_HOMEPAGE; ?>/LICENSE' target='_blank' class='url'><?php echo DEFER_SOURCE_HOMEPAGE; ?>/LICENSE</a></p>
-                <p>Copyright (c) 2021 Mai Nhut Tan &lt;<a href='mailto:shin@shin.company'>shin@shin.company</a>&gt;.</p>
+                    <a href='<?php echo DEFER_SOURCE_HOMEPAGE; ?>/LICENSE' target='_blank' class='url'><?php echo DEFER_SOURCE_HOMEPAGE; ?>/LICENSE</a>
+                </p>
+                <p>Copyright (c) <?php echo date('Y'); ?> Mai Nhut Tan &lt;<a href='mailto:shin@shin.company'>shin@shin.company</a>&gt;.</p>
                 <p>From Vietnam 🇻🇳 with love.</p>
             </div>
         </div>

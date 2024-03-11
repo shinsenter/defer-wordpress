@@ -71,4 +71,4 @@ This plugin also works perfectly on popular browsers, including Internet Explore
 Released under the GNU General Public License v2 license.
 https://code.shin.company/defer-wordpress/blob/master/LICENSE
 
-Copyright (c) 2019 Mai Nhut Tan &lt;[shin@shin.company](mailto:shin@shin.company)&gt;
+Copyright (c) 2024 Mai Nhut Tan &lt;[shin@shin.company](mailto:shin@shin.company)&gt;
