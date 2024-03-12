@@ -1,41 +1,38 @@
 # defer-wordpress
 
-🥇 Harness the latest WordPress optimization tech, 💯 SEO-friendly, and 🔰 effortlessly user-friendly!
+🚀 Unleash the power of cutting edge WordPress optimization tech. 💯 SEO-Optimized and 🎯 Effortlessly User-Friendly!
 
 Download: [https://wordpress.org/plugins/shins-pageload-magic/](https://wordpress.org/plugins/shins-pageload-magic/)
 
-![HitCount](http://hits.dwyl.com/shinsenter/defer-wordpress.svg)
 ![GitHub](https://img.shields.io/github/license/shinsenter/defer-wordpress.svg)
-
-![Libraries.io dependency status for GitHub repo](https://img.shields.io/librariesio/github/shinsenter/defer-wordpress.svg)
 [![Post an issue](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://code.shin.company/defer-wordpress/issues)
 ![GitHub issues](https://img.shields.io/github/issues-raw/shinsenter/defer-wordpress.svg)
 ![GitHub Release Date](https://img.shields.io/github/release-date/shinsenter/defer-wordpress.svg)
 
-⚡️ Experience the speed of a native, lightning-fast lazy loader. ✅ Backward compatibility for legacy browsers (IE9+). 💯 SEO-friendly. 🧩 Lazy-load everything.
+⚡️ Experience lightning-fast load times with our native, blazingly quick lazy loader. ✅ Backward compatible with legacy browsers (IE9+). 💯 SEO-optimized. 🧩 Lazy-load everything.
 
-This plugin empowers you to optimize various elements, including image tags, videos, audio, iframes, stylesheets, and JavaScript.
+This plugin empowers you to optimize a wide range of elements, including images, videos, audio, iframes, stylesheets, and JavaScript, for a seamless user experience.
 
-Leveraging tips endorsed by seasoned web experts and harnessing the latest web technologies for resource lazy-loading, this plugin ensures your website operates at peak efficiency.
+Leveraging tips from seasoned web experts and harnessing the latest web technologies for resource lazy-loading, this plugin ensures your website operates at peak efficiency, providing your visitors with a lightning-fast browsing experience.
 
-If you find this plugin valuable, please consider leaving a [5-star review (⭐️⭐️⭐️⭐️⭐️)](https://wordpress.org/support/plugin/shins-pageload-magic/reviews/?filter=5#new-post).
+If you find this plugin valuable, please consider leaving a [5-star review (⭐️⭐️⭐️⭐️⭐️)](https://wordpress.org/support/plugin/shins-pageload-magic/reviews/?filter=5#new-post) to support my efforts.
 
+## What People Love
 
-## Good points
+- ⚡️ Native API, blazingly fast performance
+- 👍 Support for legacy browsers (IE9+)
+- 🥇 SEO-friendly optimization
+- ✅ Incredibly easy to use
+- 💯 No dependencies, no jQuery required
+- 🤝 Works seamlessly with your favorite frameworks
+- 🧩 Utilizes [IntersectionObserver API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) for optimized CPU usage
+- 🏞 Supports responsive images with `srcset` and `sizes` attributes
 
-- ⚡️ Native API, blazing fast
-- 👍 Legacy browsers support (IE9+)
-- 🥇 SEO friendly
-- ✅ Very easy to use
-- 💯 No dependencies, no jQuery
-- 🤝 Works well with your favorite frameworks
-- 🧩 Uses [IntersectionObserver API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) for optimized CPU usage
-- 🏞 Supports for responsive images, both `srcset` and `sizes` attributes
+💡 Tip: For optimal results, consider disabling optimization features from other plugins (e.g., lazy-loading, HTML minification, JS minification).
 
-💡 Tip: To archive better result, you should consider disabling all optimization features (Eg. lazy-loading, HTML minification, JS minification, etc.) by other plugins.
+We recommend using this plugin alongside another page-caching solution for best performance.
 
-We recommend you use it with another page-caching plugin for best performance.
-
+![Scoring 100/100 in Google PageSpeed Test](https://ps.w.org/shins-pageload-magic/assets/screenshot-1.jpg)
 
 ## Browser support
 
@@ -49,7 +46,6 @@ This plugin also works perfectly on popular browsers, including Internet Explore
 - 📱 Android 4+
 - 📱 iOS 3.2+
 
-
 ## Powered by defer.js, defer.php
 
 [defer.js](https://code.shin.company/defer.js)
@@ -61,14 +57,12 @@ This plugin also works perfectly on popular browsers, including Internet Explore
 
 ## Support my activities
 
-[![Donate via Paypal](https://img.shields.io/badge/Donate-Paypal-blue)](https://www.paypal.me/shinsenter)
-[![Become a sponsor](https://img.shields.io/badge/Donate-Patreon-orange)](https://www.patreon.com/appseeds)
-[![Become a stargazer](https://img.shields.io/badge/Support-Stargazer-yellow)](https://code.shin.company/defer-wordpress/stargazers)
-[![Report an issue](https://img.shields.io/badge/Support-Issues-green)](https://code.shin.company/defer-wordpress/issues/new)
+If you find these images useful, consider donating via [PayPal](https://www.paypal.me/shinsenter) or open an issue on [Github](https://github.com/shinsenter/defer-wordpress/issues/new).
+
+Your support helps keep these images maintained and improved for the community.
 
 ---
 
-Released under the GNU General Public License v2 license.
-https://code.shin.company/defer-wordpress/blob/master/LICENSE
+Released under the [GNU General Public License v2 license](https://code.shin.company/defer-wordpress/blob/master/LICENSE).
 
 Copyright (c) 2024 Mai Nhut Tan &lt;[shin@shin.company](mailto:shin@shin.company)&gt;
