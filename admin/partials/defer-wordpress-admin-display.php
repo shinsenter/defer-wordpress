@@ -46,13 +46,13 @@
 
         <?php if (!isset($reset_settings) && !isset($save_settings)) { ?>
             <div id="message" class="notice notice-info fade">
-                <p>💯 Feel free to leave all options as defaults. The plugin will take care of your website.</p>
+                <p>💯 Feel free to leave all the options at their default settings. The plugin will take care of optimizing your website.</p>
             </div>
 
             <div id="message" class="notice notice-warning fade">
-                <p><strong>💡 Tip:</strong> For this plugin to be most effective, please <u>turn OFF</u> optimization features for HTML, JS, CSS, images... by other plugins.</p>
+                <p><strong>💡 Tip:</strong> For this plugin to work most effectively, please <u>disable</u> HTML, JavaScript, CSS, and image optimization features from other plugins.</p>
 
-                <p><strong>🧩 Tip:</strong> This plugin is recommended for use with another <a href="plugin-install.php?s=caching&tab=search&type=tag">caching plugin</a> for best results.</p>
+                <p><strong>🧩 Tip:</strong> It's recommended to use this plugin together with another <a href="plugin-install.php?s=caching&tab=search&type=tag">caching plugin</a> for best results.</p>
             </div>
         <?php } ?>
 
@@ -61,21 +61,21 @@
             <?php do_settings_sections(DEFER_WP_PLUGIN_NAME); ?>
 
             <div class="postbox">
-                <h2>Basic optimizations</h2>
+                <h2>Basic Optimizations</h2>
                 <div class="inside">
                     <table class="form-table">
                         <tbody>
                             <tr class="top">
                                 <th>
-                                    <label for="deferjs_enable_preloading">Enable preloading</label>
+                                    <label for="deferjs_enable_preloading">Enable Preloading</label>
                                 </th>
                                 <td>
                                     <fieldset>
                                         <input type="hidden" value="0" name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'enable_preloading'; ?>">
                                         <input type="checkbox" value="1" <?php echo true == $options['enable_preloading'] ? 'checked' : ''; ?> name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'enable_preloading'; ?>" id="deferjs_enable_preloading">
-                                        <span class="description">Default: <?php echo $default['enable_preloading'] ? 'checked' : 'none'; ?>.</span>
+                                        <span class="description">Default: <?php echo $default['enable_preloading'] ? 'Checked' : 'None'; ?>.</span>
                                         <p class="help">
-                                            Preload key requests such as stylesheets or external scripts.<br>
+                                            Preload key requests like stylesheets or external scripts to improve page load times.<br>
                                             Read <a rel="nofollow" href="https://web.dev/uses-rel-preload/" target="_blank">this article</a> for more details.
                                         </p>
                                     </fieldset>
@@ -83,15 +83,15 @@
                             </tr>
                             <tr class="top">
                                 <th>
-                                    <label for="deferjs_enable_dns_prefetch">Enable preconnect</label>
+                                    <label for="deferjs_enable_dns_prefetch">Enable Preconnect</label>
                                 </th>
                                 <td>
                                     <fieldset>
                                         <input type="hidden" value="0" name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'enable_dns_prefetch'; ?>">
                                         <input type="checkbox" value="1" <?php echo true == $options['enable_dns_prefetch'] ? 'checked' : ''; ?> name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'enable_dns_prefetch'; ?>" id="deferjs_enable_dns_prefetch">
-                                        <span class="description">Default: <?php echo $default['enable_dns_prefetch'] ? 'checked' : 'none'; ?>.</span>
+                                        <span class="description">Default: <?php echo $default['enable_dns_prefetch'] ? 'Checked' : 'None'; ?>.</span>
                                         <p class="help">
-                                            DNS resolution time can lead to a significant amount of user perceived latency. Enabling DNS prefetch saves about 200 milliseconds in browser navigation.<br>
+                                            DNS resolution can cause significant perceived delay. Enabling DNS prefetching can save around 200 milliseconds in browser navigation time.<br>
                                             Read <a rel="nofollow" href="https://web.dev/uses-rel-preconnect/" target="_blank">this article</a> for more details.
                                         </p>
                                     </fieldset>
@@ -99,16 +99,20 @@
                             </tr>
                             <tr class="top">
                                 <th>
-                                    <label for="deferjs_fix_render_blocking">Fix render-blocking</label>
+                                    <label for="deferjs_fix_render_blocking">Fix Render-Blocking</label>
                                 </th>
                                 <td>
                                     <fieldset>
                                         <input type="hidden" value="0" name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'fix_render_blocking'; ?>">
                                         <input type="checkbox" value="1" <?php echo true == $options['fix_render_blocking'] ? 'checked' : ''; ?> name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'fix_render_blocking'; ?>" id="deferjs_fix_render_blocking">
-                                        <span class="description">Default: <?php echo $default['fix_render_blocking'] ? 'checked' : 'none'; ?>.</span>
+                                        <span class="description">Default: <?php echo $default['fix_render_blocking'] ? 'Checked' : 'None'; ?>.</span>
                                         <p class="help">
-                                            This option moves all stylesheets to bottom of the head tag, and moves script tags to bottom of the body tag.<br>
-                                            Read <a rel="nofollow" href="https://web.dev/render-blocking-resources/" target="_blank">this article</a> for more details.
+                                            This moves all stylesheets to the bottom of the
+
+                                            <head> tag and script tags to the bottom of the
+
+                                            <body> tag to prevent render-blocking.<br>
+                                                Read <a rel="nofollow" href="https://web.dev/render-blocking-resources/" target="_blank">this article</a> for more details.
                                         </p>
                                     </fieldset>
                                 </td>
@@ -121,10 +125,10 @@
                                     <fieldset>
                                         <input type="hidden" value="0" name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'minify_output_html'; ?>">
                                         <input type="checkbox" value="1" <?php echo true == $options['minify_output_html'] ? 'checked' : ''; ?> name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'minify_output_html'; ?>" id="deferjs_minify_output_html">
-                                        <span class="description">Default: <?php echo $default['minify_output_html'] ? 'checked' : 'none'; ?>.</span>
+                                        <span class="description">Default: <?php echo $default['minify_output_html'] ? 'Checked' : 'None'; ?>.</span>
                                         <p class="help">
-                                            Minify HTML output.<br>
-                                            This function is extremely fast and good. With this function enabled, you can turn off all HTML optimization features of other plugins.
+                                            Minify the HTML output to reduce file size.<br>
+                                            This function is extremely fast and effective. With it enabled, you can disable HTML optimization in other plugins.
                                         </p>
                                     </fieldset>
                                 </td>
@@ -140,7 +144,7 @@
             </div>
 
             <div class="postbox">
-                <h2>Optimizations for elements on the page</h2>
+                <h2>Optimizations for Page Elements</h2>
                 <div class="inside">
                     <table class="form-table">
                         <tbody>
@@ -152,9 +156,9 @@
                                     <fieldset>
                                         <input type="hidden" value="0" name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'optimize_css'; ?>">
                                         <input type="checkbox" value="1" <?php echo true == $options['optimize_css'] ? 'checked' : ''; ?> name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'optimize_css'; ?>" id="deferjs_optimize_css">
-                                        <span class="description">Default: <?php echo $default['optimize_css'] ? 'checked' : 'none'; ?>.</span>
+                                        <span class="description">Default: <?php echo $default['optimize_css'] ? 'Checked' : 'None'; ?>.</span>
                                         <p class="help">
-                                            Turn on optimization for stylesheets. This optimization applies to style and link[rel="stylesheet"] tags.<br>
+                                            Enable optimization for stylesheets. This applies to &lt;style&gt; and &lt;link rel="stylesheet"&gt; tags.<br>
                                             Read <a rel="nofollow" href="https://web.dev/extract-critical-css/" target="_blank">this article</a> for more details.
                                         </p>
                                     </fieldset>
@@ -169,9 +173,9 @@
                                     <fieldset>
                                         <input type="hidden" value="0" name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'optimize_scripts'; ?>">
                                         <input type="checkbox" value="1" <?php echo true == $options['optimize_scripts'] ? 'checked' : ''; ?> name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'optimize_scripts'; ?>" id="deferjs_optimize_scripts">
-                                        <span class="description">Default: <?php echo $default['optimize_scripts'] ? 'checked' : 'none'; ?>.</span>
+                                        <span class="description">Default: <?php echo $default['optimize_scripts'] ? 'Checked' : 'None'; ?>.</span>
                                         <p class="help">
-                                            Optimize script tags (both inline and external scripts). Note: The library only minify for inline script tags.<br>
+                                            Optimize &lt;script&gt; tags (both inline and external). Note: The plugin only minifies inline script tags.<br>
                                             Read <a rel="nofollow" href="https://web.dev/unminified-javascript/" target="_blank">this article</a> for more details.
                                         </p>
                                     </fieldset>
@@ -180,15 +184,15 @@
 
                             <tr class="top">
                                 <th>
-                                    <label for="deferjs_optimize_images">Lazy load media</label>
+                                    <label for="deferjs_optimize_images">Lazy Load Media</label>
                                 </th>
                                 <td>
                                     <fieldset>
                                         <input type="hidden" value="0" name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'optimize_images'; ?>">
                                         <input type="checkbox" value="1" <?php echo true == $options['optimize_images'] ? 'checked' : ''; ?> name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'optimize_images'; ?>" id="deferjs_optimize_images">
-                                        <span class="description">Default: <?php echo $default['optimize_images'] ? 'checked' : 'none'; ?>.</span>
+                                        <span class="description">Default: <?php echo $default['optimize_images'] ? 'Checked' : 'None'; ?>.</span>
                                         <p class="help">
-                                            Optimize img, picture, video, audio and source tags.<br>
+                                            Optimize &lt;img&gt;, &lt;picture&gt;, &lt;video&gt;, &lt;audio&gt;, and &lt;source&gt; tags for lazy loading.<br>
                                             Read <a rel="nofollow" href="https://web.dev/lazy-loading-images/" target="_blank">this article</a> and <a rel="nofollow" href="https://web.dev/browser-level-image-lazy-loading/" target="_blank">this article</a> for more details.</p>
                                         </p>
                                     </fieldset>
@@ -197,15 +201,15 @@
 
                             <tr class="top">
                                 <th>
-                                    <label for="deferjs_optimize_iframes">Lazy load iframes</label>
+                                    <label for="deferjs_optimize_iframes">Lazy Load Iframes</label>
                                 </th>
                                 <td>
                                     <fieldset>
                                         <input type="hidden" value="0" name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'optimize_iframes'; ?>">
                                         <input type="checkbox" value="1" <?php echo true == $options['optimize_iframes'] ? 'checked' : ''; ?> name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'optimize_iframes'; ?>" id="deferjs_optimize_iframes">
-                                        <span class="description">Default: <?php echo $default['optimize_iframes'] ? 'checked' : 'none'; ?>.</span>
+                                        <span class="description">Default: <?php echo $default['optimize_iframes'] ? 'Checked' : 'None'; ?>.</span>
                                         <p class="help">
-                                            Optimize iframe, frame, embed tags.<br>
+                                            Optimize &lt;iframe&gt;, &lt;frame&gt;, and &lt;embed&gt; tags for lazy loading.<br>
                                             Read <a rel="nofollow" href="https://web.dev/lazy-loading-video/" target="_blank">this article</a> for more details.
                                         </p>
                                     </fieldset>
@@ -214,15 +218,15 @@
 
                             <tr class="top">
                                 <th>
-                                    <label for="deferjs_optimize_background">Lazy load background</label>
+                                    <label for="deferjs_optimize_background">Lazy Load Backgrounds</label>
                                 </th>
                                 <td>
                                     <fieldset>
                                         <input type="hidden" value="0" name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'optimize_background'; ?>">
                                         <input type="checkbox" value="1" <?php echo true == $options['optimize_background'] ? 'checked' : ''; ?> name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'optimize_background'; ?>" id="deferjs_optimize_background">
-                                        <span class="description">Default: <?php echo $default['optimize_background'] ? 'checked' : 'none'; ?>.</span>
+                                        <span class="description">Default: <?php echo $default['optimize_background'] ? 'Checked' : 'None'; ?>.</span>
                                         <p class="help">
-                                            Optimize tags that containing CSS for loading images from external sources.<br>
+                                            Optimize tags with CSS background-image properties that load images from external sources.<br>
                                             For example, style properties contain <code>background-image:url()</code> etc.<br>
                                             Read <a rel="nofollow" href="https://web.dev/optimize-css-background-images-with-media-queries/" target="_blank">this article</a> for more details.</p>
                                         </p>
@@ -232,16 +236,15 @@
 
                             <tr class="top">
                                 <th>
-                                    <label for="deferjs_optimize_fallback">Create fallback content when JavaScript is not available</label>
+                                    <label for="deferjs_optimize_fallback">Create Fallback for No JavaScript</label>
                                 </th>
                                 <td>
                                     <fieldset>
                                         <input type="hidden" value="0" name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'optimize_fallback'; ?>">
                                         <input type="checkbox" value="1" <?php echo true == $options['optimize_fallback'] ? 'checked' : ''; ?> name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'optimize_fallback'; ?>" id="deferjs_optimize_fallback">
-                                        <span class="description">Default: <?php echo $default['optimize_fallback'] ? 'checked' : 'none'; ?>.</span>
+                                        <span class="description">Default: <?php echo $default['optimize_fallback'] ? 'Checked' : 'None'; ?>.</span>
                                         <p class="help">
-                                            Create <code>&lt;noscript&gt;</code> tags so lazy-loaded elements can still display even when the browser doesn't have javascript enabled.<br>
-                                            This option applies to all tags that have been lazy-loaded.<br>
+                                            Create &lt;noscript&gt; tags so lazy-loaded elements still display when JavaScript is disabled.<br>
                                             Read <a rel="nofollow" href="https://web.dev/without-javascript/" target="_blank">this article</a> for more details.</p>
                                         </p>
                                     </fieldset>
@@ -264,15 +267,15 @@
                         <tbody>
                             <tr class="top">
                                 <th>
-                                    <label for="deferjs_optimize_anchors">Fix unsafe anchor tags</label>
+                                    <label for="deferjs_optimize_anchors">Fix Unsafe Anchor Links</label>
                                 </th>
                                 <td>
                                     <fieldset>
                                         <input type="hidden" value="0" name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'optimize_anchors'; ?>">
                                         <input type="checkbox" value="1" <?php echo true == $options['optimize_anchors'] ? 'checked' : ''; ?> name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'optimize_anchors'; ?>" id="deferjs_optimize_anchors">
-                                        <span class="description">Default: <?php echo $default['optimize_anchors'] ? 'checked' : 'none'; ?>.</span>
+                                        <span class="description">Default: <?php echo $default['optimize_anchors'] ? 'Checked' : 'None'; ?>.</span>
                                         <p class="help">
-                                            Fix unsafe links to cross-origin destinations.<br>
+                                            Fix unsafe links pointing to cross-origin destinations.<br>
                                             Read <a rel="nofollow" href="https://web.dev/external-anchors-use-rel-noopener/" target="_blank">this article</a> for more details.</p>
                                         </p>
                                     </fieldset>
@@ -281,16 +284,16 @@
 
                             <tr class="top">
                                 <th>
-                                    <label for="deferjs_defer_third_party">Optimized third-party resources</label>
+                                    <label for="deferjs_defer_third_party">Optimize Third-Party Resources</label>
                                 </th>
                                 <td>
                                     <fieldset>
                                         <input type="hidden" value="0" name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'defer_third_party'; ?>">
                                         <input type="checkbox" value="1" <?php echo true == $options['defer_third_party'] ? 'checked' : ''; ?> name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'defer_third_party'; ?>" id="deferjs_defer_third_party">
-                                        <span class="description">Default: <?php echo $default['defer_third_party'] ? 'checked' : 'none'; ?>.</span>
+                                        <span class="description">Default: <?php echo $default['defer_third_party'] ? 'Checked' : 'None'; ?>.</span>
                                         <p class="help">
-                                            Turn on optimization for third-party resources such as web fonts.<br>
-                                            If there are unexpected JavaScript or CSS related errors, please try disabling this feature.
+                                            Enable optimization for third-party resources like web fonts.<br>
+                                            Disable if you encounter JavaScript or CSS issues.
                                         </p>
                                     </fieldset>
                                 </td>
@@ -298,52 +301,52 @@
 
                             <tr class="top">
                                 <th>
-                                    <label for="deferjs_use_css_fadein_effects">Fade-in effect</label>
+                                    <label for="deferjs_use_css_fadein_effects">Fade-in Effect</label>
                                 </th>
                                 <td>
                                     <fieldset>
                                         <input type="hidden" value="0" name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'use_css_fadein_effects'; ?>">
                                         <input type="checkbox" value="1" <?php echo true == $options['use_css_fadein_effects'] ? 'checked' : ''; ?> name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'use_css_fadein_effects'; ?>" id="deferjs_use_css_fadein_effects">
-                                        <span class="description">Default: <?php echo $default['use_css_fadein_effects'] ? 'checked' : 'none'; ?>.</span>
-                                        <p class="help">Apply fade-in animation to tags after being lazy-loaded.</p>
+                                        <span class="description">Default: <?php echo $default['use_css_fadein_effects'] ? 'Checked' : 'None'; ?>.</span>
+                                        <p class="help">Apply a fade-in animation to elements after lazy-loading.</p>
                                     </fieldset>
                                 </td>
                             </tr>
                             <tr class="top">
                                 <th>
-                                    <label for="deferjs_use_color_placeholder">Color placeholder</label>
+                                    <label for="deferjs_use_color_placeholder">Color Placeholder</label>
                                 </th>
                                 <td>
                                     <fieldset>
                                         <input type="hidden" value="0" name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'use_color_placeholder'; ?>">
                                         <input type="checkbox" value="1" <?php echo true == $options['use_color_placeholder'] ? 'checked' : ''; ?> name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'use_color_placeholder'; ?>" id="deferjs_use_color_placeholder">
-                                        <span class="description">Default: <?php echo $default['use_color_placeholder'] ? 'checked' : 'none'; ?>.</span>
-                                        <p class="help">Use random background colors for images to be lazy-loaded.</p>
+                                        <span class="description">Default: <?php echo $default['use_color_placeholder'] ? 'Checked' : 'None'; ?>.</span>
+                                        <p class="help">Use random background colors as placeholders for lazy-loaded images.</p>
                                     </fieldset>
                                 </td>
                             </tr>
                             <tr class="top">
                                 <th>
-                                    <label for="deferjs_img_placeholder">Image placeholder</label>
+                                    <label for="deferjs_img_placeholder">Image Placeholder</label>
                                 </th>
                                 <td>
                                     <fieldset>
                                         <input type="text" name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'img_placeholder'; ?>" id="deferjs_img_placeholder" value="<?php echo esc_html($options['img_placeholder']); ?>">
-                                        <p><span class="description">Default: <?php echo $default['img_placeholder'] ?: 'empty string'; ?>.</span></p>
-                                        <p class="help">Default placeholder for lazy-loaded IMG tags.</p>
+                                        <p><span class="description">Default: <?php echo $default['img_placeholder'] ?: 'Leave empty'; ?>.</span></p>
+                                        <p class="help">Default placeholder for lazy-loaded &lt;img&gt; tags.</p>
                                     </fieldset>
                                 </td>
                             </tr>
 
                             <tr class="top">
                                 <th>
-                                    <label for="deferjs_iframe_placeholder">Iframe placeholder</label>
+                                    <label for="deferjs_iframe_placeholder">Iframe Placeholder</label>
                                 </th>
                                 <td>
                                     <fieldset>
                                         <input type="text" name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'iframe_placeholder'; ?>" id="deferjs_iframe_placeholder" value="<?php echo esc_html($options['iframe_placeholder']); ?>">
-                                        <p><span class="description">Default: <?php echo $default['iframe_placeholder'] ?: 'empty string'; ?>.</span></p>
-                                        <p class="help">Default placeholder for lazy-loaded IFRAME tags.</p>
+                                        <p><span class="description">Default: <?php echo $default['iframe_placeholder'] ?: 'Leave empty'; ?>.</span></p>
+                                        <p class="help">Default placeholder for lazy-loaded &lt;iframe&gt; tags.</p>
                                     </fieldset>
                                 </td>
                             </tr>
@@ -355,7 +358,7 @@
                                 <td>
                                     <fieldset>
                                         <textarea rows="5" style="font-family: monospace;" name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'long_copyright'; ?>" id="defer_long_copyright"><?php echo esc_html($options['long_copyright']); ?></textarea>
-                                        <p class="help">If you found this plugin useful, please help me share it with other people by appending a little information at the bottom of your HTML. This information does not affect your website at all.</p>
+                                        <p class="help">If you found this plugin useful, please help share it by adding a short message at the bottom of your HTML output. This won't affect your website.</p>
                                     </fieldset>
                                 </td>
                             </tr>
@@ -370,46 +373,46 @@
             </div>
 
             <div class="postbox">
-                <h2>Ignore lazy-loading for some elements</h2>
+                <h2>Exclude from Lazy-Loading</h2>
                 <div class="inside">
                     <table class="form-table">
                         <tbody>
                             <tr class="top">
                                 <th>
-                                    <label for="defer_ignore_lazyload_css_class">Exclude by CSS class names</label>
+                                    <label for="defer_ignore_lazyload_css_class">Exclude by CSS Class</label>
                                 </th>
                                 <td>
                                     <fieldset>
                                         <textarea rows="5" name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'ignore_lazyload_css_class'; ?>" id="defer_ignore_lazyload_css_class"><?php echo esc_html(implode("\n", $options['ignore_lazyload_css_class'])); ?></textarea>
-                                        <p><span class="description">Default: leave it empty.</span></p>
-                                        <p class="help">Skip lazy-loading for tags containing any of these CSS class names. Each class name is in one line.</p>
-                                        <p class="help notice">Caution: checking many CSS class names for each element will significantly reduce the performance of this plugin.</p>
+                                        <p><span class="description">Default: Leave empty.</span></p>
+                                        <p class="help">Skip lazy-loading for elements containing these CSS class names (one per line).</p>
+                                        <p class="help notice">Caution: Adding many classes will reduce performance.</p>
                                     </fieldset>
                                 </td>
                             </tr>
                             <tr class="top">
                                 <th>
-                                    <label for="defer_ignore_lazyload_css_selectors">Exclude by CSS selector</label>
+                                    <label for="defer_ignore_lazyload_css_selectors">Exclude by CSS Selector</label>
                                 </th>
                                 <td>
                                     <fieldset>
                                         <textarea rows="5" name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'ignore_lazyload_css_selectors'; ?>" id="defer_ignore_lazyload_css_selectors"><?php echo esc_html(implode("\n", $options['ignore_lazyload_css_selectors'])); ?></textarea>
-                                        <p><span class="description">Default: leave it empty.</span></p>
-                                        <p class="help">Skip lazy-loading for tags matching any of these CSS selectors. Each CSS selector is in one line.<br>
+                                        <p><span class="description">Default: Leave empty.</span></p>
+                                        <p class="help">Skip lazy-loading for elements matching these CSS selectors (one per line).<br>
                                             Read <a rel="nofollow" href="https://www.w3schools.com/cssref/css_selectors.asp" target="_blank">this article</a> for more details.</p>
-                                        <p class="help notice">Caution: handling too many CSS selectors will significantly reduce the performance of this plugin.</p>
+                                        <p class="help notice">Caution: Too many CSS selectors will reduce performance.</p>
                                     </fieldset>
                                 </td>
                             </tr>
                             <tr class="top">
-                                <th><label for="defer_ignore_lazyload_css_selectors">Better solutions</label></th>
+                                <th><label for="defer_ignore_lazyload_css_selectors">Better Solutions</label></th>
                                 <td>
-                                    <p class="help notice-info notice">You may add an <code>data-ignore</code> attribute to element that you don't want it to be optimized by the library. This attribute can be used for all HTML elements.</p>
+                                    <p class="help notice-info notice">You can add a <code>data-ignore</code> attribute to any element you don't want optimized by the plugin.</p>
 
                                     <pre><code><?php echo esc_html('<!-- Example for add data-ignore for an img tag -->
 <img data-ignore src="my_photo.jpeg" alt="Awesome photo" />'); ?></code></pre>
 
-                                    <p class="help notice-info notice">You may add an <code>data-nolazy</code> attribute to element that you don't want it to be lazy-loaded by the library. Other optimizations for that element will still be applied except lazy-load. This attribute can be used for all <code>&lt;img&gt;</code>, <code>&lt;picture&gt;</code>, <code>&lt;video&gt;</code>, <code>&lt;audio&gt;</code>, <code>&lt;iframe&gt;</code> and also <code>&lt;link rel="stylesheet"&gt;</code> elements.</p>
+                                    <p class="help notice-info notice">You can add a <code>data-nolazy</code> attribute to &lt;img&gt;, &lt;picture&gt;, &lt;video&gt;, &lt;audio&gt;, &lt;iframe&gt;, and &lt;link rel="stylesheet"&gt; elements to exclude just lazy-loading while allowing other optimizationss.</p>
 
                                     <pre><code><?php echo esc_html('<!-- Example for add data-nolazy for an img tag -->
 <img data-nolazy src="my_photo.jpeg" alt="Awesome photo" />'); ?></code></pre>
@@ -426,19 +429,19 @@
             </div>
 
             <div class="postbox">
-                <h2>Support for old browsers (IE9)</h2>
+                <h2>Support for Old Browsers (like IE9)</h2>
                 <div class="inside">
                     <table class="form-table">
                         <tbody>
                             <tr class="top">
                                 <th>
-                                    <label for="defer_polyfill_src">JS polyfill URL</label>
+                                    <label for="defer_polyfill_src">JS Polyfill URL</label>
                                 </th>
                                 <td>
                                     <fieldset>
                                         <input type="text" name="<?php echo DEFER_WP_PLUGIN_PREFIX . 'polyfill_src'; ?>" id="defer_polyfill_src" value="<?php echo esc_html($options['polyfill_src']); ?>">
                                         <p><span class="description">Default: <code><?php echo $default['polyfill_src']; ?></code>.</span></p>
-                                        <p class="help">This library polyfills the native <code>IntersectionObserver</code> API in unsupporting browsers.<br>See the <a rel="nofollow" href="https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API" target="_blank">API documentation</a> for usage information.</p>
+                                        <p class="help">This polyfill library provides <code>IntersectionObserver</code> API support for browsers lacking native support.<br>See the <a rel="nofollow" href="https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API" target="_blank">API documentation</a> for usage information.</p>
                                     </fieldset>
                                 </td>
                             </tr>
