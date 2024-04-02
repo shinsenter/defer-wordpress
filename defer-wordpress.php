@@ -58,7 +58,7 @@ if (!defined('DEFER_WP_PLUGIN_VERSION')) {
   $has_deferjs = file_exists(__DIR__ . '/public/lib/defer_plus.min.js');
   define('DEFER_WP_SRC_DEFERJS_CDN', $has_deferjs
     ? __DIR__ . '/public/lib/defer_plus.min.js'
-    : 'https://cdn.jsdelivr.net/npm/@shinsenter/defer.js@3.7.0/dist/defer_plus.min.js');
+    : 'https://cdn.jsdelivr.net/npm/@shinsenter/defer.js@3.8.0/dist/defer_plus.min.js');
 
   $has_polyfill = file_exists(__DIR__ . '/public/lib/polyfill.min.js');
   define('DEFER_WP_SRC_POLYFILL_CDN', $has_polyfill

@@ -3,7 +3,7 @@ Contributors: shinsenter
 Donate link: https://www.paypal.me/shinsenter
 Tags: lazyload,lazy-load,defer.js,core-web-vitals,pagespeed,page-speed,html-minify
 Requires at least: 4.0
-Tested up to: 6.4
+Tested up to: 6.5
 Stable tag: 2.9.0
 Requires PHP: 5.6
 License: GPLv2 or later

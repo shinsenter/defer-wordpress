@@ -57,9 +57,9 @@ This plugin also works perfectly on popular browsers, including Internet Explore
 
 ## Support my activities
 
-If you find these images useful, consider donating via [PayPal](https://www.paypal.me/shinsenter) or open an issue on [Github](https://github.com/shinsenter/defer-wordpress/issues/new).
+If you find this plugin useful, consider donating via [PayPal](https://www.paypal.me/shinsenter) or open an issue on [Github](https://github.com/shinsenter/defer-wordpress/issues/new).
 
-Your support helps keep these images maintained and improved for the community.
+Your support helps keep this plugin maintained and improved for the community.
 
 ---
 
