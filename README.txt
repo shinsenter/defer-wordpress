@@ -1,10 +1,10 @@
 === A faster website! (aka defer.js) ===
 Contributors: shinsenter
 Donate link: https://www.paypal.me/shinsenter
-Tags: lazyload,lazy-load,defer.js,core-web-vitals,pagespeed,page-speed,html-minify
+Tags: lazyload,optimize,pagespeed,performance,defer.js
 Requires at least: 4.0
-Tested up to: 6.5
-Stable tag: 2.9.0
+Tested up to: 6.6
+Stable tag: 2.10.0
 Requires PHP: 5.6
 License: GPLv2 or later
 License URI: https://code.shin.company/defer-wordpress/blob/master/LICENSE
@@ -160,6 +160,8 @@ We also recommend using it in conjunction with a page-caching plugin for the ult
 
 
 == Changelog ==
+
+2.10: Removed dependency from polyfill[.]io
 
 2.9: Fixed broken feeds and API responses
 
