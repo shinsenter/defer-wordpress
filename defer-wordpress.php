@@ -28,7 +28,7 @@ if (!defined('WPINC')) {
  * Plugin Name:       A faster website! (aka defer.js)
  * Plugin URI:        https://wordpress.org/plugins/shins-pageload-magic/
  * Description:       💯 Latest web technologies in website optimization by experienced web experts. 🔰 Very easy to use.
- * Version:           2.9.0
+ * Version:           2.10.0
  * Author:            Mai Nhut Tan
  * Author URI:        https://code.shin.company/
  * License:           GPL-2.0+
@@ -44,7 +44,7 @@ if (!defined('WPINC')) {
 if (!defined('DEFER_WP_PLUGIN_VERSION')) {
   define('DEFER_WP_PLUGIN_BASE', plugin_basename(__FILE__));
   define('DEFER_WP_PLUGIN_NAME', 'defer-wordpress');
-  define('DEFER_WP_PLUGIN_VERSION', '2.9.0');
+  define('DEFER_WP_PLUGIN_VERSION', '2.10.0');
   define('DEFER_WP_PLUGIN_PREFIX', DEFER_WP_PLUGIN_NAME . '_');
 
   define('DEFER_WP_PLUGIN_HOOK', 'plugin_action_links_' . DEFER_WP_PLUGIN_BASE);
@@ -55,15 +55,8 @@ if (!defined('DEFER_WP_PLUGIN_VERSION')) {
   define('DEFER_WP_CACHE_DIR', __DIR__ . '/cache');
   define('DEFER_WP_CACHE_EXP', 600);
 
-  $has_deferjs = file_exists(__DIR__ . '/public/lib/defer_plus.min.js');
-  define('DEFER_WP_SRC_DEFERJS_CDN', $has_deferjs
-    ? __DIR__ . '/public/lib/defer_plus.min.js'
-    : 'https://cdn.jsdelivr.net/npm/@shinsenter/defer.js@3.7.0/dist/defer_plus.min.js');
-
-  $has_polyfill = file_exists(__DIR__ . '/public/lib/polyfill.min.js');
-  define('DEFER_WP_SRC_POLYFILL_CDN', $has_polyfill
-    ? plugin_dir_url(__FILE__) . 'public/lib/polyfill.min.js'
-    : 'https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver');
+  define('DEFER_WP_SRC_DEFERJS_CDN', __DIR__ . '/public/lib/defer_plus.min.js');
+  define('DEFER_WP_SRC_POLYFILL_CDN', plugin_dir_url(__FILE__) . 'public/lib/polyfill.min.js');
 
   define('DEFER_WP_HOMEPAGE', 'https://shinsenter.github.io/defer.js');
   define('DEFER_WP_PLUGIN_URL', 'https://wordpress.org/plugins/shins-pageload-magic/');
