@@ -3,8 +3,8 @@ Contributors: shinsenter
 Donate link: https://www.paypal.me/shinsenter
 Tags: lazyload,optimize,pagespeed,performance,defer.js
 Requires at least: 4.0
-Tested up to: 6.6
-Stable tag: 2.10.0
+Tested up to: 6.6.1
+Stable tag: 3.0.0
 Requires PHP: 5.6
 License: GPLv2 or later
 License URI: https://code.shin.company/defer-wordpress/blob/master/LICENSE
@@ -160,6 +160,8 @@ We also recommend using it in conjunction with a page-caching plugin for the ult
 
 
 == Changelog ==
+
+3.0: Remove support for PHP versions earlier than 7.2
 
 2.10: Removed dependency from polyfill[.]io
 

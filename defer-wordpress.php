@@ -5,7 +5,7 @@
  *    and optimizing processing on the browser when rendering the WordPress page.
  * (c) 2021-2024 SHIN Company <service@shin.company>
  *
- * PHP Version >=5.6
+ * PHP Version >=7.2
  *
  * @category  Web_Performance_Optimization
  * @package   defer-wordpress
@@ -28,7 +28,7 @@ if (!defined('WPINC')) {
  * Plugin Name:       A faster website! (aka defer.js)
  * Plugin URI:        https://wordpress.org/plugins/shins-pageload-magic/
  * Description:       💯 Latest web technologies in website optimization by experienced web experts. 🔰 Very easy to use.
- * Version:           2.10.0
+ * Version:           3.0.0
  * Author:            Mai Nhut Tan
  * Author URI:        https://code.shin.company/
  * License:           GPL-2.0+
@@ -44,7 +44,7 @@ if (!defined('WPINC')) {
 if (!defined('DEFER_WP_PLUGIN_VERSION')) {
   define('DEFER_WP_PLUGIN_BASE', plugin_basename(__FILE__));
   define('DEFER_WP_PLUGIN_NAME', 'defer-wordpress');
-  define('DEFER_WP_PLUGIN_VERSION', '2.10.0');
+  define('DEFER_WP_PLUGIN_VERSION', '3.0.0');
   define('DEFER_WP_PLUGIN_PREFIX', DEFER_WP_PLUGIN_NAME . '_');
 
   define('DEFER_WP_PLUGIN_HOOK', 'plugin_action_links_' . DEFER_WP_PLUGIN_BASE);
