@@ -30,7 +30,7 @@
         }
     ],
     "scripts": {
-        "fixer": "php-cs-fixer fix --show-progress=dots --verbose --ansi",
+        "fixer": "PHP_CS_FIXER_IGNORE_ENV=1 php-cs-fixer fix --show-progress=dots --verbose --ansi",
         "pull": [
             "rm -rf ./cache/*/ ./vendor/ ./node_modules/ ./composer.lock ./package-lock.json",
             "composer clearcache --ansi",
@@ -49,14 +49,14 @@
         "optimize-autoloader": true,
         "sort-packages": true,
         "platform": {
-            "php": "5.6"
+            "php": "7.2"
         },
         "allow-plugins": {
             "dangoodman/composer-for-wordpress": true
         }
     },
     "require": {
-        "php": ">=5.6",
+        "php": ">=7.2",
         "shinsenter/defer.php": "^2.5",
         "symfony/polyfill-mbstring": "<=1.22.0",
         "dangoodman/composer-for-wordpress": "^2.0"

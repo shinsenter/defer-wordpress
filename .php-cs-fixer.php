@@ -5,7 +5,7 @@
  *    and optimizing processing on the browser when rendering the WordPress page.
  * (c) 2021-2024 SHIN Company <service@shin.company>
  *
- * PHP Version >=5.6
+ * PHP Version >=7.2
  *
  * @category  Web_Performance_Optimization
  * @package   defer-wordpress
@@ -21,7 +21,7 @@ $header = <<<'EOF'
    and optimizing processing on the browser when rendering the WordPress page.
 (c) 2021-2024 SHIN Company <service@shin.company>
 
-PHP Version >=5.6
+PHP Version >=7.2
 
 @category  Web_Performance_Optimization
 @package   defer-wordpress
