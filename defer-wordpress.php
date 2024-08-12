@@ -138,7 +138,7 @@ if (!function_exists('defer_wp_ob')) {
     foreach (headers_list() as $header) {
       if (preg_match('/Content-Type:/i', $header)) {
         if (false === strstr(strtolower($header), 'html')) {
-          return 'aaa' . $buffer;
+          return $buffer;
         }
 
         // end the loop

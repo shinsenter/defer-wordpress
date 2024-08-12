@@ -5,7 +5,7 @@ Tags: lazyload,optimize,pagespeed,performance,defer.js
 Requires at least: 4.0
 Tested up to: 6.6.1
 Stable tag: 3.0.0
-Requires PHP: 5.6
+Requires PHP: 7.2
 License: GPLv2 or later
 License URI: https://code.shin.company/defer-wordpress/blob/master/LICENSE
 
